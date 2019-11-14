@@ -1,24 +1,21 @@
 <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
     <a class="navbar-brand" href="#">AgilePro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
+      aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a routerLink="user/login" class="nav-link" routerLinkActive="active">
+            Login
+          </a> 
+        </li>
+      </ul>
+    </div>
   </nav>
-
-  <div class="row" style="margin-top: 200px;">
-    <div class="offset-sm-4 col-sm-4">
-      <form>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Password</label>
-          <input type="password" class="form-control" id="pwd">
-        </div>
-      </form>
-    </div>
-    <div class="offset-sm-4 col-sm-4">
-      <button id="loginButton" type="button" class="btn btn-primary offset-sm-3">Login</button>
-      <button id="registerButton" type="button" class="btn btn-success offset-sm-1">Register</button>
-    </div>
-  </div>
 </div>
+<div class="container">  
+    <router-outlet></router-outlet>  
+  </div> 
