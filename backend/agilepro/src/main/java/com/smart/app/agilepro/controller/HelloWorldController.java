@@ -1,6 +1,11 @@
 package com.smart.app.agilepro.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.smart.app.agilepro.model.User;
+import com.smart.app.agilepro.service.UserServiceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,8 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/rest")
 public class HelloWorldController {
 
-    @GetMapping(path="/hello",produces = "text/plain")
-    public  String sayHello() {
-        return "Welcome to Spring Boot";
+    @Autowired
+    public UserServiceImpl userService;
+
+    @PostMapping(path = "/registration", consumes = "application/json", produces = "application/json")
+    public boolean registerUser(@RequestBody User user) {
+        return userService.registerUser(user);
     }
 }
