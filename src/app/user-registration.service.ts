@@ -16,8 +16,8 @@ export class UserRegistrationService {
     console.log('Posting registration request', obj);
     this.http.post(`${this.uri}`, obj).subscribe((res) => {
       console.log('Success response', res);
-      }, (error) => {
+    }, (error) => {
       console.log('Error response', error);
-      });
+    });
   }
 }

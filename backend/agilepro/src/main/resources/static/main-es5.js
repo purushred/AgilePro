@@ -28,7 +28,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n  <nav class=\"navbar navbar-expand-lg navbar-light bg-light rounded\">\n    <a class=\"navbar-brand\" href=\"#\">AgilePro</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample09\"\n      aria-controls=\"navbarsExample09\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample09\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"user/login\" class=\"nav-link\" routerLinkActive=\"active\">\n            Login\n          </a> \n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>\n<div class=\"container\">  \n    <router-outlet></router-outlet>  \n  </div> ");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n  <nav class=\"navbar navbar-expand-lg navbar-light bg-light rounded\">\n    <a class=\"navbar-brand\" href=\"#\">AgilePro</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample09\"\n      aria-controls=\"navbarsExample09\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample09\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"user/login\" class=\"nav-link\" routerLinkActive=\"active\">\n            Login\n          </a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html": 
@@ -40,6 +40,28 @@
             "use strict";
             __webpack_require__.r(__webpack_exports__);
             /* harmony default export */ __webpack_exports__["default"] = ("<p>dashboard works!</p>\n");
+            /***/ 
+        }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/profile.component.html": 
+        /*!**************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/profile/profile.component.html ***!
+          \**************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card\">\n    <div class=\"card-body\">\n        <h5 class=\"card-title\">User Profile</h5>\n        <div class=\"card-text\">\n            <div class=\"form-group\">\n                <label for=\"companyName\">Company</label>\n                <input id=\"companyName\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"phoneNumber\">Phone</label>\n                <input id=\"phoneNumber\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"country\">Country</label>\n                <input id=\"country\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <input class=\"btn btn-primary\" routerLink=\"/projects\" type=\"button\" value=\"Save\">\n            </div>\n        </div>\n    </div>\n</div>");
+            /***/ 
+        }),
+        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/projects/projects.component.html": 
+        /*!****************************************************************************************!*\
+          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/projects/projects.component.html ***!
+          \****************************************************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"offset-sm-3 col-sm-6\">\n    <table class=\"table table-dark\">\n        <thead class=\"thead-dark\">\n            <tr>\n                <th>#</th>\n                <th>Name</th>\n                <th>Description</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>1</td>\n                <td>Project1</td>\n                <td>Its about new project</td>\n            </tr>\n            <tr>\n                    <td>2</td>\n                    <td>Project2</td>\n                    <td>Its about new project2</td>\n                </tr>\n        </tbody>\n    </table>\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/user-login/user-login.component.html": 
@@ -61,7 +83,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"offset-sm-4 col-sm-4\" style=\"margin-top: 50px;\">\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\" style=\"margin-bottom: 30px;\">\n            <h2>User Registration</h2>\n        </div>\n        <div class=\"panel-body\">\n            <div class=\"form-group\">\n                <label for=\"email\">Email</label>\n                <input id=\"email\" class=\"form-control\" type=\"email\" formControlName=\"emailid\" #emailid>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input id=\"password\" class=\"form-control\" type=\"password\" formControlName=\"password\" #password>\n            </div>\n            <div class=\"form-group\">\n                <button id=\"register\" class=\"btn btn-success\" \n                (click)=\"registerUser(emailid.value, password.value)\">Register</button>\n            </div>\n        </div>\n    </div>\n</div>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"offset-sm-4 col-sm-4\" style=\"margin-top: 50px;\">\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\" style=\"margin-bottom: 30px;\">\n            <h2>User Registration</h2>\n        </div>\n        <div class=\"panel-body\">\n            <div class=\"form-group\">\n                <label for=\"email\">Email</label>\n                <input id=\"email\" class=\"form-control\" type=\"email\" formControlName=\"emailid\" #emailid>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input id=\"password\" class=\"form-control\" type=\"password\" formControlName=\"password\" #password>\n            </div>\n            <div class=\"form-group\">\n                <button routerLink=\"/profile\" class=\"btn btn-success\" \n                (click)=\"registerUser(emailid.value, password.value)\">Register</button>\n            </div>\n        </div>\n    </div>\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/tslib/tslib.es6.js": 
@@ -379,6 +401,8 @@
             /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
             /* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
             /* harmony import */ var _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user-register/user-register.component */ "./src/app/user-register/user-register.component.ts");
+            /* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
+            /* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
             var routes = [
                 {
                     path: 'user/login',
@@ -391,6 +415,14 @@
                 {
                     path: 'register',
                     component: _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
+                },
+                {
+                    path: 'profile',
+                    component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]
+                },
+                {
+                    path: 'projects',
+                    component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsComponent"]
                 }
             ];
             var AppRoutingModule = /** @class */ (function () {
@@ -462,6 +494,8 @@
             /* harmony import */ var _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user-register/user-register.component */ "./src/app/user-register/user-register.component.ts");
             /* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-registration.service */ "./src/app/user-registration.service.ts");
             /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+            /* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
+            /* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
             var AppModule = /** @class */ (function () {
                 function AppModule() {
                 }
@@ -473,7 +507,9 @@
                         _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                         _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_5__["UserLoginComponent"],
                         _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"],
-                        _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_7__["UserRegisterComponent"]
+                        _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_7__["UserRegisterComponent"],
+                        _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"],
+                        _projects_projects_component__WEBPACK_IMPORTED_MODULE_11__["ProjectsComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -522,6 +558,82 @@
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")).default]
                 })
             ], DashboardComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/profile/profile.component.css": 
+        /*!***********************************************!*\
+          !*** ./src/app/profile/profile.component.css ***!
+          \***********************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2ZpbGUvcHJvZmlsZS5jb21wb25lbnQuY3NzIn0= */");
+            /***/ 
+        }),
+        /***/ "./src/app/profile/profile.component.ts": 
+        /*!**********************************************!*\
+          !*** ./src/app/profile/profile.component.ts ***!
+          \**********************************************/
+        /*! exports provided: ProfileComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileComponent", function () { return ProfileComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            var ProfileComponent = /** @class */ (function () {
+                function ProfileComponent() {
+                }
+                ProfileComponent.prototype.ngOnInit = function () {
+                };
+                return ProfileComponent;
+            }());
+            ProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-profile',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./profile.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/profile/profile.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./profile.component.css */ "./src/app/profile/profile.component.css")).default]
+                })
+            ], ProfileComponent);
+            /***/ 
+        }),
+        /***/ "./src/app/projects/projects.component.css": 
+        /*!*************************************************!*\
+          !*** ./src/app/projects/projects.component.css ***!
+          \*************************************************/
+        /*! exports provided: default */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5jc3MifQ== */");
+            /***/ 
+        }),
+        /***/ "./src/app/projects/projects.component.ts": 
+        /*!************************************************!*\
+          !*** ./src/app/projects/projects.component.ts ***!
+          \************************************************/
+        /*! exports provided: ProjectsComponent */
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict";
+            __webpack_require__.r(__webpack_exports__);
+            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function () { return ProjectsComponent; });
+            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            var ProjectsComponent = /** @class */ (function () {
+                function ProjectsComponent() {
+                }
+                ProjectsComponent.prototype.ngOnInit = function () {
+                };
+                return ProjectsComponent;
+            }());
+            ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+                    selector: 'app-projects',
+                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/projects/projects.component.html")).default,
+                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./projects.component.css */ "./src/app/projects/projects.component.css")).default]
+                })
+            ], ProjectsComponent);
             /***/ 
         }),
         /***/ "./src/app/user-login/user-login.component.css": 

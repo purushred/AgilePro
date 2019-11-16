@@ -8,13 +8,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserRegistrationService } from './user-registration.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     DashboardComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    ProfileComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

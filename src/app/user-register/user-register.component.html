@@ -13,7 +13,7 @@
                 <input id="password" class="form-control" type="password" formControlName="password" #password>
             </div>
             <div class="form-group">
-                <button id="register" class="btn btn-success" 
+                <button routerLink="/profile" class="btn btn-success" 
                 (click)="registerUser(emailid.value, password.value)">Register</button>
             </div>
         </div>

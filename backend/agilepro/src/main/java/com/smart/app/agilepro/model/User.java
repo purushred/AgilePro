@@ -1,7 +1,6 @@
 package com.smart.app.agilepro.model;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
