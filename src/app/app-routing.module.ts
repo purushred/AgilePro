@@ -5,6 +5,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectComponent } from './project/project.component';
+import { FeatureComponent } from './feature/feature.component';
+import { StoryComponent } from './story/story.component';
+import { TaskComponent } from './task/task.component';
 
 
 const routes: Routes = [
@@ -23,11 +27,26 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
-  }
-  ,
+  },
   {
     path: 'projects',
     component: ProjectsComponent
+  },
+  {
+    path: 'project',
+    component: ProjectComponent
+  },
+  {
+    path: 'feature',
+    component: FeatureComponent
+  },
+  {
+    path: 'story',
+    component: StoryComponent
+  },
+  {
+    path: 'task',
+    component: TaskComponent
   }
 ];
 
