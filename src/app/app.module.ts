@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ButtonModule} from 'primeng/button';
+import {TabViewModule} from 'primeng/tabview';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
@@ -40,7 +42,8 @@ import { FeatureComponent } from './feature/feature.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    TabViewModule
   ],
   providers: [UserRegistrationService, HttpClient],
   bootstrap: [AppComponent]

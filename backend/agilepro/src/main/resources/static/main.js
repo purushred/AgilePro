@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Stories list</h1>\n<table class=\"table table-light\">\n    <thead class=\"thead-dark\">\n        <tr>\n            <th>#</th>\n            <th>Story</th>\n            <th>Description</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td> <a routerLink='/story'> Story1</a></td>\n            <td>To enable cut through</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td><a routerLink='/story'>Story2</a></td>\n            <td>To enable ARP</td>\n        </tr>\n        <tr>\n            <td>3</td>\n            <td><a routerLink='/story'>Story3</a></td>\n            <td>IGMP Multicast VLAN feature description</td>\n        </tr>\n    </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\n        <p-tabPanel header=\"Feature Description\">\n           Feature Description\n        </p-tabPanel>\n        <p-tabPanel header=\"Stories\">\n                <table class=\"table table-light\">\n                        <thead class=\"thead-dark\">\n                            <tr>\n                                <th>#</th>\n                                <th>Story</th>\n                                <th>Description</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td>1</td>\n                                <td> <a routerLink='/story' >Story1</a></td>\n                                <td>Its about new story1</td>\n                            </tr>\n                            <tr>\n                                    <td>2</td>\n                                    <td><a routerLink='/story'>Story2</a></td>\n                                    <td> Its about new story2</td>\n                                </tr>\n                        </tbody>\n                    </table>\n        </p-tabPanel>\n    </p-tabView>\n<div class=\"offset-sm-3 col-sm-6\">\n    \n</div>");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" id=\"home-tab\" data-toggle=\"tab\" href=\"#home\" role=\"tab\" aria-controls=\"home\" aria-selected=\"true\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" id=\"profile-tab\" data-toggle=\"tab\" href=\"#profile\" role=\"tab\" aria-controls=\"profile\" aria-selected=\"false\">Profile</a>\n        </li>\n      </ul>\n      <div class=\"tab-content\" id=\"myTabContent\">\n        <div class=\"tab-pane fade show active\" id=\"home\" role=\"tabpanel\" aria-labelledby=\"home-tab\">...</div>\n        <div class=\"tab-pane fade\" id=\"profile\" role=\"tabpanel\" aria-labelledby=\"profile-tab\">\n                <h1>Features list</h1>\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Feature</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>1</td>\n                            <td> <a routerLink='/feature'> Cutthrough feature</a></td>\n                            <td>To enable cut through</td>\n                        </tr>\n                        <tr>\n                            <td>2</td>\n                            <td><a routerLink='/feature'>ARP feature </a></td>\n                            <td>To enable ARP</td>\n                        </tr>\n                        <tr>\n                            <td>3</td>\n                            <td><a routerLink='/feature'>IGMP Multicast feature</a></td>\n                            <td>IGMP Multicast VLAN feature description</td>\n                        </tr>\n                    </tbody>\n                </table>\n        </div>\n      </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\n    <p-tabPanel header=\"Project Description\">\n        Project Description\n    </p-tabPanel>\n    <p-tabPanel header=\"Features\">\n        <table class=\"table table-light\">\n            <thead class=\"thead-dark\">\n                <tr>\n                    <th>#</th>\n                    <th>Feature</th>\n                    <th>Description</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td>1</td>\n                    <td> <a routerLink='/feature'>Feature1</a></td>\n                    <td>Its about new feature1</td>\n                </tr>\n                <tr>\n                    <td>2</td>\n                    <td><a routerLink='/feature'>Feature2</a></td>\n                    <td> Its about new feature2</td>\n                </tr>\n            </tbody>\n        </table>\n    </p-tabPanel>\n</p-tabView>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p-button icon=\"pi pi-check\" label=\"Click\"></p-button>\n\n<div class=\"offset-sm-3 col-sm-6\">\n    <table class=\"table table-light\">\n        <thead class=\"thead-dark\">\n            <tr>\n                <th>#</th>\n                <th>Name</th>\n                <th>Description1</th>\n            </tr>\n        </thead>\n        <tbody>\n            <tr>\n                <td>1</td>\n                <td> <a routerLink='/project' >Project1</a></td>\n                <td>Its about new project</td>\n            </tr>\n            <tr>\n                    <td>2</td>\n                    <td><a routerLink='/project'>Project2</a></td>\n                    <td> Its about new project2</td>\n                </tr>\n        </tbody>\n    </table>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-light\">\n    <thead class=\"thead-dark\">\n        <tr>\n            <th>#</th>\n            <th>Project</th>\n            <th>Description</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td> <a routerLink='/project'>Project1</a></td>\n            <td>Its about new project</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td><a routerLink='/project'>Project2</a></td>\n            <td> Its about new project2</td>\n        </tr>\n    </tbody>\n</table>");
 
 /***/ }),
 
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Stories list</h1>\n<table class=\"table table-light\">\n    <thead class=\"thead-dark\">\n        <tr>\n            <th>#</th>\n            <th>Task</th>\n            <th>Description</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>1</td>\n            <td> <a routerLink='/task'> Task1</a></td>\n            <td>To enable cut through</td>\n        </tr>\n        <tr>\n            <td>2</td>\n            <td><a routerLink='/task'>Task2</a></td>\n            <td>To enable ARP</td>\n        </tr>\n        <tr>\n            <td>3</td>\n            <td><a routerLink='/task'>Task3</a></td>\n            <td>IGMP Multicast VLAN feature description</td>\n        </tr>\n    </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\n        <p-tabPanel header=\"Story Description\">\n            Story Description\n        </p-tabPanel>\n        <p-tabPanel header=\"Tasks\">\n            <table class=\"table table-light\">\n                <thead class=\"thead-dark\">\n                    <tr>\n                        <th>#</th>\n                        <th>Task</th>\n                        <th>Description</th>\n                    </tr>\n                </thead>\n                <tbody>\n                    <tr>\n                        <td>1</td>\n                        <td> <a routerLink='/task'>Task1</a></td>\n                        <td>Its about new Task1</td>\n                    </tr>\n                    <tr>\n                        <td>2</td>\n                        <td><a routerLink='/task'>Task2</a></td>\n                        <td> Its about new task2</td>\n                    </tr>\n                </tbody>\n            </table>\n        </p-tabPanel>\n    </p-tabView>\n");
 
 /***/ }),
 
@@ -578,23 +578,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/button.js");
 /* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primeng_button__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user-login/user-login.component */ "./src/app/user-login/user-login.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-register/user-register.component */ "./src/app/user-register/user-register.component.ts");
-/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-registration.service */ "./src/app/user-registration.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
-/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
-/* harmony import */ var _features_features_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./features/features.component */ "./src/app/features/features.component.ts");
-/* harmony import */ var _stories_stories_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./stories/stories.component */ "./src/app/stories/stories.component.ts");
-/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
-/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
-/* harmony import */ var _story_story_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./story/story.component */ "./src/app/story/story.component.ts");
-/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
-/* harmony import */ var _reports_reports_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./reports/reports.component */ "./src/app/reports/reports.component.ts");
-/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
+/* harmony import */ var primeng_tabview__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/tabview */ "./node_modules/primeng/tabview.js");
+/* harmony import */ var primeng_tabview__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(primeng_tabview__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user-login/user-login.component */ "./src/app/user-login/user-login.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-register/user-register.component */ "./src/app/user-register/user-register.component.ts");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
+/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
+/* harmony import */ var _features_features_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./features/features.component */ "./src/app/features/features.component.ts");
+/* harmony import */ var _stories_stories_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./stories/stories.component */ "./src/app/stories/stories.component.ts");
+/* harmony import */ var _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./tasks/tasks.component */ "./src/app/tasks/tasks.component.ts");
+/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
+/* harmony import */ var _story_story_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./story/story.component */ "./src/app/story/story.component.ts");
+/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
+/* harmony import */ var _reports_reports_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./reports/reports.component */ "./src/app/reports/reports.component.ts");
+/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
+
 
 
 
@@ -621,29 +624,30 @@ let AppModule = class AppModule {
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_6__["UserLoginComponent"],
-            _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
-            _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_8__["UserRegisterComponent"],
-            _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
-            _projects_projects_component__WEBPACK_IMPORTED_MODULE_12__["ProjectsComponent"],
-            _features_features_component__WEBPACK_IMPORTED_MODULE_13__["FeaturesComponent"],
-            _stories_stories_component__WEBPACK_IMPORTED_MODULE_14__["StoriesComponent"],
-            _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_15__["TasksComponent"],
-            _project_project_component__WEBPACK_IMPORTED_MODULE_16__["ProjectComponent"],
-            _story_story_component__WEBPACK_IMPORTED_MODULE_17__["StoryComponent"],
-            _task_task_component__WEBPACK_IMPORTED_MODULE_18__["TaskComponent"],
-            _reports_reports_component__WEBPACK_IMPORTED_MODULE_19__["ReportsComponent"],
-            _feature_feature_component__WEBPACK_IMPORTED_MODULE_20__["FeatureComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+            _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_7__["UserLoginComponent"],
+            _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"],
+            _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_9__["UserRegisterComponent"],
+            _profile_profile_component__WEBPACK_IMPORTED_MODULE_12__["ProfileComponent"],
+            _projects_projects_component__WEBPACK_IMPORTED_MODULE_13__["ProjectsComponent"],
+            _features_features_component__WEBPACK_IMPORTED_MODULE_14__["FeaturesComponent"],
+            _stories_stories_component__WEBPACK_IMPORTED_MODULE_15__["StoriesComponent"],
+            _tasks_tasks_component__WEBPACK_IMPORTED_MODULE_16__["TasksComponent"],
+            _project_project_component__WEBPACK_IMPORTED_MODULE_17__["ProjectComponent"],
+            _story_story_component__WEBPACK_IMPORTED_MODULE_18__["StoryComponent"],
+            _task_task_component__WEBPACK_IMPORTED_MODULE_19__["TaskComponent"],
+            _reports_reports_component__WEBPACK_IMPORTED_MODULE_20__["ReportsComponent"],
+            _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__["FeatureComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
-            primeng_button__WEBPACK_IMPORTED_MODULE_3__["ButtonModule"]
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
+            primeng_button__WEBPACK_IMPORTED_MODULE_3__["ButtonModule"],
+            primeng_tabview__WEBPACK_IMPORTED_MODULE_4__["TabViewModule"]
         ],
-        providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_9__["UserRegistrationService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClient"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+        providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_10__["UserRegistrationService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
 
