@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /backend/agilepro/bin
+/backend/agilepro/gradle.properties
 # Only exists if Bazel was run
 /bazel-out
 
