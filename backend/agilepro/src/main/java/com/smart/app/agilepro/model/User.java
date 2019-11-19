@@ -15,7 +15,7 @@ public class User {
     @SequenceGenerator(
             name = "user_id_generator",
             sequenceName = "user_id_sequence",
-            initialValue = 1000
+            initialValue = 1
     )
     private Long id;
 
@@ -27,6 +27,10 @@ public class User {
     @Size(min = 3, max = 100)
     private String password;
 
+    private String company;
+    private String phone;
+    private String country;
+    
     public String getEmailId() {
         return emailId;
     }
@@ -41,6 +45,30 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
     
 }

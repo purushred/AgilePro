@@ -7,13 +7,14 @@ import { UserRegistrationService } from '../user-registration.service';
   styleUrls: ['./user-register.component.css']
 })
 export class UserRegisterComponent implements OnInit {
-
+  public emailId: string;
+  public password: string;
   constructor(private userRegistrationService: UserRegistrationService) { }
 
   ngOnInit() {
   }
-  registerUser(email, password) {
-    this.userRegistrationService.registerUser(email, password);
-    console.log('Register user clicked', email, password);
+  registerUser() {
+    this.userRegistrationService.registerUser(this.emailId, this.password);
+    console.log('Register user clicked', this.emailId, this.password);
   }
 }

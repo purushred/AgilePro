@@ -13,7 +13,7 @@ import { TaskComponent } from './task/task.component';
 
 const routes: Routes = [
   {
-    path: 'user/login',
+    path: 'login',
     component: UserLoginComponent
   },
   {

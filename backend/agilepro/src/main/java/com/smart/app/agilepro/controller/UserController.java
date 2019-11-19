@@ -11,10 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/rest")
-public class HelloWorldController {
+public class UserController {
 
     @Autowired
     public UserServiceImpl userService;
+
+    @PostMapping(path = "/login", consumes = "application/json", produces = "application/json")
+    public User loginUser(@RequestBody User user) {
+        System.out.println("Login Request"+user.getEmailId()+":"+user.getPassword());
+        return userService.loginUser(user);
+    }
 
     @PostMapping(path = "/registration", consumes = "application/json", produces = "application/json")
     public boolean registerUser(@RequestBody User user) {

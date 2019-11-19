@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-5\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"user/login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-5\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>dashboard works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Tab1</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 1</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 1</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 2</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 2</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Tab2</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            Tab2 content\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"card\">\n    <div class=\"card-body\">\n        <h5 class=\"card-title\">User Profile</h5>\n        <div class=\"card-text\">\n            <div class=\"form-group\">\n                <label for=\"companyName\">Company</label>\n                <input id=\"companyName\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"phoneNumber\">Phone</label>\n                <input id=\"phoneNumber\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"country\">Country</label>\n                <input id=\"country\" class=\"form-control\" type=\"text\" name=\"\">\n            </div>\n            <div class=\"form-group\">\n                <input class=\"btn btn-primary\" routerLink=\"/projects\" type=\"button\" value=\"Save\">\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <div class=\"card\">\n        <div class=\"card-block\">\n            <h3 class=\"card-title\">User Profile</h3>\n            <div class=\"card-text\">\n                <form clrForm>\n                    <clr-input-container>\n                        <label>Company</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"company\" name=\"company\" required />\n                        <clr-control-error>Company is required!</clr-control-error>\n                    </clr-input-container>\n                    <clr-input-container>\n                        <label>Phone</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" required />\n                        <clr-control-error>Phone is required!</clr-control-error>\n                    </clr-input-container>\n                    <clr-input-container>\n                        <label>Country</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"country\" name=\"country\" required />\n                        <clr-control-error>Country is required!</clr-control-error>\n                    </clr-input-container>\n                </form>\n            </div>\n        </div>\n        <div class=\"card-footer\">\n            <button class=\"btn\" routerLink=\"/projects\" type=\"button\" (click)=\"registerUser()\">Save</button>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Username</label>\n                    <input type=\"text\" name=\"username\" clrInput placeholder=\"Username\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/dashboard\" class=\"btn btn-primary\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Email</label>\n                    <input type=\"text\" [(ngModel)]=\"user.emailId\" name=\"emailId\" clrInput placeholder=\"Email\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/login\" class=\"btn btn-primary\" (click)=\"loginUser()\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"offset-sm-4 col-sm-4\" style=\"margin-top: 50px;\">\n    <div class=\"panel panel-primary\">\n        <div class=\"panel-heading\" style=\"margin-bottom: 30px;\">\n            <h2>User Registration</h2>\n        </div>\n        <div class=\"panel-body\">\n            <div class=\"form-group\">\n                <label for=\"email\">Email</label>\n                <input id=\"email\" class=\"form-control\" type=\"email\" formControlName=\"emailid\" #emailid>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Password</label>\n                <input id=\"password\" class=\"form-control\" type=\"password\" formControlName=\"password\" #password>\n            </div>\n            <div class=\"form-group\">\n                <button routerLink=\"/profile\" class=\"btn btn-success\" \n                (click)=\"registerUser(emailid.value, password.value)\">Register</button>\n            </div>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <form clrForm>\n        <clr-input-container>\n            <label>Email</label>\n            <input clrInput type=\"email\" [(ngModel)]=\"emailId\" name=\"emailId\" required/>\n            <clr-control-error>Email is required!</clr-control-error>\n        </clr-input-container>\n        <clr-input-container>\n            <label>Password</label>\n            <input clrInput type=\"password\" [(ngModel)]=\"password\" name=\"password\" required/>\n            <clr-control-error>Password is required!</clr-control-error>\n        </clr-input-container>\n        <button class=\"btn\" routerLink=\"/profile\" type=\"button\" (click)=\"registerUser()\">Register</button>\n    </form>\n</div>");
 
 /***/ }),
 
@@ -470,7 +470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: 'user/login',
+        path: 'login',
         component: _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_2__["UserLoginComponent"]
     },
     {
@@ -599,6 +599,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/fesm2015/clr-angular.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+
 
 
 
@@ -650,7 +652,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             primeng_button__WEBPACK_IMPORTED_MODULE_3__["ButtonModule"],
             primeng_tabview__WEBPACK_IMPORTED_MODULE_4__["TabViewModule"],
             _clr_angular__WEBPACK_IMPORTED_MODULE_22__["ClarityModule"],
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__["BrowserAnimationsModule"]
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__["BrowserAnimationsModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"],
         ],
         providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_10__["UserRegistrationService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
@@ -1170,13 +1173,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserLoginComponent", function() { return UserLoginComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user */ "./src/app/user.ts");
+
+
 
 
 let UserLoginComponent = class UserLoginComponent {
-    constructor() { }
+    constructor(userRegistrationService) {
+        this.userRegistrationService = userRegistrationService;
+        this.user = new _user__WEBPACK_IMPORTED_MODULE_3__["User"]();
+    }
     ngOnInit() {
     }
+    loginUser() {
+        this.userRegistrationService.loginUser(this.user);
+    }
 };
+UserLoginComponent.ctorParameters = () => [
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
+];
 UserLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-user-login',
@@ -1224,9 +1240,9 @@ let UserRegisterComponent = class UserRegisterComponent {
     }
     ngOnInit() {
     }
-    registerUser(email, password) {
-        this.userRegistrationService.registerUser(email, password);
-        console.log('Register user clicked', email, password);
+    registerUser() {
+        this.userRegistrationService.registerUser(this.emailId, this.password);
+        console.log('Register user clicked', this.emailId, this.password);
     }
 };
 UserRegisterComponent.ctorParameters = () => [
@@ -1270,6 +1286,7 @@ let UserRegistrationService = class UserRegistrationService {
         this.router = router;
         this.location = location;
         this.uri = '/rest/registration';
+        this.loginUri = '/rest/login';
     }
     registerUser(emailId, password) {
         const obj = {
@@ -1280,6 +1297,16 @@ let UserRegistrationService = class UserRegistrationService {
             console.log('Success response', res);
         }, (error) => {
             console.log('Error response', error);
+        });
+    }
+    loginUser(user) {
+        this.http.post(`${window.location.origin + this.loginUri}`, user).subscribe((res) => {
+            if (res) {
+                this.router.navigate(['/dashboard']);
+            }
+            console.log('Login Success response', res);
+        }, (error) => {
+            console.log('Login Error response', error);
         });
     }
 };
@@ -1294,6 +1321,24 @@ UserRegistrationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], UserRegistrationService);
 
+
+
+/***/ }),
+
+/***/ "./src/app/user.ts":
+/*!*************************!*\
+  !*** ./src/app/user.ts ***!
+  \*************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class User {
+}
 
 
 /***/ }),

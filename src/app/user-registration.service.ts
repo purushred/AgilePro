@@ -8,6 +8,7 @@ import { Location, PlatformLocation } from '@angular/common';
 })
 export class UserRegistrationService {
   uri = '/rest/registration';
+  loginUri = '/rest/login';
   constructor(private http: HttpClient, private router: Router, private location: PlatformLocation) { }
 
   registerUser(emailId, password) {
@@ -19,6 +20,17 @@ export class UserRegistrationService {
       console.log('Success response', res);
     }, (error) => {
       console.log('Error response', error);
+    });
+  }
+
+  loginUser(user) {
+    this.http.post(`${window.location.origin + this.loginUri}`, user).subscribe((res) => {
+      if (res) {
+        this.router.navigate(['/dashboard']);
+      }
+      console.log('Login Success response', res);
+    }, (error) => {
+      console.log('Login Error response', error);
     });
   }
 }

@@ -6,6 +6,16 @@
             "request": "launch",
             "mainClass": "com.smart.app.agilepro.DemoApplication",
             "projectName": "agilepro"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MainApplication<agilepro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.smart.app.agilepro.MainApplication",
+            "projectName": "agilepro",
+            "args": ""
         }
     ]
 }

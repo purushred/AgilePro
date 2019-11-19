@@ -1,22 +1,29 @@
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">User Profile</h5>
-        <div class="card-text">
-            <div class="form-group">
-                <label for="companyName">Company</label>
-                <input id="companyName" class="form-control" type="text" name="">
+<div class="clr-offset-4 clr-col-6">
+    <div class="card">
+        <div class="card-block">
+            <h3 class="card-title">User Profile</h3>
+            <div class="card-text">
+                <form clrForm>
+                    <clr-input-container>
+                        <label>Company</label>
+                        <input clrInput type="text" [(ngModel)]="company" name="company" required />
+                        <clr-control-error>Company is required!</clr-control-error>
+                    </clr-input-container>
+                    <clr-input-container>
+                        <label>Phone</label>
+                        <input clrInput type="text" [(ngModel)]="phone" name="phone" required />
+                        <clr-control-error>Phone is required!</clr-control-error>
+                    </clr-input-container>
+                    <clr-input-container>
+                        <label>Country</label>
+                        <input clrInput type="text" [(ngModel)]="country" name="country" required />
+                        <clr-control-error>Country is required!</clr-control-error>
+                    </clr-input-container>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="phoneNumber">Phone</label>
-                <input id="phoneNumber" class="form-control" type="text" name="">
-            </div>
-            <div class="form-group">
-                <label for="country">Country</label>
-                <input id="country" class="form-control" type="text" name="">
-            </div>
-            <div class="form-group">
-                <input class="btn btn-primary" routerLink="/projects" type="button" value="Save">
-            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn" routerLink="/projects" type="button" (click)="registerUser()">Save</button>
         </div>
     </div>
 </div>

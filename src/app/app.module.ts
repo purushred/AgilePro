@@ -22,6 +22,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { FeatureComponent } from './feature/feature.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     TabViewModule,
     ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [UserRegistrationService, HttpClient],
   bootstrap: [AppComponent]
