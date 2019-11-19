@@ -1,22 +1,23 @@
-<div class="row" style="margin-top: 200px;">
-    <div class="offset-sm-4 col-sm-4">
-        <form>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="pwd">Password</label>
-                <input type="password" class="form-control" id="pwd">
+<div class="login-wrapper">
+        <form class="login">
+            <section class="title">
+                <h3 class="welcome">Login</h3>
+            </section>
+            <div class="login-group">
+                <clr-input-container>
+                    <label class="clr-sr-only">Username</label>
+                    <input type="text" name="username" clrInput placeholder="Username" />
+                </clr-input-container>
+                <clr-password-container>
+                    <label class="clr-sr-only">Password</label>
+                    <input type="password" name="password" clrPassword placeholder="Password" />
+                </clr-password-container>
+                <clr-checkbox-wrapper>
+                    <label>Remember me</label>
+                    <input type="checkbox" name="rememberMe" clrCheckbox />
+                </clr-checkbox-wrapper>
+                <a routerLink="/dashboard" class="btn btn-primary">Login</a>
+                <a routerLink="/register" class="signup">Register</a>
             </div>
         </form>
     </div>
-    <div class="offset-sm-4 col-sm-4">
-        <a routerLink="/dashboard" class="btn btn-primary offset-sm-2">
-            Login
-        </a>
-        <a routerLink="/register" class="btn btn-success offset-sm-1">
-            Register
-        </a>
-    </div>
-</div>

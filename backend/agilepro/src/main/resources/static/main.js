@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\">\n  <nav class=\"navbar navbar-expand-lg navbar-light bg-light rounded\">\n    <a class=\"navbar-brand\" href=\"#\">AgilePro</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample09\"\n      aria-controls=\"navbarsExample09\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample09\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"user/login\" class=\"nav-link\" routerLinkActive=\"active\">\n            Login\n          </a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-5\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"user/login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\" style=\"margin-top: 200px;\">\n    <div class=\"offset-sm-4 col-sm-4\">\n        <form>\n            <div class=\"form-group\">\n                <label for=\"email\">Email</label>\n                <input type=\"email\" class=\"form-control\" id=\"email\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"pwd\">Password</label>\n                <input type=\"password\" class=\"form-control\" id=\"pwd\">\n            </div>\n        </form>\n    </div>\n    <div class=\"offset-sm-4 col-sm-4\">\n        <a routerLink=\"/dashboard\" class=\"btn btn-primary offset-sm-2\">\n            Login\n        </a>\n        <a routerLink=\"/register\" class=\"btn btn-success offset-sm-1\">\n            Register\n        </a>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Username</label>\n                    <input type=\"text\" name=\"username\" clrInput placeholder=\"Username\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/dashboard\" class=\"btn btn-primary\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
 
 /***/ }),
 
@@ -597,6 +597,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
 /* harmony import */ var _reports_reports_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./reports/reports.component */ "./src/app/reports/reports.component.ts");
 /* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/fesm2015/clr-angular.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+
+
 
 
 
@@ -644,7 +648,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
             primeng_button__WEBPACK_IMPORTED_MODULE_3__["ButtonModule"],
-            primeng_tabview__WEBPACK_IMPORTED_MODULE_4__["TabViewModule"]
+            primeng_tabview__WEBPACK_IMPORTED_MODULE_4__["TabViewModule"],
+            _clr_angular__WEBPACK_IMPORTED_MODULE_22__["ClarityModule"],
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__["BrowserAnimationsModule"]
         ],
         providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_10__["UserRegistrationService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]

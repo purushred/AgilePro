@@ -20,6 +20,8 @@ import { StoryComponent } from './story/story.component';
 import { TaskComponent } from './task/task.component';
 import { ReportsComponent } from './reports/reports.component';
 import { FeatureComponent } from './feature/feature.component';
+import { ClarityModule } from '@clr/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { FeatureComponent } from './feature/feature.component';
     AppRoutingModule,
     HttpClientModule,
     ButtonModule,
-    TabViewModule
+    TabViewModule,
+    ClarityModule,
+    BrowserAnimationsModule
   ],
   providers: [UserRegistrationService, HttpClient],
   bootstrap: [AppComponent]

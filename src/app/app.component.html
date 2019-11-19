@@ -1,21 +1,21 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-    <a class="navbar-brand" href="#">AgilePro</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
-      aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExample09">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a routerLink="user/login" class="nav-link" routerLinkActive="active">
-            Login
-          </a>
-        </li>
-      </ul>
+<div class="main-container">
+    <header class="header header-5">
+        <div class="branding">
+          Agile Pro
+        </div>
+        <div class="header-nav">
+            <a href="javascript://" class="active nav-link nav-text">Home</a>
+        </div>
+        <div class="header-actions">
+            <a routerLink="user/login" routerLinkActive="active" class="nav-link nav-icon-text">
+                <clr-icon shape="user"></clr-icon>
+                <span class="nav-text">Login</span>
+            </a>
+        </div>
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+                <router-outlet></router-outlet>
+        </div>
     </div>
-  </nav>
-</div>
-<div class="container">
-  <router-outlet></router-outlet>
 </div>
