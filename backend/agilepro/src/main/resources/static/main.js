@@ -1304,8 +1304,11 @@ let UserRegistrationService = class UserRegistrationService {
             if (res) {
                 this.router.navigate(['/dashboard']);
             }
-            console.log('Login Success response', res);
+            else {
+                console.log('Invalid user credentials');
+            }
         }, (error) => {
+            console.log('Unable to login, Please try again.');
             console.log('Login Error response', error);
         });
     }

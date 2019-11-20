@@ -27,9 +27,11 @@ export class UserRegistrationService {
     this.http.post(`${window.location.origin + this.loginUri}`, user).subscribe((res) => {
       if (res) {
         this.router.navigate(['/dashboard']);
+      } else {
+        console.log('Invalid user credentials');
       }
-      console.log('Login Success response', res);
     }, (error) => {
+      console.log('Unable to login, Please try again.');
       console.log('Login Error response', error);
     });
   }

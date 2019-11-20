@@ -22,12 +22,9 @@ public class UserServiceImpl {
     }
 
     public User loginUser(final User user) {
-        User usr = userDaoImpl.findAll().stream()
+        return userDaoImpl.findAll().stream()
                 .filter(u -> u.getEmailId().equals(user.getEmailId()) 
         && u.getPassword().equals(user.getPassword())).findAny().orElse(null);
-        System.out.println("USER:"+user);
-        System.out.println("USER OBJ:"+usr.getEmailId()+":"+usr.getPassword());
-        return usr;
     }
     public void saveUser(final User user) {
         userDaoImpl.save(user);
