@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Tab1</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 1</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 1</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 2</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 2</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Tab2</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            Tab2 content\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Dashboard</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\" *ngFor=\"let project of projects\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">\n                                <a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                            </h3>\n                            <p class=\"card-text\">\n                                {{project.description}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Progress</button>\n        <clr-tab-content>\n            Show current progress here.\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
 
 /***/ }),
 
@@ -689,13 +689,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
+
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor() { }
+    constructor(route, router, userService) {
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.projects = new Array();
+    }
     ngOnInit() {
+        this.userId = this.route.snapshot
+            .queryParamMap.get('userId');
+        // .pipe(map(params => params.get('userId') || 'None'));
+        // const projectId = this.route.snapshot.paramMap.get('id');
+        console.log('Project Id', this.userId);
+        this.userService.getProjects(100).subscribe((res) => {
+            if (res) {
+                this.projects = res;
+            }
+            else {
+                console.log('Could not get projects');
+            }
+        }, (error) => {
+            console.log('Unable to get projects, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+DashboardComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
 DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-dashboard',
@@ -1312,22 +1342,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
 /* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user */ "./src/app/user.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 
 let UserLoginComponent = class UserLoginComponent {
-    constructor(userRegistrationService) {
+    constructor(router, userRegistrationService) {
+        this.router = router;
         this.userRegistrationService = userRegistrationService;
         this.user = new _user__WEBPACK_IMPORTED_MODULE_3__["User"]();
     }
     ngOnInit() {
     }
     loginUser() {
-        this.userRegistrationService.loginUser(this.user);
+        this.userRegistrationService.loginUser(this.user).subscribe((res) => {
+            if (res) {
+                const navigationExtras = {
+                    queryParams: { userId: res.id }
+                };
+                this.router.navigate(['/dashboard/'], navigationExtras);
+            }
+            else {
+                console.log('Invalid user credentials');
+            }
+        }, (error) => {
+            console.log('Unable to login, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
 UserLoginComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
     { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
 ];
 UserLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1441,17 +1488,7 @@ let UserRegistrationService = class UserRegistrationService {
         });
     }
     loginUser(user) {
-        this.http.post(`${window.location.origin + this.loginUri}`, user).subscribe((res) => {
-            if (res) {
-                this.router.navigate(['/dashboard']);
-            }
-            else {
-                console.log('Invalid user credentials');
-            }
-        }, (error) => {
-            console.log('Unable to login, Please try again.');
-            console.log('Login Error response', error);
-        });
+        return this.http.post(`${window.location.origin + this.loginUri}`, user);
     }
     getProjects(userId) {
         return this.http.get(`${window.location.origin + this.projectsUri + userId}`);

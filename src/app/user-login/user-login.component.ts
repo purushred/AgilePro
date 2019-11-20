@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserRegistrationService } from '../user-registration.service';
 import { User } from '../user';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -9,11 +10,23 @@ import { User } from '../user';
 })
 export class UserLoginComponent implements OnInit {
   user: User = new User();
-  constructor(private userRegistrationService: UserRegistrationService) { }
+  constructor(private router: Router, private userRegistrationService: UserRegistrationService) { }
 
   ngOnInit() {
   }
   public loginUser() {
-    this.userRegistrationService.loginUser(this.user);
+    this.userRegistrationService.loginUser(this.user).subscribe((res) => {
+      if (res) {
+        const navigationExtras: NavigationExtras = {
+          queryParams: {userId: res.id}
+        };
+        this.router.navigate(['/dashboard/'], navigationExtras);
+      } else {
+        console.log('Invalid user credentials');
+      }
+    }, (error) => {
+      console.log('Unable to login, Please try again.');
+      console.log('Login Error response', error);
+    });
   }
 }

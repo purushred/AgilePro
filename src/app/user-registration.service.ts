@@ -7,6 +7,7 @@ import { Project } from './project';
 import { Feature } from './feature';
 import { Story } from './story';
 import { Task } from './task';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -33,16 +34,7 @@ export class UserRegistrationService {
   }
 
   loginUser(user) {
-    this.http.post(`${window.location.origin + this.loginUri}`, user).subscribe((res) => {
-      if (res) {
-        this.router.navigate(['/dashboard']);
-      } else {
-        console.log('Invalid user credentials');
-      }
-    }, (error) => {
-      console.log('Unable to login, Please try again.');
-      console.log('Login Error response', error);
-    });
+    return this.http.post<User>(`${window.location.origin + this.loginUri}`, user);
   }
 
   getProjects(userId) {
