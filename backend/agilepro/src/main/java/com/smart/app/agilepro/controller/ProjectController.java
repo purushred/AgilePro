@@ -1,11 +1,14 @@
 package com.smart.app.agilepro.controller;
 
+import java.util.List;
+
 import com.smart.app.agilepro.model.Project;
 import com.smart.app.agilepro.service.ProjectServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,34 +17,35 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * ProjectController
  */
-@RestController("/rest")
+
+@RestController
 public class ProjectController {
 
     @Autowired
     public ProjectServiceImpl projectServiceImpl;
     
-    @PostMapping(name="/project", consumes="application/json")
+    @PostMapping(path="/project", consumes="application/json")
     public void createProject(@RequestBody Project project){
         projectServiceImpl.createProject(project);
     }
 
-    @PutMapping(name="/project", consumes="application/json")
+    @PutMapping(path="/project", consumes="application/json")
     public void updateProject(@RequestBody Project project){
         projectServiceImpl.updateProject(project);
     }
 
-    @DeleteMapping(name="/project", consumes="application/json")
-    public void deleteProject(@RequestBody Project project){
-        projectServiceImpl.deleteProject(project);
+    @DeleteMapping(path="/project/{id}")
+    public void deleteProject(@PathVariable Long id){
+        projectServiceImpl.deleteProject(id);
     }
 
-    @GetMapping(name="/project", consumes="application/json")
-    public Project getProject(@RequestBody Long id){
+    @GetMapping(path="/project/{id}")
+    public Project getProject(@PathVariable Long id){
         return projectServiceImpl.getProject(id);
     }
 
-    @GetMapping(name="/project", consumes="application/json")
-    public Project getProjects(@RequestBody Long userId){
-        return projectServiceImpl.getProject(userId);
+    @GetMapping(path="/projects/{id}")
+    public List<Project> getProjects(@PathVariable Long id){
+        return projectServiceImpl.findProjectsByUserId(id);
     }
 }

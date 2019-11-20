@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserRegistrationService } from '../user-registration.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService:UserRegistrationService) { }
 
   ngOnInit() {
   }
 
+  getProjects() {
+    console.log("Projects:",this.userService.getProjects(100));
+  }
 }

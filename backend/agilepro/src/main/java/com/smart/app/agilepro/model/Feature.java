@@ -20,6 +20,7 @@ public class Feature {
     private Long featureId;
     private String name;
     private String description;
+    private String projectId;
 
     public Long getFeatureId() {
         return featureId;
@@ -43,6 +44,14 @@ public class Feature {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(String projectId) {
+        this.projectId = projectId;
     }
     
 }

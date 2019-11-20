@@ -29,7 +29,7 @@ module.exports = [[module.i, "/*!\n * Copyright (c) 2016-2019 VMware, Inc. All R
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbiJdfQ== */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RSIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cclxuIl19 */", '', '']]
 
 /***/ }),
 
@@ -414,9 +414,9 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rajitha/workspace/AgilePro/node_modules/@clr/icons/clr-icons.min.css */"./node_modules/@clr/icons/clr-icons.min.css");
-__webpack_require__(/*! /Users/rajitha/workspace/AgilePro/node_modules/@clr/ui/clr-ui.min.css */"./node_modules/@clr/ui/clr-ui.min.css");
-module.exports = __webpack_require__(/*! /Users/rajitha/workspace/AgilePro/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\workspace\AgilePro\node_modules\@clr\icons\clr-icons.min.css */"./node_modules/@clr/icons/clr-icons.min.css");
+__webpack_require__(/*! C:\workspace\AgilePro\node_modules\@clr\ui\clr-ui.min.css */"./node_modules/@clr/ui/clr-ui.min.css");
+module.exports = __webpack_require__(/*! C:\workspace\AgilePro\src\styles.css */"./src/styles.css");
 
 
 /***/ })

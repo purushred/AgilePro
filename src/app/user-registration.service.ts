@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Location, PlatformLocation } from '@angular/common';
+import { state } from '@angular/animations';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { Location, PlatformLocation } from '@angular/common';
 export class UserRegistrationService {
   uri = '/rest/registration';
   loginUri = '/rest/login';
+  projectsUri = '/projects/';
   constructor(private http: HttpClient, private router: Router, private location: PlatformLocation) { }
 
   registerUser(emailId, password) {
@@ -20,6 +22,19 @@ export class UserRegistrationService {
       console.log('Success response', res);
     }, (error) => {
       console.log('Error response', error);
+    });
+  }
+
+  getProjects(userId) {
+    this.http.get(`${window.location.origin + this.projectsUri + userId}`).subscribe((res) => {
+      if (res) {
+        this.router.navigate(['/projects'], {state : {data:res}});
+      } else {
+        console.log('Could not get projects');
+      }
+    }, (error) => {
+      console.log('Unable to get projects, Please try again.');
+      console.log('Login Error response', error);
     });
   }
 

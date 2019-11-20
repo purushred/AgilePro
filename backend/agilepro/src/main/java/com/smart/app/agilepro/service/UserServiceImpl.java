@@ -1,8 +1,5 @@
 package com.smart.app.agilepro.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import javax.annotation.Resource;
 
 import com.smart.app.agilepro.dao.UserDaoImpl;

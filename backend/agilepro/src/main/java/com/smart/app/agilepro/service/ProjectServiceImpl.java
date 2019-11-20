@@ -1,5 +1,7 @@
 package com.smart.app.agilepro.service;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import com.smart.app.agilepro.dao.ProjectDaoImpl;
@@ -19,11 +21,15 @@ public class ProjectServiceImpl {
     public void updateProject(final Project project) {
         projecDaoImpl.save(project);
     }
-    public void deleteProject(final Project project) {
-        projecDaoImpl.delete(project);
+    public void deleteProject(final Long id) {
+        projecDaoImpl.delete(projecDaoImpl.getOne(id));
     }
 
     public Project getProject(Long id) {
-        return projecDaoImpl.getOne(id);
+        return projecDaoImpl.findAll().get(0);
+    }
+
+    public List<Project> findProjectsByUserId(Long id) {
+        return projecDaoImpl.findProjectsByUserId(id);
     }
 }

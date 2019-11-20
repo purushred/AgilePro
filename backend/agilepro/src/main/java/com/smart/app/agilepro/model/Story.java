@@ -20,7 +20,7 @@ public class Story {
     private Long storyId;
     private String name;
     private String description;
-    private Long projectId;
+    private Long featureId;
 
     public Long getStoryId() {
         return storyId;
@@ -45,12 +45,12 @@ public class Story {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public Long getProjectId() {
-        return projectId;
+    
+    public Long getFeatureId() {
+        return featureId;
     }
 
-    public void setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public void setFeatureId(Long featureId) {
+        this.featureId = featureId;
     }
 }
