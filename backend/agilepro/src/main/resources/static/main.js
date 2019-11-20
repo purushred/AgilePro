@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\r\n    <header class=\"header header-5\">\r\n        <div class=\"branding\">\r\n          Agile Pro\r\n        </div>\r\n        <div class=\"header-nav\">\r\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\r\n        </div>\r\n        <div class=\"header-actions\">\r\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\r\n                <clr-icon shape=\"user\"></clr-icon>\r\n                <span class=\"nav-text\">Login</span>\r\n            </a>\r\n        </div>\r\n    </header>\r\n    <div class=\"content-container\">\r\n        <div class=\"content-area\">\r\n                <router-outlet></router-outlet>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-5\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\r\n    <clr-tab>\r\n        <button clrTabLink id=\"link1\">Tab1</button>\r\n        <clr-tab-content id=\"content1\" *clrIfActive>\r\n            <div class=\"clr-row\">\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 1</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 1</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 2</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 2</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 3</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 3</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 3</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"clr-col-lg-4 clr-col-12\">\r\n                    <div class=\"card\">\r\n                        <div class=\"card-block\">\r\n                            <h3 class=\"card-title\">Card 3</h3>\r\n                            <p class=\"card-text\">\r\n                                ...\r\n                            </p>\r\n                        </div>\r\n                        <div class=\"card-footer\">\r\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </clr-tab-content>\r\n    </clr-tab>\r\n    <clr-tab>\r\n        <button clrTabLink>Tab2</button>\r\n        <clr-tab-content *clrIfActive=\"true\">\r\n            Tab2 content\r\n        </clr-tab-content>\r\n    </clr-tab>\r\n</clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Tab1</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 1</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 1</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 2</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 2</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Card 3</h3>\n                            <p class=\"card-text\">\n                                ...\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Action 3</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Tab2</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            Tab2 content\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\r\n        <p-tabPanel header=\"Feature Description\">\r\n           Feature Description\r\n        </p-tabPanel>\r\n        <p-tabPanel header=\"Stories\">\r\n                <table class=\"table table-light\">\r\n                        <thead class=\"thead-dark\">\r\n                            <tr>\r\n                                <th>#</th>\r\n                                <th>Story</th>\r\n                                <th>Description</th>\r\n                            </tr>\r\n                        </thead>\r\n                        <tbody>\r\n                            <tr>\r\n                                <td>1</td>\r\n                                <td> <a routerLink='/story' >Story1</a></td>\r\n                                <td>Its about new story1</td>\r\n                            </tr>\r\n                            <tr>\r\n                                    <td>2</td>\r\n                                    <td><a routerLink='/story'>Story2</a></td>\r\n                                    <td> Its about new story2</td>\r\n                                </tr>\r\n                        </tbody>\r\n                    </table>\r\n        </p-tabPanel>\r\n    </p-tabView>\r\n<div class=\"offset-sm-3 col-sm-6\">\r\n    \r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n        <clr-tab>\n            <button clrTabLink id=\"link1\">About Feature</button>\n            <clr-tab-content id=\"content1\" *clrIfActive>\n                <div class=\"clr-row\">\n                    <div class=\"clr-col-lg-4 clr-col-12\">\n                        <div class=\"card\">\n                            <div class=\"card-block\">\n                                <h3 class=\"card-title\">Description</h3>\n                                <p class=\"card-text\">\n                                    Its about cut through feature.\n                                </p>\n                            </div>\n                            <div class=\"card-footer\">\n                                <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </clr-tab-content>\n        </clr-tab>\n        <clr-tab>\n            <button clrTabLink>User Stories</button>\n            <clr-tab-content *clrIfActive=\"true\">\n                    <table class=\"table table-light\">\n                            <thead class=\"thead-dark\">\n                                <tr>\n                                    <th>#</th>\n                                    <th>Story</th>\n                                    <th>Description</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let story of stories\">\n                                    <td>{{story.storyId}}</td>\n                                    <td><a routerLink='/story/{{story.storyId}}'>{{story.name}}</a></td>\n                                    <td>{{story.description}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </clr-tab-content>\n        </clr-tab>\n    </clr-tabs>");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>features works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>features works!</p>\n");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\r\n    <div class=\"card\">\r\n        <div class=\"card-block\">\r\n            <h3 class=\"card-title\">User Profile</h3>\r\n            <div class=\"card-text\">\r\n                <form clrForm>\r\n                    <clr-input-container>\r\n                        <label>Company</label>\r\n                        <input clrInput type=\"text\" [(ngModel)]=\"company\" name=\"company\" required />\r\n                        <clr-control-error>Company is required!</clr-control-error>\r\n                    </clr-input-container>\r\n                    <clr-input-container>\r\n                        <label>Phone</label>\r\n                        <input clrInput type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" required />\r\n                        <clr-control-error>Phone is required!</clr-control-error>\r\n                    </clr-input-container>\r\n                    <clr-input-container>\r\n                        <label>Country</label>\r\n                        <input clrInput type=\"text\" [(ngModel)]=\"country\" name=\"country\" required />\r\n                        <clr-control-error>Country is required!</clr-control-error>\r\n                    </clr-input-container>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div class=\"card-footer\">\r\n            <button class=\"btn\" routerLink=\"/projects\" type=\"button\" (click)=\"getProjects()\">Save</button>\r\n        </div>\r\n    </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <div class=\"card\">\n        <div class=\"card-block\">\n            <h3 class=\"card-title\">User Profile</h3>\n            <div class=\"card-text\">\n                <form clrForm>\n                    <clr-input-container>\n                        <label>Company</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"company\" name=\"company\" required />\n                        <clr-control-error>Company is required!</clr-control-error>\n                    </clr-input-container>\n                    <clr-input-container>\n                        <label>Phone</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" required />\n                        <clr-control-error>Phone is required!</clr-control-error>\n                    </clr-input-container>\n                    <clr-input-container>\n                        <label>Country</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"country\" name=\"country\" required />\n                        <clr-control-error>Country is required!</clr-control-error>\n                    </clr-input-container>\n                </form>\n            </div>\n        </div>\n        <div class=\"card-footer\">\n            <button class=\"btn\" routerLink=\"/projects\" type=\"button\" (click)=\"getProjects()\">Save</button>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\r\n    <p-tabPanel header=\"Project Description\">\r\n        Project Description\r\n    </p-tabPanel>\r\n    <p-tabPanel header=\"Features\">\r\n        <table class=\"table table-light\">\r\n            <thead class=\"thead-dark\">\r\n                <tr>\r\n                    <th>#</th>\r\n                    <th>Feature</th>\r\n                    <th>Description</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                \r\n                <tr>\r\n                    <td>1</td>\r\n                    <td> <a routerLink='/feature'>Feature1</a></td>\r\n                    <td>Its about new feature1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td>2</td>\r\n                    <td><a routerLink='/feature'>Feature2</a></td>\r\n                    <td> Its about new feature2</td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </p-tabPanel>\r\n</p-tabView>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Project</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                OneView is a HPE project for its Synergy Hardware.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Features</button>\n        <clr-tab-content *clrIfActive=\"true\">\n                <table class=\"table table-light\">\n                        <thead class=\"thead-dark\">\n                            <tr>\n                                <th>#</th>\n                                <th>Feature</th>\n                                <th>Description</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let feature of features\">\n                                <td>{{feature.featureId}}</td>\n                                <td><a routerLink='/feature/{{feature.featureId}}'>{{feature.name}}</a></td>\n                                <td>{{feature.description}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-light\">\r\n    <thead class=\"thead-dark\">\r\n        <tr>\r\n            <th>#</th>\r\n            <th>Project</th>\r\n            <th>Description</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let project of projects\">\r\n            <td>{{project.projectId}}</td>\r\n            <td><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a></td>\r\n            <td>{{project.description}}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>");
+/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-light\">\n    <thead class=\"thead-dark\">\n        <tr>\n            <th>#</th>\n            <th>Project</th>\n            <th>Description</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let project of projects\">\n            <td>{{project.projectId}}</td>\n            <td><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a></td>\n            <td>{{project.description}}</td>\n        </tr>\n    </tbody>\n</table>");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>reports works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>reports works!</p>\n");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>stories works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>stories works!</p>\n");
 
 /***/ }),
 
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p-tabView>\r\n    <p-tabPanel header=\"Story Description\">\r\n        Story Description\r\n    </p-tabPanel>\r\n    <p-tabPanel header=\"Tasks\">\r\n        <table class=\"table table-light\">\r\n            <thead class=\"thead-dark\">\r\n                <tr>\r\n                    <th>#</th>\r\n                    <th>Task</th>\r\n                    <th>Description</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr>\r\n                    <td>1</td>\r\n                    <td> <a routerLink='/task'>Task1</a></td>\r\n                    <td>Its about new Task1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td>2</td>\r\n                    <td><a routerLink='/task'>Task2</a></td>\r\n                    <td> Its about new task2</td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </p-tabPanel>\r\n</p-tabView>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n        <clr-tab>\n            <button clrTabLink id=\"link1\">About Story</button>\n            <clr-tab-content id=\"content1\" *clrIfActive>\n                <div class=\"clr-row\">\n                    <div class=\"clr-col-lg-4 clr-col-12\">\n                        <div class=\"card\">\n                            <div class=\"card-block\">\n                                <h3 class=\"card-title\">Description</h3>\n                                <p class=\"card-text\">\n                                    Its about cut through story.\n                                </p>\n                            </div>\n                            <div class=\"card-footer\">\n                                <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </clr-tab-content>\n        </clr-tab>\n        <clr-tab>\n            <button clrTabLink>Tasks</button>\n            <clr-tab-content *clrIfActive=\"true\">\n                    <table class=\"table table-light\">\n                            <thead class=\"thead-dark\">\n                                <tr>\n                                    <th>#</th>\n                                    <th>Task</th>\n                                    <th>Description</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let task of tasks\">\n                                    <td>{{task.taskId}}</td>\n                                    <td><a routerLink='/task/{{task.taskId}}'>{{task.name}}</a></td>\n                                    <td>{{task.description}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </clr-tab-content>\n        </clr-tab>\n    </clr-tabs>");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>task works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>task works!</p>\n");
 
 /***/ }),
 
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>tasks works!</p>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<p>tasks works!</p>\n");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\r\n        <form class=\"login\">\r\n            <section class=\"title\">\r\n                <h3 class=\"welcome\">Login</h3>\r\n            </section>\r\n            <div class=\"login-group\">\r\n                <clr-input-container>\r\n                    <label class=\"clr-sr-only\">Email</label>\r\n                    <input type=\"text\" [(ngModel)]=\"user.emailId\" name=\"emailId\" clrInput placeholder=\"Email\" />\r\n                </clr-input-container>\r\n                <clr-password-container>\r\n                    <label class=\"clr-sr-only\">Password</label>\r\n                    <input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" clrPassword placeholder=\"Password\" />\r\n                </clr-password-container>\r\n                <clr-checkbox-wrapper>\r\n                    <label>Remember me</label>\r\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\r\n                </clr-checkbox-wrapper>\r\n                <a routerLink=\"/login\" class=\"btn btn-primary\" (click)=\"loginUser()\">Login</a>\r\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\r\n            </div>\r\n        </form>\r\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Email</label>\n                    <input type=\"text\" [(ngModel)]=\"user.emailId\" name=\"emailId\" clrInput placeholder=\"Email\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/login\" class=\"btn btn-primary\" (click)=\"loginUser()\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\r\n    <form clrForm>\r\n        <clr-input-container>\r\n            <label>Email</label>\r\n            <input clrInput type=\"email\" [(ngModel)]=\"emailId\" name=\"emailId\" required/>\r\n            <clr-control-error>Email is required!</clr-control-error>\r\n        </clr-input-container>\r\n        <clr-input-container>\r\n            <label>Password</label>\r\n            <input clrInput type=\"password\" [(ngModel)]=\"password\" name=\"password\" required/>\r\n            <clr-control-error>Password is required!</clr-control-error>\r\n        </clr-input-container>\r\n        <button class=\"btn\" routerLink=\"/profile\" type=\"button\" (click)=\"registerUser()\">Register</button>\r\n    </form>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <form clrForm>\n        <clr-input-container>\n            <label>Email</label>\n            <input clrInput type=\"email\" [(ngModel)]=\"emailId\" name=\"emailId\" required/>\n            <clr-control-error>Email is required!</clr-control-error>\n        </clr-input-container>\n        <clr-input-container>\n            <label>Password</label>\n            <input clrInput type=\"password\" [(ngModel)]=\"password\" name=\"password\" required/>\n            <clr-control-error>Password is required!</clr-control-error>\n        </clr-input-container>\n        <button class=\"btn\" routerLink=\"/profile\" type=\"button\" (click)=\"registerUser()\">Register</button>\n    </form>\n</div>");
 
 /***/ }),
 
@@ -490,19 +490,19 @@ const routes = [
         component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsComponent"]
     },
     {
-        path: 'project',
+        path: 'project/:id',
         component: _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"]
     },
     {
-        path: 'feature',
+        path: 'feature/:id',
         component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_9__["FeatureComponent"]
     },
     {
-        path: 'story',
+        path: 'story/:id',
         component: _story_story_component__WEBPACK_IMPORTED_MODULE_10__["StoryComponent"]
     },
     {
-        path: 'task',
+        path: 'task/:id',
         component: _task_task_component__WEBPACK_IMPORTED_MODULE_11__["TaskComponent"]
     }
 ];
@@ -733,13 +733,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeatureComponent", function() { return FeatureComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
+
 
 
 let FeatureComponent = class FeatureComponent {
-    constructor() { }
+    constructor(route, router, userService) {
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.stories = new Array();
+    }
     ngOnInit() {
+        const featureId = this.route.snapshot.paramMap.get('id');
+        console.log('Feature Id', featureId);
+        this.userService.getStories(featureId).subscribe((res) => {
+            if (res) {
+                this.stories = res;
+            }
+            else {
+                console.log('Could not get stories');
+            }
+        }, (error) => {
+            console.log('Unable to get stories, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+FeatureComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
 FeatureComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-feature',
@@ -777,13 +804,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeaturesComponent", function() { return FeaturesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
+
 
 
 let FeaturesComponent = class FeaturesComponent {
-    constructor() { }
+    constructor(route, router, userService) {
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.stories = new Array();
+    }
     ngOnInit() {
+        const featureId = this.route.snapshot.paramMap.get('id');
+        console.log('feature Id', featureId);
+        this.userService.getStories(featureId).subscribe((res) => {
+            if (res) {
+                this.stories = res;
+            }
+            else {
+                console.log('Could not get stories');
+            }
+        }, (error) => {
+            console.log('Unable to get stories, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+FeaturesComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
 FeaturesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-features',
@@ -832,7 +886,7 @@ let ProfileComponent = class ProfileComponent {
     ngOnInit() {
     }
     getProjects() {
-        console.log("Projects:", this.userService.getProjects(100));
+        console.log('Projects:');
     }
 };
 ProfileComponent.ctorParameters = () => [
@@ -875,13 +929,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectComponent", function() { return ProjectComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
+
 
 
 let ProjectComponent = class ProjectComponent {
-    constructor() { }
+    constructor(route, router, userService) {
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.features = new Array();
+    }
     ngOnInit() {
+        const projectId = this.route.snapshot.paramMap.get('id');
+        console.log('Project Id', projectId);
+        this.userService.getFeatures(projectId).subscribe((res) => {
+            if (res) {
+                this.features = res;
+            }
+            else {
+                console.log('Could not get features');
+            }
+        }, (error) => {
+            console.log('Unable to get features, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+ProjectComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
 ProjectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-project',
@@ -919,16 +1000,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
 
 
 let ProjectsComponent = class ProjectsComponent {
-    constructor() {
+    constructor(userService) {
+        this.userService = userService;
         this.projects = [];
     }
     ngOnInit() {
-        this.projects = history.state.data;
+        this.userService.getProjects(100).subscribe((res) => {
+            if (res) {
+                this.projects = res;
+            }
+            else {
+                console.log('Could not get projects');
+            }
+        }, (error) => {
+            console.log('Unable to get projects, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+ProjectsComponent.ctorParameters = () => [
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
+];
 ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-projects',
@@ -1054,13 +1151,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoryComponent", function() { return StoryComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+
+
 
 
 let StoryComponent = class StoryComponent {
-    constructor() { }
+    constructor(route, router, userService) {
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.tasks = new Array();
+    }
     ngOnInit() {
+        const storyId = this.route.snapshot.paramMap.get('id');
+        console.log('Feature Id', storyId);
+        this.userService.getTasks(storyId).subscribe((res) => {
+            if (res) {
+                this.tasks = res;
+            }
+            else {
+                console.log('Could not get tasks');
+            }
+        }, (error) => {
+            console.log('Unable to get tasks, Please try again.');
+            console.log('Login Error response', error);
+        });
     }
 };
+StoryComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
 StoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-story',
@@ -1301,6 +1425,9 @@ let UserRegistrationService = class UserRegistrationService {
         this.uri = '/rest/registration';
         this.loginUri = '/rest/login';
         this.projectsUri = '/projects/';
+        this.featuresUri = '/features/';
+        this.storiesUri = '/stories/';
+        this.tasksUri = '/tasks/';
     }
     registerUser(emailId, password) {
         const obj = {
@@ -1311,19 +1438,6 @@ let UserRegistrationService = class UserRegistrationService {
             console.log('Success response', res);
         }, (error) => {
             console.log('Error response', error);
-        });
-    }
-    getProjects(userId) {
-        this.http.get(`${window.location.origin + this.projectsUri + userId}`).subscribe((res) => {
-            if (res) {
-                this.router.navigate(['/projects'], { state: { data: res } });
-            }
-            else {
-                console.log('Could not get projects');
-            }
-        }, (error) => {
-            console.log('Unable to get projects, Please try again.');
-            console.log('Login Error response', error);
         });
     }
     loginUser(user) {
@@ -1338,6 +1452,18 @@ let UserRegistrationService = class UserRegistrationService {
             console.log('Unable to login, Please try again.');
             console.log('Login Error response', error);
         });
+    }
+    getProjects(userId) {
+        return this.http.get(`${window.location.origin + this.projectsUri + userId}`);
+    }
+    getFeatures(projectId) {
+        return this.http.get(`${window.location.origin + this.featuresUri + projectId}`);
+    }
+    getStories(featureId) {
+        return this.http.get(`${window.location.origin + this.storiesUri + featureId}`);
+    }
+    getTasks(storyId) {
+        return this.http.get(`${window.location.origin + this.tasksUri + storyId}`);
     }
 };
 UserRegistrationService.ctorParameters = () => [
@@ -1438,7 +1564,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\workspace\AgilePro\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/rajitha/workspace/AgilePro/src/main.ts */"./src/main.ts");
 
 
 /***/ })

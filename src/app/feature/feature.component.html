@@ -1,31 +1,43 @@
-<p-tabView>
-        <p-tabPanel header="Feature Description">
-           Feature Description
-        </p-tabPanel>
-        <p-tabPanel header="Stories">
-                <table class="table table-light">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>#</th>
-                                <th>Story</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td> <a routerLink='/story' >Story1</a></td>
-                                <td>Its about new story1</td>
-                            </tr>
-                            <tr>
-                                    <td>2</td>
-                                    <td><a routerLink='/story'>Story2</a></td>
-                                    <td> Its about new story2</td>
+<clr-tabs>
+        <clr-tab>
+            <button clrTabLink id="link1">About Feature</button>
+            <clr-tab-content id="content1" *clrIfActive>
+                <div class="clr-row">
+                    <div class="clr-col-lg-4 clr-col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <h3 class="card-title">Description</h3>
+                                <p class="card-text">
+                                    Its about cut through feature.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="..." class="btn btn-sm btn-link">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+            <button clrTabLink>User Stories</button>
+            <clr-tab-content *clrIfActive="true">
+                    <table class="table table-light">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Story</th>
+                                    <th>Description</th>
                                 </tr>
-                        </tbody>
-                    </table>
-        </p-tabPanel>
-    </p-tabView>
-<div class="offset-sm-3 col-sm-6">
-    
-</div>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let story of stories">
+                                    <td>{{story.storyId}}</td>
+                                    <td><a routerLink='/story/{{story.storyId}}'>{{story.name}}</a></td>
+                                    <td>{{story.description}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </clr-tab-content>
+        </clr-tab>
+    </clr-tabs>

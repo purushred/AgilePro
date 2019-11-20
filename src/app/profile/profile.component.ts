@@ -8,12 +8,12 @@ import { UserRegistrationService } from '../user-registration.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private userService:UserRegistrationService) { }
+  constructor(private userService: UserRegistrationService) { }
 
   ngOnInit() {
   }
 
   getProjects() {
-    console.log("Projects:",this.userService.getProjects(100));
+    console.log('Projects:');
   }
 }

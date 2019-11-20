@@ -7,27 +7,26 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "feature")
-public class Feature {
-
+@Table(name = "task")
+public class Task {
     @Id
-    @GeneratedValue(generator = "feature_id_generator")
+    @GeneratedValue(generator = "task_id_generator")
     @SequenceGenerator(
-            name = "feature_id_generator",
-            sequenceName = "feature_id_sequence",
+            name = "task_id_generator",
+            sequenceName = "task_id_sequence",
             initialValue = 1
     )
-    private Long featureId;
+    private Long taskId;
     private String name;
     private String description;
-    private Long projectId;
+    private Long storyId;
 
-    public Long getFeatureId() {
-        return featureId;
+    public Long getTaskId() {
+        return taskId;
     }
 
-    public void setFeatureId(Long featureId) {
-        this.featureId = featureId;
+    public void setTaskId(Long taskId) {
+        this.taskId = taskId;
     }
 
     public String getName() {
@@ -46,11 +45,12 @@ public class Feature {
         this.description = description;
     }
 
-    public Long getProjectId() {
-        return projectId;
+    public Long getStoryId() {
+        return storyId;
     }
 
-    public void setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public void setStoryId(Long storyId) {
+        this.storyId = storyId;
     }
+    
 }

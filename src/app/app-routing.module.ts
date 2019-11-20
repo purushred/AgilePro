@@ -33,19 +33,19 @@ const routes: Routes = [
     component: ProjectsComponent
   },
   {
-    path: 'project',
+    path: 'project/:id',
     component: ProjectComponent
   },
   {
-    path: 'feature',
+    path: 'feature/:id',
     component: FeatureComponent
   },
   {
-    path: 'story',
+    path: 'story/:id',
     component: StoryComponent
   },
   {
-    path: 'task',
+    path: 'task/:id',
     component: TaskComponent
   }
 ];

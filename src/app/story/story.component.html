@@ -1,28 +1,43 @@
-<p-tabView>
-    <p-tabPanel header="Story Description">
-        Story Description
-    </p-tabPanel>
-    <p-tabPanel header="Tasks">
-        <table class="table table-light">
-            <thead class="thead-dark">
-                <tr>
-                    <th>#</th>
-                    <th>Task</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td> <a routerLink='/task'>Task1</a></td>
-                    <td>Its about new Task1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a routerLink='/task'>Task2</a></td>
-                    <td> Its about new task2</td>
-                </tr>
-            </tbody>
-        </table>
-    </p-tabPanel>
-</p-tabView>
+<clr-tabs>
+        <clr-tab>
+            <button clrTabLink id="link1">About Story</button>
+            <clr-tab-content id="content1" *clrIfActive>
+                <div class="clr-row">
+                    <div class="clr-col-lg-4 clr-col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <h3 class="card-title">Description</h3>
+                                <p class="card-text">
+                                    Its about cut through story.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="..." class="btn btn-sm btn-link">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+            <button clrTabLink>Tasks</button>
+            <clr-tab-content *clrIfActive="true">
+                    <table class="table table-light">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Task</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let task of tasks">
+                                    <td>{{task.taskId}}</td>
+                                    <td><a routerLink='/task/{{task.taskId}}'>{{task.name}}</a></td>
+                                    <td>{{task.description}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </clr-tab-content>
+        </clr-tab>
+    </clr-tabs>
