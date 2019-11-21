@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-5\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-6\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
