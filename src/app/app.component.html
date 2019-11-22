@@ -1,21 +1,25 @@
 <div class="main-container">
     <header class="header header-6">
         <div class="branding">
-          Agile Pro
+            Agile Pro
         </div>
         <div class="header-nav">
-            <a href="javascript://" class="active nav-link nav-text">Home</a>
+            <a href="#" class="active nav-link nav-text">Home</a>
         </div>
         <div class="header-actions">
-            <a routerLink="login" routerLinkActive="active" class="nav-link nav-icon-text">
+            <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link nav-icon-text">
                 <clr-icon shape="user"></clr-icon>
                 <span class="nav-text">Login</span>
+            </a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" (click)="userLogout()" class="nav-link nav-icon-text">
+                <clr-icon shape="user"></clr-icon>
+                <span class="nav-text">Logout</span>
             </a>
         </div>
     </header>
     <div class="content-container">
         <div class="content-area">
-                <router-outlet></router-outlet>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

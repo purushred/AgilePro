@@ -9,12 +9,17 @@ import { ProjectComponent } from './project/project.component';
 import { FeatureComponent } from './feature/feature.component';
 import { StoryComponent } from './story/story.component';
 import { TaskComponent } from './task/task.component';
+import { UserLogoutComponent } from './user-logout/user-logout.component';
 
 
 const routes: Routes = [
   {
     path: 'login',
     component: UserLoginComponent
+  },
+  {
+    path: 'logout',
+    component: UserLogoutComponent
   },
   {
     path: 'dashboard',

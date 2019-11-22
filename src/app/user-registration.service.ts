@@ -13,28 +13,28 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserRegistrationService {
-  uri = '/rest/registration';
-  loginUri = '/rest/login';
+  registrationUri = '/register';
+  loginUri = '/authenticate';
   projectsUri = '/projects/';
   featuresUri = '/features/';
   storiesUri = '/stories/';
   tasksUri = '/tasks/';
   constructor(private http: HttpClient, private router: Router, private location: PlatformLocation) { }
 
-  registerUser(emailId, password) {
-    const obj = {
-      emailId,
-      password
-    };
-    this.http.post(`${window.location.origin + this.uri}`, obj).subscribe((res) => {
-      console.log('Success response', res);
-    }, (error) => {
-      console.log('Error response', error);
-    });
-  }
-
   loginUser(user) {
     return this.http.post<User>(`${window.location.origin + this.loginUri}`, user);
+  }
+
+  registerUser(userObj) {
+    return this.http.post(`${window.location.origin + this.registrationUri}`, userObj);
+  }
+
+  isUserLoggedIn() {
+    const user = sessionStorage.getItem('username');
+    return !(user === null);
+  }
+  logOut() {
+    sessionStorage.removeItem('username');
   }
 
   getProjects(userId) {

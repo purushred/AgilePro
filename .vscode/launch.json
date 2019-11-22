@@ -2,9 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - DemoApplication",
+            "name": "CodeLens (Launch) - MainApplication",
             "request": "launch",
-            "mainClass": "com.smart.app.agilepro.DemoApplication",
+            "mainClass": "com.smart.app.agilepro.MainApplication",
             "projectName": "agilepro"
         },
         {

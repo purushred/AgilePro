@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-6\">\n        <div class=\"branding\">\n          Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"javascript://\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a routerLink=\"login\" routerLinkActive=\"active\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n                <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-6\">\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"#\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -188,7 +188,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Email</label>\n                    <input type=\"text\" [(ngModel)]=\"user.emailId\" name=\"emailId\" clrInput placeholder=\"Email\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/login\" class=\"btn btn-primary\" (click)=\"loginUser()\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"login-wrapper\">\n        <form class=\"login\">\n            <section class=\"title\">\n                <h3 class=\"welcome\">Login</h3>\n            </section>\n            <div class=\"login-group\">\n                <clr-input-container>\n                    <label class=\"clr-sr-only\">Email</label>\n                    <input type=\"text\" [(ngModel)]=\"user.username\" name=\"username\" clrInput placeholder=\"Email\" />\n                </clr-input-container>\n                <clr-password-container>\n                    <label class=\"clr-sr-only\">Password</label>\n                    <input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" clrPassword placeholder=\"Password\" />\n                </clr-password-container>\n                <clr-checkbox-wrapper>\n                    <label>Remember me</label>\n                    <input type=\"checkbox\" name=\"rememberMe\" clrCheckbox />\n                </clr-checkbox-wrapper>\n                <a routerLink=\"/login\" class=\"btn btn-primary\" (click)=\"loginUser()\">Login</a>\n                <a routerLink=\"/register\" class=\"signup\">Register</a>\n            </div>\n        </form>\n    </div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/user-logout/user-logout.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/user-logout/user-logout.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>user-logout works!</p>\n");
 
 /***/ }),
 
@@ -201,7 +214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <form clrForm>\n        <clr-input-container>\n            <label>Email</label>\n            <input clrInput type=\"email\" [(ngModel)]=\"emailId\" name=\"emailId\" required/>\n            <clr-control-error>Email is required!</clr-control-error>\n        </clr-input-container>\n        <clr-input-container>\n            <label>Password</label>\n            <input clrInput type=\"password\" [(ngModel)]=\"password\" name=\"password\" required/>\n            <clr-control-error>Password is required!</clr-control-error>\n        </clr-input-container>\n        <button class=\"btn\" routerLink=\"/profile\" type=\"button\" (click)=\"registerUser()\">Register</button>\n    </form>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <form clrForm>\n        <clr-input-container>\n            <label>Email</label>\n            <input clrInput type=\"email\" [(ngModel)]=\"user.username\" name=\"username\" required/>\n            <clr-control-error>Email is required!</clr-control-error>\n        </clr-input-container>\n        <clr-input-container>\n            <label>Password</label>\n            <input clrInput type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" required/>\n            <clr-control-error>Password is required!</clr-control-error>\n        </clr-input-container>\n        <button class=\"btn\" type=\"button\" (click)=\"registerUser()\">Register</button>\n    </form>\n</div>");
 
 /***/ }),
 
@@ -456,6 +469,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
 /* harmony import */ var _story_story_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./story/story.component */ "./src/app/story/story.component.ts");
 /* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
+/* harmony import */ var _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user-logout/user-logout.component */ "./src/app/user-logout/user-logout.component.ts");
+
 
 
 
@@ -472,6 +487,10 @@ const routes = [
     {
         path: 'login',
         component: _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_2__["UserLoginComponent"]
+    },
+    {
+        path: 'logout',
+        component: _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_12__["UserLogoutComponent"]
     },
     {
         path: 'dashboard',
@@ -544,13 +563,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 let AppComponent = class AppComponent {
-    constructor() {
+    constructor(router, loginService) {
+        this.router = router;
+        this.loginService = loginService;
         this.title = 'AgilePro';
     }
+    userLogout() {
+        this.loginService.logOut();
+        this.router.navigate(['/login']);
+    }
 };
+AppComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
+];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-root',
@@ -600,6 +633,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/fesm2015/clr-angular.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _basic_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./basic-auth-http-interceptor.service */ "./src/app/basic-auth-http-interceptor.service.ts");
+/* harmony import */ var _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./user-logout/user-logout.component */ "./src/app/user-logout/user-logout.component.ts");
+
+
 
 
 
@@ -643,7 +680,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _story_story_component__WEBPACK_IMPORTED_MODULE_18__["StoryComponent"],
             _task_task_component__WEBPACK_IMPORTED_MODULE_19__["TaskComponent"],
             _reports_reports_component__WEBPACK_IMPORTED_MODULE_20__["ReportsComponent"],
-            _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__["FeatureComponent"]
+            _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__["FeatureComponent"],
+            _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_26__["UserLogoutComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -655,10 +693,51 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_23__["BrowserAnimationsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"],
         ],
-        providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_10__["UserRegistrationService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]],
+        providers: [_user_registration_service__WEBPACK_IMPORTED_MODULE_10__["UserRegistrationService"], {
+                provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HTTP_INTERCEPTORS"],
+                useClass: _basic_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_25__["BasicAuthHtppInterceptorService"],
+                multi: true
+            }, _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/basic-auth-http-interceptor.service.ts":
+/*!********************************************************!*\
+  !*** ./src/app/basic-auth-http-interceptor.service.ts ***!
+  \********************************************************/
+/*! exports provided: BasicAuthHtppInterceptorService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasicAuthHtppInterceptorService", function() { return BasicAuthHtppInterceptorService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let BasicAuthHtppInterceptorService = class BasicAuthHtppInterceptorService {
+    constructor() { }
+    intercept(req, next) {
+        if (sessionStorage.getItem('username') && sessionStorage.getItem('token')) {
+            req = req.clone({
+                setHeaders: {
+                    Authorization: sessionStorage.getItem('token')
+                }
+            });
+        }
+        return next.handle(req);
+    }
+};
+BasicAuthHtppInterceptorService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], BasicAuthHtppInterceptorService);
 
 
 
@@ -1359,6 +1438,9 @@ let UserLoginComponent = class UserLoginComponent {
     loginUser() {
         this.userRegistrationService.loginUser(this.user).subscribe((res) => {
             if (res) {
+                sessionStorage.setItem('username', this.user.username);
+                const tokenStr = 'Bearer ' + res['token'];
+                sessionStorage.setItem('token', tokenStr);
                 const navigationExtras = {
                     queryParams: { userId: res.id }
                 };
@@ -1384,6 +1466,50 @@ UserLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./user-login.component.css */ "./src/app/user-login/user-login.component.css")).default]
     })
 ], UserLoginComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/user-logout/user-logout.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/user-logout/user-logout.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3VzZXItbG9nb3V0L3VzZXItbG9nb3V0LmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/user-logout/user-logout.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/user-logout/user-logout.component.ts ***!
+  \******************************************************/
+/*! exports provided: UserLogoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserLogoutComponent", function() { return UserLogoutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let UserLogoutComponent = class UserLogoutComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+UserLogoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-user-logout',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./user-logout.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/user-logout/user-logout.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./user-logout.component.css */ "./src/app/user-logout/user-logout.component.css")).default]
+    })
+], UserLogoutComponent);
 
 
 
@@ -1415,21 +1541,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user */ "./src/app/user.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
 
 
 
 let UserRegisterComponent = class UserRegisterComponent {
-    constructor(userRegistrationService) {
+    constructor(router, userRegistrationService) {
+        this.router = router;
         this.userRegistrationService = userRegistrationService;
+        this.user = new _user__WEBPACK_IMPORTED_MODULE_3__["User"]();
     }
     ngOnInit() {
     }
     registerUser() {
-        this.userRegistrationService.registerUser(this.emailId, this.password);
-        console.log('Register user clicked', this.emailId, this.password);
+        this.userRegistrationService.registerUser(this.user).subscribe((res) => {
+            console.log('Success response', res);
+            this.router.navigate(['/profile']);
+            return res;
+        }, (error) => {
+            console.log('Error response', error);
+        });
     }
 };
 UserRegisterComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
     { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
 ];
 UserRegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1469,26 +1607,25 @@ let UserRegistrationService = class UserRegistrationService {
         this.http = http;
         this.router = router;
         this.location = location;
-        this.uri = '/rest/registration';
-        this.loginUri = '/rest/login';
+        this.registrationUri = '/register';
+        this.loginUri = '/authenticate';
         this.projectsUri = '/projects/';
         this.featuresUri = '/features/';
         this.storiesUri = '/stories/';
         this.tasksUri = '/tasks/';
     }
-    registerUser(emailId, password) {
-        const obj = {
-            emailId,
-            password
-        };
-        this.http.post(`${window.location.origin + this.uri}`, obj).subscribe((res) => {
-            console.log('Success response', res);
-        }, (error) => {
-            console.log('Error response', error);
-        });
-    }
     loginUser(user) {
         return this.http.post(`${window.location.origin + this.loginUri}`, user);
+    }
+    registerUser(userObj) {
+        return this.http.post(`${window.location.origin + this.registrationUri}`, userObj);
+    }
+    isUserLoggedIn() {
+        const user = sessionStorage.getItem('username');
+        return !(user === null);
+    }
+    logOut() {
+        sessionStorage.removeItem('username');
     }
     getProjects(userId) {
         return this.http.get(`${window.location.origin + this.projectsUri + userId}`);

@@ -1,5 +1,5 @@
 export class User {
     public id: BigInteger;
-    public emailId: string;
+    public username: string;
     public password: string;
 }

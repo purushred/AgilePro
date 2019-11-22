@@ -17,6 +17,9 @@ export class UserLoginComponent implements OnInit {
   public loginUser() {
     this.userRegistrationService.loginUser(this.user).subscribe((res) => {
       if (res) {
+        sessionStorage.setItem('username', this.user.username);
+        const tokenStr = 'Bearer ' + res['token'];
+        sessionStorage.setItem('token', tokenStr);
         const navigationExtras: NavigationExtras = {
           queryParams: {userId: res.id}
         };

@@ -2,14 +2,14 @@
     <form clrForm>
         <clr-input-container>
             <label>Email</label>
-            <input clrInput type="email" [(ngModel)]="emailId" name="emailId" required/>
+            <input clrInput type="email" [(ngModel)]="user.username" name="username" required/>
             <clr-control-error>Email is required!</clr-control-error>
         </clr-input-container>
         <clr-input-container>
             <label>Password</label>
-            <input clrInput type="password" [(ngModel)]="password" name="password" required/>
+            <input clrInput type="password" [(ngModel)]="user.password" name="password" required/>
             <clr-control-error>Password is required!</clr-control-error>
         </clr-input-container>
-        <button class="btn" routerLink="/profile" type="button" (click)="registerUser()">Register</button>
+        <button class="btn" type="button" (click)="registerUser()">Register</button>
     </form>
 </div>
