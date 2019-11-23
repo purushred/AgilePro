@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Story } from '../story';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserRegistrationService } from '../user-registration.service';
+import { StoryService } from '../story.service';
 
 @Component({
   selector: 'app-feature',
@@ -10,9 +11,11 @@ import { UserRegistrationService } from '../user-registration.service';
 })
 export class FeatureComponent implements OnInit {
 
+  isShowAddStoryModal = false;
+  story: Story = new Story();
   stories: Array<Story> = new Array();
   constructor(private route: ActivatedRoute,
-              private router: Router, private userService: UserRegistrationService) { }
+              private router: Router, private userService: UserRegistrationService, private storyService: StoryService) { }
 
   ngOnInit() {
     const featureId = this.route.snapshot.paramMap.get('id');
@@ -30,4 +33,22 @@ export class FeatureComponent implements OnInit {
     });
   }
 
+
+  showAddStoryModal() {
+    this.isShowAddStoryModal = true;
+  }
+
+  createStory() {
+    this.story.featureId = 100;
+    this.storyService.createStory(this.story).subscribe((res) => {
+      if (res) {
+        this.stories.push(res);
+        this.isShowAddStoryModal = false;
+      } else {
+        console.log('Could not create story');
+      }
+    }, (error) => {
+      console.log('Unable to create story, Please try again.', error);
+    });
+  }
 }

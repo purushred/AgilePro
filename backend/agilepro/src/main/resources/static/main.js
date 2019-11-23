@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n        <clr-tab>\n            <button clrTabLink id=\"link1\">About Feature</button>\n            <clr-tab-content id=\"content1\" *clrIfActive>\n                <div class=\"clr-row\">\n                    <div class=\"clr-col-lg-4 clr-col-12\">\n                        <div class=\"card\">\n                            <div class=\"card-block\">\n                                <h3 class=\"card-title\">Description</h3>\n                                <p class=\"card-text\">\n                                    Its about cut through feature.\n                                </p>\n                            </div>\n                            <div class=\"card-footer\">\n                                <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </clr-tab-content>\n        </clr-tab>\n        <clr-tab>\n            <button clrTabLink>User Stories</button>\n            <clr-tab-content *clrIfActive=\"true\">\n                    <table class=\"table table-light\">\n                            <thead class=\"thead-dark\">\n                                <tr>\n                                    <th>#</th>\n                                    <th>Story</th>\n                                    <th>Description</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let story of stories\">\n                                    <td>{{story.storyId}}</td>\n                                    <td><a routerLink='/story/{{story.storyId}}'>{{story.name}}</a></td>\n                                    <td>{{story.description}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </clr-tab-content>\n        </clr-tab>\n    </clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Feature</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                Its about cut through feature.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>User Stories</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddStoryModal()\">Add Story</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Story</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let story of stories\">\n                            <td>{{story.storyId}}</td>\n                            <td><a routerLink='/story/{{story.storyId}}'>{{story.name}}</a></td>\n                            <td>{{story.description}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddStoryModal\">\n        <h3 class=\"modal-title\">Add Story</h3>\n        <div class=\"modal-body\">\n            <div>\n                <form clrForm>\n                    <clr-input-container>\n                        <label>Name</label>\n                        <input clrInput type=\"text\" [(ngModel)]=\"story.name\" name=\"name\" required />\n                    </clr-input-container>\n                    <clr-textarea-container>\n                        <label>Description</label>\n                        <textarea clrTextarea [(ngModel)]=\"story.description\" name=\"description\" required></textarea>\n                    </clr-textarea-container>\n                </form>\n            </div>\n        </div>\n        <div class=\"modal-footer\">\n            <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddStoryModal = false\">Cancel</button>\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"createStory()\">Add</button>\n        </div>\n    </clr-modal>");
 
 /***/ }),
 
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n        <clr-tab>\n            <button clrTabLink id=\"link1\">About Story</button>\n            <clr-tab-content id=\"content1\" *clrIfActive>\n                <div class=\"clr-row\">\n                    <div class=\"clr-col-lg-4 clr-col-12\">\n                        <div class=\"card\">\n                            <div class=\"card-block\">\n                                <h3 class=\"card-title\">Description</h3>\n                                <p class=\"card-text\">\n                                    Its about cut through story.\n                                </p>\n                            </div>\n                            <div class=\"card-footer\">\n                                <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </clr-tab-content>\n        </clr-tab>\n        <clr-tab>\n            <button clrTabLink>Tasks</button>\n            <clr-tab-content *clrIfActive=\"true\">\n                    <table class=\"table table-light\">\n                            <thead class=\"thead-dark\">\n                                <tr>\n                                    <th>#</th>\n                                    <th>Task</th>\n                                    <th>Description</th>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr *ngFor=\"let task of tasks\">\n                                    <td>{{task.taskId}}</td>\n                                    <td><a routerLink='/task/{{task.taskId}}'>{{task.name}}</a></td>\n                                    <td>{{task.description}}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n            </clr-tab-content>\n        </clr-tab>\n    </clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Story</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                Its about cut through story.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Tasks</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddTaskModal()\">Add Task</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Task</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let task of tasks\">\n                            <td>{{task.taskId}}</td>\n                            <td><a routerLink='/task/{{task.taskId}}'>{{task.name}}</a></td>\n                            <td>{{task.description}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddTaskModal\">\n    <h3 class=\"modal-title\">Add Task</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"task.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"task.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddTaskModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createTask()\">Add</button>\n    </div>\n</clr-modal>");
 
 /***/ }),
 
@@ -906,17 +906,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeatureComponent", function() { return FeatureComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _story__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../story */ "./src/app/story.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _story_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../story.service */ "./src/app/story.service.ts");
+
+
 
 
 
 
 let FeatureComponent = class FeatureComponent {
-    constructor(route, router, userService) {
+    constructor(route, router, userService, storyService) {
         this.route = route;
         this.router = router;
         this.userService = userService;
+        this.storyService = storyService;
+        this.isShowAddStoryModal = false;
+        this.story = new _story__WEBPACK_IMPORTED_MODULE_2__["Story"]();
         this.stories = new Array();
     }
     ngOnInit() {
@@ -934,11 +941,29 @@ let FeatureComponent = class FeatureComponent {
             console.log('Login Error response', error);
         });
     }
+    showAddStoryModal() {
+        this.isShowAddStoryModal = true;
+    }
+    createStory() {
+        this.story.featureId = 100;
+        this.storyService.createStory(this.story).subscribe((res) => {
+            if (res) {
+                this.stories.push(res);
+                this.isShowAddStoryModal = false;
+            }
+            else {
+                console.log('Could not create story');
+            }
+        }, (error) => {
+            console.log('Unable to create story, Please try again.', error);
+        });
+    }
 };
 FeatureComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_4__["UserRegistrationService"] },
+    { type: _story_service__WEBPACK_IMPORTED_MODULE_5__["StoryService"] }
 ];
 FeatureComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1413,6 +1438,70 @@ StoriesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/story.service.ts":
+/*!**********************************!*\
+  !*** ./src/app/story.service.ts ***!
+  \**********************************/
+/*! exports provided: StoryService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoryService", function() { return StoryService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
+
+
+
+let StoryService = class StoryService {
+    constructor(http, router, location) {
+        this.http = http;
+        this.router = router;
+        this.location = location;
+        this.storyUri = '/story';
+    }
+    createStory(story) {
+        return this.http.post(`${window.location.origin + this.storyUri}`, story);
+    }
+};
+StoryService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+];
+StoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], StoryService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/story.ts":
+/*!**************************!*\
+  !*** ./src/app/story.ts ***!
+  \**************************/
+/*! exports provided: Story */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Story", function() { return Story; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Story {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/story/story.component.css":
 /*!*******************************************!*\
   !*** ./src/app/story/story.component.css ***!
@@ -1438,17 +1527,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoryComponent", function() { return StoryComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../task */ "./src/app/task.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _task_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../task.service */ "./src/app/task.service.ts");
+
+
 
 
 
 
 let StoryComponent = class StoryComponent {
-    constructor(route, router, userService) {
+    constructor(route, router, userService, taskService) {
         this.route = route;
         this.router = router;
         this.userService = userService;
+        this.taskService = taskService;
+        this.isShowAddTaskModal = false;
+        this.task = new _task__WEBPACK_IMPORTED_MODULE_2__["Task"]();
         this.tasks = new Array();
     }
     ngOnInit() {
@@ -1466,11 +1562,29 @@ let StoryComponent = class StoryComponent {
             console.log('Login Error response', error);
         });
     }
+    showAddTaskModal() {
+        this.isShowAddTaskModal = true;
+    }
+    createTask() {
+        this.task.storyId = 100;
+        this.taskService.createTask(this.task).subscribe((res) => {
+            if (res) {
+                this.tasks.push(res);
+                this.isShowAddTaskModal = false;
+            }
+            else {
+                console.log('Could not create task');
+            }
+        }, (error) => {
+            console.log('Unable to create task, Please try again.', error);
+        });
+    }
 };
 StoryComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_4__["UserRegistrationService"] },
+    { type: _task_service__WEBPACK_IMPORTED_MODULE_5__["TaskService"] }
 ];
 StoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1480,6 +1594,70 @@ StoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], StoryComponent);
 
+
+
+/***/ }),
+
+/***/ "./src/app/task.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/task.service.ts ***!
+  \*********************************/
+/*! exports provided: TaskService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TaskService", function() { return TaskService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
+
+
+
+let TaskService = class TaskService {
+    constructor(http, router, location) {
+        this.http = http;
+        this.router = router;
+        this.location = location;
+        this.taskUri = '/task';
+    }
+    createTask(task) {
+        return this.http.post(`${window.location.origin + this.taskUri}`, task);
+    }
+};
+TaskService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+];
+TaskService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], TaskService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/task.ts":
+/*!*************************!*\
+  !*** ./src/app/task.ts ***!
+  \*************************/
+/*! exports provided: Task */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Task", function() { return Task; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Task {
+}
 
 
 /***/ }),
