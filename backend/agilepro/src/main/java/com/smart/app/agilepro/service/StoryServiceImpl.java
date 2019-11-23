@@ -15,11 +15,11 @@ public class StoryServiceImpl {
     @Resource
     public StoryDaoImpl storyDaoImpl;
     
-    public void createStory(final Story story) {
-        storyDaoImpl.save(story);
+    public Story createStory(final Story story) {
+        return storyDaoImpl.save(story);
     }
-    public void updateStory(final Story story) {
-        storyDaoImpl.save(story);
+    public Story updateStory(final Story story) {
+        return storyDaoImpl.save(story);
     }
     public void deleteStory(final Long id) {
         storyDaoImpl.delete(storyDaoImpl.getOne(id));

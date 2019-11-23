@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-6\">\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"#\" class=\"active nav-link nav-text\">Home</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main-container\">\n    <header class=\"header header-6\">\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\">\n            <a href=\"#\" class=\"nav-link nav-text\">Home</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Reports</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Track</a>\n            <a routerLink=\"/projects\" class=\"nav-link nav-text\">Projects</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </header>\n    <div class=\"content-container\">\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Project</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                OneView is a HPE project for its Synergy Hardware.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Features</button>\n        <clr-tab-content *clrIfActive=\"true\">\n                <table class=\"table table-light\">\n                        <thead class=\"thead-dark\">\n                            <tr>\n                                <th>#</th>\n                                <th>Feature</th>\n                                <th>Description</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let feature of features\">\n                                <td>{{feature.featureId}}</td>\n                                <td><a routerLink='/feature/{{feature.featureId}}'>{{feature.name}}</a></td>\n                                <td>{{feature.description}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Project</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                OneView is a HPE project for its Synergy Hardware.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Features</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddFeatureModal()\">Add Feature</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Feature</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let feature of features\">\n                            <td>{{feature.featureId}}</td>\n                            <td><a routerLink='/feature/{{feature.featureId}}'>{{feature.name}}</a></td>\n                            <td>{{feature.description}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddFeatureModal\">\n    <h3 class=\"modal-title\">Add Feature</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"feature.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"feature.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddFeatureModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createFeature()\">Add</button>\n    </div>\n</clr-modal>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table class=\"table table-light\">\n    <thead class=\"thead-dark\">\n        <tr>\n            <th>#</th>\n            <th>Project</th>\n            <th>Description</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr *ngFor=\"let project of projects\">\n            <td>{{project.projectId}}</td>\n            <td><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a></td>\n            <td>{{project.description}}</td>\n        </tr>\n    </tbody>\n</table>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Projects</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddProjectModal()\">Add Project</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <div class=\"clr-col\">\n                    <table class=\"table table-light\">\n                        <thead class=\"thead-dark\">\n                            <tr>\n                                <td>Select</td>\n                                <th>#</th>\n                                <th>Project</th>\n                                <th>Description</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr *ngFor=\"let project of projects\">\n                                <td><input type=\"checkbox\" clrCheckbox /></td>\n                                <td>{{project.projectId}}</td>\n                                <td><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a></td>\n                                <td>{{project.description}}</td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddProjectModal\">\n    <h3 class=\"modal-title\">Add Project</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"project.name\" name=\"name\" required/>\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"project.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddProjectModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createProject()\">Add</button>\n    </div>\n</clr-modal>");
 
 /***/ }),
 
@@ -817,6 +817,70 @@ DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/feature.service.ts":
+/*!************************************!*\
+  !*** ./src/app/feature.service.ts ***!
+  \************************************/
+/*! exports provided: FeatureService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeatureService", function() { return FeatureService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
+
+
+
+let FeatureService = class FeatureService {
+    constructor(http, router, location) {
+        this.http = http;
+        this.router = router;
+        this.location = location;
+        this.featureUri = '/feature';
+    }
+    createFeature(feature) {
+        return this.http.post(`${window.location.origin + this.featureUri}`, feature);
+    }
+};
+FeatureService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+];
+FeatureService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], FeatureService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/feature.ts":
+/*!****************************!*\
+  !*** ./src/app/feature.ts ***!
+  \****************************/
+/*! exports provided: Feature */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Feature", function() { return Feature; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Feature {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/feature/feature.component.css":
 /*!***********************************************!*\
   !*** ./src/app/feature/feature.component.css ***!
@@ -1013,6 +1077,70 @@ ProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/project.service.ts":
+/*!************************************!*\
+  !*** ./src/app/project.service.ts ***!
+  \************************************/
+/*! exports provided: ProjectService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectService", function() { return ProjectService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+
+
+let ProjectService = class ProjectService {
+    constructor(http, router, location) {
+        this.http = http;
+        this.router = router;
+        this.location = location;
+        this.projectUri = '/project';
+    }
+    createProject(project) {
+        return this.http.post(`${window.location.origin + this.projectUri}`, project);
+    }
+};
+ProjectService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"] }
+];
+ProjectService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], ProjectService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/project.ts":
+/*!****************************!*\
+  !*** ./src/app/project.ts ***!
+  \****************************/
+/*! exports provided: Project */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Project", function() { return Project; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Project {
+}
+
+
+/***/ }),
+
 /***/ "./src/app/project/project.component.css":
 /*!***********************************************!*\
   !*** ./src/app/project/project.component.css ***!
@@ -1040,15 +1168,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _feature__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../feature */ "./src/app/feature.ts");
+/* harmony import */ var _feature_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../feature.service */ "./src/app/feature.service.ts");
+
+
 
 
 
 
 let ProjectComponent = class ProjectComponent {
-    constructor(route, router, userService) {
+    constructor(route, router, userService, featureService) {
         this.route = route;
         this.router = router;
         this.userService = userService;
+        this.featureService = featureService;
+        this.isShowAddFeatureModal = false;
+        this.feature = new _feature__WEBPACK_IMPORTED_MODULE_4__["Feature"]();
         this.features = new Array();
     }
     ngOnInit() {
@@ -1066,11 +1201,29 @@ let ProjectComponent = class ProjectComponent {
             console.log('Login Error response', error);
         });
     }
+    showAddFeatureModal() {
+        this.isShowAddFeatureModal = true;
+    }
+    createFeature() {
+        this.feature.projectId = 100;
+        this.featureService.createFeature(this.feature).subscribe((res) => {
+            if (res) {
+                this.features.push(res);
+                this.isShowAddFeatureModal = false;
+            }
+            else {
+                console.log('Could not create feature');
+            }
+        }, (error) => {
+            console.log('Unable to create feature, Please try again.', error);
+        });
+    }
 };
 ProjectComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] },
+    { type: _feature_service__WEBPACK_IMPORTED_MODULE_5__["FeatureService"] }
 ];
 ProjectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1109,14 +1262,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../project */ "./src/app/project.ts");
+/* harmony import */ var _user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../user-registration.service */ "./src/app/user-registration.service.ts");
+/* harmony import */ var _project_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../project.service */ "./src/app/project.service.ts");
+
+
 
 
 
 let ProjectsComponent = class ProjectsComponent {
-    constructor(userService) {
+    constructor(userService, projectService) {
         this.userService = userService;
+        this.projectService = projectService;
+        this.project = new _project__WEBPACK_IMPORTED_MODULE_2__["Project"]();
         this.projects = [];
+        this.isShowAddProjectModal = false;
     }
     ngOnInit() {
         this.userService.getProjects(100).subscribe((res) => {
@@ -1131,9 +1291,27 @@ let ProjectsComponent = class ProjectsComponent {
             console.log('Login Error response', error);
         });
     }
+    showAddProjectModal() {
+        this.isShowAddProjectModal = true;
+    }
+    createProject() {
+        this.project.userId = 100;
+        this.projectService.createProject(this.project).subscribe((res) => {
+            if (res) {
+                this.projects.push(res);
+                this.isShowAddProjectModal = false;
+            }
+            else {
+                console.log('Could not create project');
+            }
+        }, (error) => {
+            console.log('Unable to create project, Please try again.', error);
+        });
+    }
 };
 ProjectsComponent.ctorParameters = () => [
-    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
+    { type: _user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] },
+    { type: _project_service__WEBPACK_IMPORTED_MODULE_4__["ProjectService"] }
 ];
 ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

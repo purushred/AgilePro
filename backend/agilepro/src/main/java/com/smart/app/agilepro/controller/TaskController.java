@@ -25,13 +25,13 @@ public class TaskController {
     public TaskServiceImpl taskServiceImpl;
     
     @PostMapping(path="/task", consumes="application/json")
-    public void createTask(@RequestBody Task task){
-        taskServiceImpl.createTask(task);
+    public Task createTask(@RequestBody Task task) {
+        return taskServiceImpl.createTask(task);
     }
 
     @PutMapping(path="/task", consumes="application/json")
-    public void updateTask(@RequestBody Task task){
-        taskServiceImpl.updateTask(task);
+    public Task updateTask(@RequestBody Task task) {
+        return taskServiceImpl.updateTask(task);
     }
 
     @DeleteMapping(path="/task/{id}")

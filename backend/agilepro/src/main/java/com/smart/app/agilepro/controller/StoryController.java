@@ -25,13 +25,13 @@ public class StoryController {
     public StoryServiceImpl storyServiceImpl;
     
     @PostMapping(path="/story", consumes="application/json")
-    public void createStory(@RequestBody Story story){
-        storyServiceImpl.createStory(story);
+    public Story createStory(@RequestBody Story story) {
+        return storyServiceImpl.createStory(story);
     }
 
     @PutMapping(path="/story", consumes="application/json")
-    public void updateStory(@RequestBody Story story){
-        storyServiceImpl.updateStory(story);
+    public Story updateStory(@RequestBody Story story) {
+        return storyServiceImpl.updateStory(story);
     }
 
     @DeleteMapping(path="/story/{id}")

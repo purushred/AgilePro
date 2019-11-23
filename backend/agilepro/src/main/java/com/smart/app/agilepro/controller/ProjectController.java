@@ -25,8 +25,8 @@ public class ProjectController {
     public ProjectServiceImpl projectServiceImpl;
     
     @PostMapping(path="/project", consumes="application/json")
-    public void createProject(@RequestBody Project project){
-        projectServiceImpl.createProject(project);
+    public Project createProject(@RequestBody Project project){
+        return projectServiceImpl.createProject(project);
     }
 
     @PutMapping(path="/project", consumes="application/json")

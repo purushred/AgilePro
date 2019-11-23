@@ -25,13 +25,13 @@ public class FeatureController {
     public FeatureServiceImpl featureServiceImpl;
     
     @PostMapping(path="/feature", consumes="application/json")
-    public void createFeature(@RequestBody Feature feature){
-        featureServiceImpl.createFeature(feature);
+    public Feature createFeature(@RequestBody Feature feature) {
+        return featureServiceImpl.createFeature(feature);
     }
 
     @PutMapping(path="/feature", consumes="application/json")
-    public void updateFeature(@RequestBody Feature feature){
-        featureServiceImpl.updateFeature(feature);
+    public Feature updateFeature(@RequestBody Feature feature) {
+        return featureServiceImpl.updateFeature(feature);
     }
 
     @DeleteMapping(path="/feature/{id}")

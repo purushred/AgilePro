@@ -15,11 +15,11 @@ public class TaskServiceImpl {
     @Resource
     public TaskDaoImpl taskDaoImpl;
     
-    public void createTask(final Task task) {
-        taskDaoImpl.save(task);
+    public Task createTask(final Task task) {
+        return taskDaoImpl.save(task);
     }
-    public void updateTask(final Task task) {
-        taskDaoImpl.save(task);
+    public Task updateTask(final Task task) {
+        return taskDaoImpl.save(task);
     }
     public void deleteTask(final Long id) {
         taskDaoImpl.delete(taskDaoImpl.getOne(id));

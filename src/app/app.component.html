@@ -4,7 +4,10 @@
             Agile Pro
         </div>
         <div class="header-nav">
-            <a href="#" class="active nav-link nav-text">Home</a>
+            <a href="#" class="nav-link nav-text">Home</a>
+            <a href="#" class="nav-link nav-text">Reports</a>
+            <a href="#" class="nav-link nav-text">Track</a>
+            <a routerLink="/projects" class="nav-link nav-text">Projects</a>
         </div>
         <div class="header-actions">
             <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link nav-icon-text">

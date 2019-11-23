@@ -15,11 +15,11 @@ public class FeatureServiceImpl {
     @Resource
     public FeatureDaoImpl featureDaoImpl;
     
-    public void createFeature(final Feature feature) {
-        featureDaoImpl.save(feature);
+    public Feature createFeature(final Feature feature) {
+        return featureDaoImpl.save(feature);
     }
-    public void updateFeature(final Feature feature) {
-        featureDaoImpl.save(feature);
+    public Feature updateFeature(final Feature feature) {
+        return featureDaoImpl.save(feature);
     }
     public void deleteFeature(final Long id) {
         featureDaoImpl.delete(featureDaoImpl.getOne(id));

@@ -15,8 +15,8 @@ public class ProjectServiceImpl {
     @Resource
     public ProjectDaoImpl projecDaoImpl;
     
-    public void createProject(final Project project) {
-        projecDaoImpl.save(project);
+    public Project createProject(final Project project) {
+        return projecDaoImpl.save(project);
     }
     public void updateProject(final Project project) {
         projecDaoImpl.save(project);
