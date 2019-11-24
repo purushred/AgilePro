@@ -5,17 +5,24 @@
                 Invite User
             </div>
             <div class="card-block">
-                <div class="card-title">
-                </div>
                 <div class="card-text">
                     <form clrForm>
+                        <clr-select-container>
+                            <label>Project</label>
+                            <select class="" clrSelect name="options" [(ngModel)]="options">
+                                <option value="one">One View</option>
+                                <option value="two">Synergy</option>
+                                <option value="three">C7000</option>
+                            </select>
+                        </clr-select-container>
                         <clr-input-container>
                             <label>Email</label>
                             <input clrInput type="text" [(ngModel)]="invitation.emailId" name="emailId" required />
                         </clr-input-container>
                         <clr-textarea-container>
                             <label>Message</label>
-                            <textarea clrTextarea [(ngModel)]="invitation.invitationMessage" name="invitationMessage"></textarea>
+                            <textarea clrTextarea [(ngModel)]="invitation.invitationMessage"
+                                name="invitationMessage"></textarea>
                         </clr-textarea-container>
                     </form>
                     <clr-alert [clrAlertType]="'success'">
