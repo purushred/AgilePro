@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { PlatformLocation } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Project } from '../model/project';
 
@@ -10,10 +8,14 @@ import { Project } from '../model/project';
 export class ProjectService {
 
   projectUri = '/project';
-
-  constructor(private http: HttpClient, private router: Router, private location: PlatformLocation) { }
+  projectsUri = '/projects/';
+  constructor(private http: HttpClient) { }
 
   createProject(project) {
     return this.http.post<Project>(`${window.location.origin + this.projectUri}`, project);
+  }
+
+  getProjects(userId) {
+    return this.http.get<Array<Project>>(`${window.location.origin + this.projectsUri + userId}`);
   }
 }

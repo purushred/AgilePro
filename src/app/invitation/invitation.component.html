@@ -1,0 +1,35 @@
+<div class="clr-row">
+    <div class="clr-offset-3 clr-col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                Invite User
+            </div>
+            <div class="card-block">
+                <div class="card-title">
+                </div>
+                <div class="card-text">
+                    <form clrForm>
+                        <clr-input-container>
+                            <label>Email</label>
+                            <input clrInput type="text" [(ngModel)]="invitation.emailId" name="emailId" required />
+                        </clr-input-container>
+                        <clr-textarea-container>
+                            <label>Message</label>
+                            <textarea clrTextarea [(ngModel)]="invitation.invitationMessage" name="invitationMessage"></textarea>
+                        </clr-textarea-container>
+                    </form>
+                    <clr-alert [clrAlertType]="'success'">
+                        <clr-alert-item>
+                            <span class="alert-text">
+                                Successfully sent invite.
+                            </span>
+                        </clr-alert-item>
+                    </clr-alert>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-info-outline" (click)="inviteUser()">Invite</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n    <clr-header>\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a href=\"#\" class=\"nav-link nav-text\">Home</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Reports</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Track</a>\n            <a routerLink=\"/projects\" class=\"nav-link nav-text\">Projects</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\"\n                class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <clr-vertical-nav [clrVerticalNavCollapsible]=\"true\" [(clrVerticalNavCollapsed)]=\"collapsed\"\n            [clr-nav-level]=\"1\">\n            <a clrVerticalNavLink routerLink=\"./normal\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                Projects\n            </a>\n            <a clrVerticalNavLink routerLink=\"./electric\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                Sprint\n            </a>\n            <a clrVerticalNavLink routerLink=\"./poison\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                Stories\n            </a>\n\n            <a clrVerticalNavLink routerLink=\"./fighting\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                Reports\n            </a>\n            <div class=\"nav-divider\"></div>\n            <a clrVerticalNavLink routerLink=\"./credit\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                Settings\n            </a>\n        </clr-vertical-nav>\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n    <clr-header>\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a href=\"#\" class=\"nav-link nav-text\">Home</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Reports</a>\n            <a href=\"#\" class=\"nav-link nav-text\">Track</a>\n            <a routerLink=\"/projects\" class=\"nav-link nav-text\">Projects</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\"\n                class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <clr-vertical-nav [clrVerticalNavCollapsible]=\"true\" [(clrVerticalNavCollapsed)]=\"collapsed\"\n            [clr-nav-level]=\"1\">\n            <a clrVerticalNavLink routerLink=\"./normal\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                Projects\n            </a>\n            <a clrVerticalNavLink routerLink=\"./electric\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                Sprint\n            </a>\n            <a clrVerticalNavLink routerLink=\"./poison\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                Stories\n            </a>\n\n            <a clrVerticalNavLink routerLink=\"./fighting\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                Reports\n            </a>\n            <div class=\"nav-divider\"></div>\n            <a clrVerticalNavLink routerLink=\"./credit\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                Settings\n            </a>\n            <a clrVerticalNavLink routerLink=\"/invite\" routerLinkActive=\"active\">\n                <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                Invite User\n            </a>\n        </clr-vertical-nav>\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
 
 /***/ }),
 
@@ -46,6 +46,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Dashboard</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\" *ngFor=\"let project of projects\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">\n                                <a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                            </h3>\n                            <p class=\"card-text\">\n                                {{project.description}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Progress</button>\n        <clr-tab-content>\n            Show current progress here.\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/email-verification/email-verification.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/email-verification/email-verification.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Mail sent to purushred@gmail.com. Please verify your email and login.</h1>");
 
 /***/ }),
 
@@ -72,6 +85,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<p>features works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/invitation/invitation.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/invitation/invitation.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-row\">\n    <div class=\"clr-offset-3 clr-col-lg-6\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                Invite User\n            </div>\n            <div class=\"card-block\">\n                <div class=\"card-title\">\n                </div>\n                <div class=\"card-text\">\n                    <form clrForm>\n                        <clr-input-container>\n                            <label>Email</label>\n                            <input clrInput type=\"text\" [(ngModel)]=\"invitation.emailId\" name=\"emailId\" required />\n                        </clr-input-container>\n                        <clr-textarea-container>\n                            <label>Message</label>\n                            <textarea clrTextarea [(ngModel)]=\"invitation.invitationMessage\" name=\"invitationMessage\"></textarea>\n                        </clr-textarea-container>\n                    </form>\n                    <clr-alert [clrAlertType]=\"'success'\">\n                        <clr-alert-item>\n                            <span class=\"alert-text\">\n                                Successfully sent invite.\n                            </span>\n                        </clr-alert-item>\n                    </clr-alert>\n                </div>\n            </div>\n            <div class=\"card-footer\">\n                <button class=\"btn btn-info-outline\" (click)=\"inviteUser()\">Invite</button>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -470,6 +496,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _story_story_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./story/story.component */ "./src/app/story/story.component.ts");
 /* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
 /* harmony import */ var _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user-logout/user-logout.component */ "./src/app/user-logout/user-logout.component.ts");
+/* harmony import */ var _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./email-verification/email-verification.component */ "./src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./invitation/invitation.component */ "./src/app/invitation/invitation.component.ts");
+
+
 
 
 
@@ -485,6 +515,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
+        path: 'profile',
+        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]
+    },
+    {
         path: 'login',
         component: _user_login_user_login_component__WEBPACK_IMPORTED_MODULE_2__["UserLoginComponent"]
     },
@@ -493,16 +527,20 @@ const routes = [
         component: _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_12__["UserLogoutComponent"]
     },
     {
+        path: 'verify',
+        component: _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_13__["EmailVerificationComponent"]
+    },
+    {
+        path: 'invite',
+        component: _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_14__["InvitationComponent"]
+    },
+    {
         path: 'dashboard',
         component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__["DashboardComponent"]
     },
     {
         path: 'register',
         component: _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
-    },
-    {
-        path: 'profile',
-        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]
     },
     {
         path: 'projects',
@@ -635,6 +673,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _service_basic_auth_http_interceptor_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./service/basic-auth-http-interceptor.service */ "./src/app/service/basic-auth-http-interceptor.service.ts");
 /* harmony import */ var _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./user-logout/user-logout.component */ "./src/app/user-logout/user-logout.component.ts");
+/* harmony import */ var _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./email-verification/email-verification.component */ "./src/app/email-verification/email-verification.component.ts");
+/* harmony import */ var _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./invitation/invitation.component */ "./src/app/invitation/invitation.component.ts");
+
+
 
 
 
@@ -681,7 +723,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _task_task_component__WEBPACK_IMPORTED_MODULE_19__["TaskComponent"],
             _reports_reports_component__WEBPACK_IMPORTED_MODULE_20__["ReportsComponent"],
             _feature_feature_component__WEBPACK_IMPORTED_MODULE_21__["FeatureComponent"],
-            _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_26__["UserLogoutComponent"]
+            _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_26__["UserLogoutComponent"],
+            _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_27__["EmailVerificationComponent"],
+            _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_28__["InvitationComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -732,25 +776,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
 
 
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor(route, router, userService) {
+    constructor(route, projectService) {
         this.route = route;
-        this.router = router;
-        this.userService = userService;
+        this.projectService = projectService;
         this.projects = new Array();
     }
     ngOnInit() {
         this.userId = this.route.snapshot
             .queryParamMap.get('userId');
-        // .pipe(map(params => params.get('userId') || 'None'));
-        // const projectId = this.route.snapshot.paramMap.get('id');
         console.log('Project Id', this.userId);
-        this.userService.getProjects(100).subscribe((res) => {
+        this.projectService.getProjects(100).subscribe((res) => {
             if (res) {
                 this.projects = res;
             }
@@ -758,15 +799,13 @@ let DashboardComponent = class DashboardComponent {
                 console.log('Could not get projects');
             }
         }, (error) => {
-            console.log('Unable to get projects, Please try again.');
-            console.log('Login Error response', error);
+            console.log('Get projects Error response', error);
         });
     }
 };
 DashboardComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
 ];
 DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -775,6 +814,50 @@ DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dashboard.component.css */ "./src/app/dashboard/dashboard.component.css")).default]
     })
 ], DashboardComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/email-verification/email-verification.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/email-verification/email-verification.component.css ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtYWlsLXZlcmlmaWNhdGlvbi9lbWFpbC12ZXJpZmljYXRpb24uY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/email-verification/email-verification.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/email-verification/email-verification.component.ts ***!
+  \********************************************************************/
+/*! exports provided: EmailVerificationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmailVerificationComponent", function() { return EmailVerificationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let EmailVerificationComponent = class EmailVerificationComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+EmailVerificationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-email-verification',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./email-verification.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/email-verification/email-verification.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./email-verification.component.css */ "./src/app/email-verification/email-verification.component.css")).default]
+    })
+], EmailVerificationComponent);
 
 
 
@@ -807,19 +890,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _model_story__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/story */ "./src/app/model/story.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
-/* harmony import */ var _service_story_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../service/story.service */ "./src/app/service/story.service.ts");
-
+/* harmony import */ var _service_story_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/story.service */ "./src/app/service/story.service.ts");
 
 
 
 
 
 let FeatureComponent = class FeatureComponent {
-    constructor(route, router, userService, storyService) {
+    constructor(route, storyService) {
         this.route = route;
-        this.router = router;
-        this.userService = userService;
         this.storyService = storyService;
         this.isShowAddStoryModal = false;
         this.story = new _model_story__WEBPACK_IMPORTED_MODULE_2__["Story"]();
@@ -828,7 +907,7 @@ let FeatureComponent = class FeatureComponent {
     ngOnInit() {
         const featureId = this.route.snapshot.paramMap.get('id');
         console.log('Feature Id', featureId);
-        this.userService.getStories(featureId).subscribe((res) => {
+        this.storyService.getStories(featureId).subscribe((res) => {
             if (res) {
                 this.stories = res;
             }
@@ -836,8 +915,7 @@ let FeatureComponent = class FeatureComponent {
                 console.log('Could not get stories');
             }
         }, (error) => {
-            console.log('Unable to get stories, Please try again.');
-            console.log('Login Error response', error);
+            console.log('get stories Error response', error);
         });
     }
     showAddStoryModal() {
@@ -860,9 +938,7 @@ let FeatureComponent = class FeatureComponent {
 };
 FeatureComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__["UserRegistrationService"] },
-    { type: _service_story_service__WEBPACK_IMPORTED_MODULE_5__["StoryService"] }
+    { type: _service_story_service__WEBPACK_IMPORTED_MODULE_4__["StoryService"] }
 ];
 FeatureComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -902,22 +978,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _service_story_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/story.service */ "./src/app/service/story.service.ts");
 
 
 
 
 let FeaturesComponent = class FeaturesComponent {
-    constructor(route, router, userService) {
+    constructor(route, router, storyService) {
         this.route = route;
         this.router = router;
-        this.userService = userService;
+        this.storyService = storyService;
         this.stories = new Array();
     }
     ngOnInit() {
         const featureId = this.route.snapshot.paramMap.get('id');
         console.log('feature Id', featureId);
-        this.userService.getStories(featureId).subscribe((res) => {
+        this.storyService.getStories(featureId).subscribe((res) => {
             if (res) {
                 this.stories = res;
             }
@@ -925,15 +1001,14 @@ let FeaturesComponent = class FeaturesComponent {
                 console.log('Could not get stories');
             }
         }, (error) => {
-            console.log('Unable to get stories, Please try again.');
-            console.log('Login Error response', error);
+            console.log('Get stories Error response', error);
         });
     }
 };
 FeaturesComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+    { type: _service_story_service__WEBPACK_IMPORTED_MODULE_3__["StoryService"] }
 ];
 FeaturesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -942,6 +1017,66 @@ FeaturesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./features.component.css */ "./src/app/features/features.component.css")).default]
     })
 ], FeaturesComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/invitation/invitation.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/invitation/invitation.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ludml0YXRpb24vaW52aXRhdGlvbi5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/invitation/invitation.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/invitation/invitation.component.ts ***!
+  \****************************************************/
+/*! exports provided: InvitationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvitationComponent", function() { return InvitationComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _model_invitation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/invitation */ "./src/app/model/invitation.ts");
+/* harmony import */ var _service_invitation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/invitation.service */ "./src/app/service/invitation.service.ts");
+
+
+
+
+let InvitationComponent = class InvitationComponent {
+    constructor(invitationService) {
+        this.invitationService = invitationService;
+        this.invitation = new _model_invitation__WEBPACK_IMPORTED_MODULE_2__["Invitation"]();
+    }
+    ngOnInit() {
+    }
+    inviteUser() {
+        this.invitationService.inviteUser(this.invitation).subscribe((res) => {
+        }, (error) => {
+            console.log('Invitation failed.', error);
+        });
+    }
+};
+InvitationComponent.ctorParameters = () => [
+    { type: _service_invitation_service__WEBPACK_IMPORTED_MODULE_3__["InvitationService"] }
+];
+InvitationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-invitation',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./invitation.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/invitation/invitation.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./invitation.component.css */ "./src/app/invitation/invitation.component.css")).default]
+    })
+], InvitationComponent);
 
 
 
@@ -960,6 +1095,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 
 class Feature {
+}
+
+
+/***/ }),
+
+/***/ "./src/app/model/invitation.ts":
+/*!*************************************!*\
+  !*** ./src/app/model/invitation.ts ***!
+  \*************************************/
+/*! exports provided: Invitation */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Invitation", function() { return Invitation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+class Invitation {
 }
 
 
@@ -1139,7 +1292,7 @@ let ProjectComponent = class ProjectComponent {
     ngOnInit() {
         const projectId = this.route.snapshot.paramMap.get('id');
         console.log('Project Id', projectId);
-        this.userService.getFeatures(projectId).subscribe((res) => {
+        this.featureService.getFeatures(projectId).subscribe((res) => {
             if (res) {
                 this.features = res;
             }
@@ -1213,23 +1366,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/project */ "./src/app/model/project.ts");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
-/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
-
+/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
 
 
 
 
 let ProjectsComponent = class ProjectsComponent {
-    constructor(userService, projectService) {
-        this.userService = userService;
+    constructor(projectService) {
         this.projectService = projectService;
         this.project = new _model_project__WEBPACK_IMPORTED_MODULE_2__["Project"]();
         this.projects = [];
         this.isShowAddProjectModal = false;
     }
     ngOnInit() {
-        this.userService.getProjects(100).subscribe((res) => {
+        this.projectService.getProjects(100).subscribe((res) => {
             if (res) {
                 this.projects = res;
             }
@@ -1237,7 +1387,6 @@ let ProjectsComponent = class ProjectsComponent {
                 console.log('Could not get projects');
             }
         }, (error) => {
-            console.log('Unable to get projects, Please try again.');
             console.log('Login Error response', error);
         });
     }
@@ -1260,8 +1409,7 @@ let ProjectsComponent = class ProjectsComponent {
     }
 };
 ProjectsComponent.ctorParameters = () => [
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] },
-    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_4__["ProjectService"] }
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
 ];
 ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1369,34 +1517,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-
-
 
 
 
 let FeatureService = class FeatureService {
-    constructor(http, router, location) {
+    constructor(http) {
         this.http = http;
-        this.router = router;
-        this.location = location;
         this.featureUri = '/feature';
+        this.featuresUri = '/features/';
     }
     createFeature(feature) {
         return this.http.post(`${window.location.origin + this.featureUri}`, feature);
     }
+    getFeatures(projectId) {
+        return this.http.get(`${window.location.origin + this.featuresUri + projectId}`);
+    }
 };
 FeatureService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 FeatureService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
     })
 ], FeatureService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/service/invitation.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/service/invitation.service.ts ***!
+  \***********************************************/
+/*! exports provided: InvitationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InvitationService", function() { return InvitationService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let InvitationService = class InvitationService {
+    constructor(http) {
+        this.http = http;
+        this.invitationUri = '/invite';
+    }
+    inviteUser(invitation) {
+        return this.http.post(`${window.location.origin + this.invitationUri}`, invitation);
+    }
+};
+InvitationService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+InvitationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], InvitationService);
 
 
 
@@ -1414,29 +1596,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectService", function() { return ProjectService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-
-
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 
 
 
 let ProjectService = class ProjectService {
-    constructor(http, router, location) {
+    constructor(http) {
         this.http = http;
-        this.router = router;
-        this.location = location;
         this.projectUri = '/project';
+        this.projectsUri = '/projects/';
     }
     createProject(project) {
         return this.http.post(`${window.location.origin + this.projectUri}`, project);
     }
+    getProjects(userId) {
+        return this.http.get(`${window.location.origin + this.projectsUri + userId}`);
+    }
 };
 ProjectService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_3__["PlatformLocation"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 ProjectService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1461,28 +1639,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-
-
 
 
 
 let StoryService = class StoryService {
-    constructor(http, router, location) {
+    constructor(http) {
         this.http = http;
-        this.router = router;
-        this.location = location;
         this.storyUri = '/story';
+        this.storiesUri = '/stories/';
     }
     createStory(story) {
         return this.http.post(`${window.location.origin + this.storyUri}`, story);
     }
+    getStories(featureId) {
+        return this.http.get(`${window.location.origin + this.storiesUri + featureId}`);
+    }
 };
 StoryService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 StoryService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1507,28 +1681,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-
-
 
 
 
 let TaskService = class TaskService {
-    constructor(http, router, location) {
+    constructor(http) {
         this.http = http;
-        this.router = router;
-        this.location = location;
         this.taskUri = '/task';
+        this.tasksUri = '/tasks/';
     }
     createTask(task) {
         return this.http.post(`${window.location.origin + this.taskUri}`, task);
     }
+    getTasks(storyId) {
+        return this.http.get(`${window.location.origin + this.tasksUri + storyId}`);
+    }
 };
 TaskService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 TaskService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1553,30 +1723,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-
-
 
 
 
 let UserRegistrationService = class UserRegistrationService {
-    constructor(http, router, location) {
+    constructor(http) {
         this.http = http;
-        this.router = router;
-        this.location = location;
         this.registrationUri = '/register';
         this.loginUri = '/authenticate';
-        this.projectsUri = '/projects/';
-        this.featuresUri = '/features/';
-        this.storiesUri = '/stories/';
-        this.tasksUri = '/tasks/';
     }
     loginUser(user) {
         return this.http.post(`${window.location.origin + this.loginUri}`, user);
     }
-    registerUser(userObj) {
-        return this.http.post(`${window.location.origin + this.registrationUri}`, userObj);
+    registerUser(user) {
+        return this.http.post(`${window.location.origin + this.registrationUri}`, user);
     }
     isUserLoggedIn() {
         const user = sessionStorage.getItem('username');
@@ -1585,23 +1745,9 @@ let UserRegistrationService = class UserRegistrationService {
     logOut() {
         sessionStorage.removeItem('username');
     }
-    getProjects(userId) {
-        return this.http.get(`${window.location.origin + this.projectsUri + userId}`);
-    }
-    getFeatures(projectId) {
-        return this.http.get(`${window.location.origin + this.featuresUri + projectId}`);
-    }
-    getStories(featureId) {
-        return this.http.get(`${window.location.origin + this.storiesUri + featureId}`);
-    }
-    getTasks(storyId) {
-        return this.http.get(`${window.location.origin + this.tasksUri + storyId}`);
-    }
 };
 UserRegistrationService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["PlatformLocation"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 UserRegistrationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1684,19 +1830,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _model_task__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/task */ "./src/app/model/task.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
-/* harmony import */ var _service_task_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../service/task.service */ "./src/app/service/task.service.ts");
-
+/* harmony import */ var _service_task_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/task.service */ "./src/app/service/task.service.ts");
 
 
 
 
 
 let StoryComponent = class StoryComponent {
-    constructor(route, router, userService, taskService) {
+    constructor(route, taskService) {
         this.route = route;
-        this.router = router;
-        this.userService = userService;
         this.taskService = taskService;
         this.isShowAddTaskModal = false;
         this.task = new _model_task__WEBPACK_IMPORTED_MODULE_2__["Task"]();
@@ -1705,7 +1847,7 @@ let StoryComponent = class StoryComponent {
     ngOnInit() {
         const storyId = this.route.snapshot.paramMap.get('id');
         console.log('Feature Id', storyId);
-        this.userService.getTasks(storyId).subscribe((res) => {
+        this.taskService.getTasks(storyId).subscribe((res) => {
             if (res) {
                 this.tasks = res;
             }
@@ -1713,8 +1855,7 @@ let StoryComponent = class StoryComponent {
                 console.log('Could not get tasks');
             }
         }, (error) => {
-            console.log('Unable to get tasks, Please try again.');
-            console.log('Login Error response', error);
+            console.log('Tasks Error response', error);
         });
     }
     showAddTaskModal() {
@@ -1737,9 +1878,7 @@ let StoryComponent = class StoryComponent {
 };
 StoryComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__["UserRegistrationService"] },
-    { type: _service_task_service__WEBPACK_IMPORTED_MODULE_5__["TaskService"] }
+    { type: _service_task_service__WEBPACK_IMPORTED_MODULE_4__["TaskService"] }
 ];
 StoryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -2005,8 +2144,7 @@ let UserRegisterComponent = class UserRegisterComponent {
     }
     registerUser() {
         this.userRegistrationService.registerUser(this.user).subscribe((res) => {
-            console.log('Success response', res);
-            this.router.navigate(['/profile']);
+            this.router.navigate(['/verify']);
             return res;
         }, (error) => {
             console.log('Error response', error);

@@ -1,29 +1,73 @@
 package com.smart.app.agilepro.controller;
 
+import com.smart.app.agilepro.model.Invitation;
+import com.smart.app.agilepro.model.JwtRequest;
+import com.smart.app.agilepro.model.JwtResponse;
 import com.smart.app.agilepro.model.User;
-import com.smart.app.agilepro.service.UserServiceImpl;
+import com.smart.app.agilepro.model.UserDTO;
+import com.smart.app.agilepro.security.JwtTokenUtil;
+import com.smart.app.agilepro.security.JwtUserDetailsService;
+import com.smart.app.agilepro.service.EmailServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/rest")
+@CrossOrigin
 public class UserController {
 
     @Autowired
-    public UserServiceImpl userService;
+    private AuthenticationManager authenticationManager;
 
-    @PostMapping(path = "/login", consumes = "application/json", produces = "application/json")
-    public User loginUser(@RequestBody User user) {
-        System.out.println("Login Request"+user.getEmailId()+":"+user.getPassword());
-        return userService.loginUser(user);
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+    
+    @Autowired
+    private JwtUserDetailsService userDetailsService;
+    
+    @Autowired
+    private EmailServiceImpl emailServiceImpl;
+
+    @PostMapping(value = "/authenticate")
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
+        final String username = authenticationRequest.getUsername();
+        final String password = authenticationRequest.getPassword();
+        authenticate(username, password);
+        final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        final String token = jwtTokenUtil.generateToken(userDetails);
+        return ResponseEntity.ok(new JwtResponse(token));
     }
 
-    @PostMapping(path = "/registration", consumes = "application/json", produces = "application/json")
-    public boolean registerUser(@RequestBody User user) {
-        return userService.registerUser(user);
+    @PostMapping(value = "/register")
+    public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+        User savedUser = userDetailsService.save(user);
+        if (savedUser != null) {
+            emailServiceImpl.sendMail(user.getUsername(), "Please click <a href='http://localhost:8080'>" + "here" + "</a> to confirm your email.");
+        }
+        return ResponseEntity.ok(savedUser);
+    }
+
+    @PostMapping(value="/invite")
+    public void inviteUser(@RequestBody Invitation invitation) {
+        emailServiceImpl.sendMail(invitation.getEmailId(), invitation.getInvitationMessage());
+    }
+
+    private void authenticate(String username, String password) throws Exception {
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        } catch (DisabledException e) {
+            throw new Exception("USER_DISABLED", e);
+        } catch (BadCredentialsException e) {
+            throw new Exception("INVALID_CREDENTIALS", e);
+        }
     }
 }

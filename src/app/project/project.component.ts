@@ -20,7 +20,7 @@ features: Array<Feature> = new Array();
     const projectId = this.route.snapshot.paramMap.get('id');
     console.log('Project Id', projectId);
 
-    this.userService.getFeatures(projectId).subscribe((res) => {
+    this.featureService.getFeatures(projectId).subscribe((res) => {
       if (res) {
         this.features = res;
       } else {

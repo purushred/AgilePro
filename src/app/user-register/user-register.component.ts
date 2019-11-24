@@ -16,8 +16,7 @@ export class UserRegisterComponent implements OnInit {
   }
   registerUser() {
     this.userRegistrationService.registerUser(this.user).subscribe((res) => {
-      console.log('Success response', res);
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/verify']);
       return res;
     }, (error) => {
       console.log('Error response', error);

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../model/project';
-import { UserRegistrationService } from '../service/user-registration.service';
 import { ProjectService } from '../service/project.service';
 
 @Component({
@@ -9,20 +8,19 @@ import { ProjectService } from '../service/project.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-project: Project = new Project();
-projects: Array<Project> = [];
-  constructor(private userService: UserRegistrationService, private projectService: ProjectService) {
-   }
-   isShowAddProjectModal = false;
+  project: Project = new Project();
+  projects: Array<Project> = [];
+  constructor(private projectService: ProjectService) {
+  }
+  isShowAddProjectModal = false;
   ngOnInit() {
-    this.userService.getProjects(100).subscribe((res) => {
+    this.projectService.getProjects(100).subscribe((res) => {
       if (res) {
         this.projects = res;
       } else {
         console.log('Could not get projects');
       }
     }, (error) => {
-      console.log('Unable to get projects, Please try again.');
       console.log('Login Error response', error);
     });
   }

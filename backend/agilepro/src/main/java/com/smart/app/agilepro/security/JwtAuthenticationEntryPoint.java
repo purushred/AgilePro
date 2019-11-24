@@ -1,4 +1,4 @@
-package com.smart.app.agilepro.controller;
+package com.smart.app.agilepro.security;
 
 import java.io.IOException;
 import java.io.Serializable;

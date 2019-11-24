@@ -1,8 +1,5 @@
 package com.smart.app.agilepro.security;
 
-import com.smart.app.agilepro.controller.JwtAuthenticationEntryPoint;
-import com.smart.app.agilepro.controller.JwtRequestFilter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

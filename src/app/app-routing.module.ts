@@ -10,9 +10,16 @@ import { FeatureComponent } from './feature/feature.component';
 import { StoryComponent } from './story/story.component';
 import { TaskComponent } from './task/task.component';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { InvitationComponent } from './invitation/invitation.component';
 
 
 const routes: Routes = [
+
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
   {
     path: 'login',
     component: UserLoginComponent
@@ -22,16 +29,20 @@ const routes: Routes = [
     component: UserLogoutComponent
   },
   {
+    path: 'verify',
+    component: EmailVerificationComponent
+  },
+  {
+    path: 'invite',
+    component: InvitationComponent
+  },
+  {
     path: 'dashboard',
     component: DashboardComponent
   },
   {
     path: 'register',
     component: UserRegisterComponent
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent
   },
   {
     path: 'projects',

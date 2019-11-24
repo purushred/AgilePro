@@ -25,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-http-interceptor.service';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { InvitationComponent } from './invitation/invitation.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { UserLogoutComponent } from './user-logout/user-logout.component';
     TaskComponent,
     ReportsComponent,
     FeatureComponent,
-    UserLogoutComponent
+    UserLogoutComponent,
+    EmailVerificationComponent,
+    InvitationComponent
   ],
   imports: [
     BrowserModule,
