@@ -498,6 +498,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_logout_user_logout_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user-logout/user-logout.component */ "./src/app/user-logout/user-logout.component.ts");
 /* harmony import */ var _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./email-verification/email-verification.component */ "./src/app/email-verification/email-verification.component.ts");
 /* harmony import */ var _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./invitation/invitation.component */ "./src/app/invitation/invitation.component.ts");
+/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./auth-guard */ "./src/app/auth-guard.ts");
+/* harmony import */ var _model_role__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./model/role */ "./src/app/model/role.ts");
+
+
 
 
 
@@ -515,8 +519,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: 'profile',
-        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"]
+        path: 'register',
+        component: _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
     },
     {
         path: 'login',
@@ -528,39 +532,49 @@ const routes = [
     },
     {
         path: 'verify',
-        component: _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_13__["EmailVerificationComponent"]
+        component: _email_verification_email_verification_component__WEBPACK_IMPORTED_MODULE_13__["EmailVerificationComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'invite',
-        component: _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_14__["InvitationComponent"]
+        component: _invitation_invitation_component__WEBPACK_IMPORTED_MODULE_14__["InvitationComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
+    },
+    {
+        path: 'profile',
+        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'dashboard',
-        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__["DashboardComponent"]
-    },
-    {
-        path: 'register',
-        component: _user_register_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__["DashboardComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'projects',
-        component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsComponent"]
+        component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_7__["ProjectsComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]],
+        data: { roles: [_model_role__WEBPACK_IMPORTED_MODULE_16__["Role"].Admin] }
     },
     {
         path: 'project/:id',
-        component: _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"]
+        component: _project_project_component__WEBPACK_IMPORTED_MODULE_8__["ProjectComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'feature/:id',
-        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_9__["FeatureComponent"]
+        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_9__["FeatureComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'story/:id',
-        component: _story_story_component__WEBPACK_IMPORTED_MODULE_10__["StoryComponent"]
+        component: _story_story_component__WEBPACK_IMPORTED_MODULE_10__["StoryComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     },
     {
         path: 'task/:id',
-        component: _task_task_component__WEBPACK_IMPORTED_MODULE_11__["TaskComponent"]
+        component: _task_task_component__WEBPACK_IMPORTED_MODULE_11__["TaskComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -745,6 +759,58 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/auth-guard.ts":
+/*!*******************************!*\
+  !*** ./src/app/auth-guard.ts ***!
+  \*******************************/
+/*! exports provided: AuthGuard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+
+
+
+
+let AuthGuard = class AuthGuard {
+    constructor(router, userRegistrationService) {
+        this.router = router;
+        this.userRegistrationService = userRegistrationService;
+    }
+    canActivate(route, state) {
+        const currentUser = this.userRegistrationService.getLoggedInUser();
+        if (currentUser) {
+            // check if route is restricted by role
+            if (route.data.roles && route.data.roles.indexOf(currentUser.role) === -1) {
+                // role not authorised so redirect to home page
+                this.router.navigate(['/']);
+                return false;
+            }
+            // authorised so return true
+            return true;
+        }
+        // not logged in so redirect to login page with the return url
+        this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+        return false;
+    }
+};
+AuthGuard.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
+];
+AuthGuard = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' })
+], AuthGuard);
 
 
 
@@ -1136,6 +1202,27 @@ class Project {
 
 /***/ }),
 
+/***/ "./src/app/model/role.ts":
+/*!*******************************!*\
+  !*** ./src/app/model/role.ts ***!
+  \*******************************/
+/*! exports provided: Role */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Role", function() { return Role; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var Role;
+(function (Role) {
+    Role["User"] = "User";
+    Role["Admin"] = "Admin";
+})(Role || (Role = {}));
+
+
+/***/ }),
+
 /***/ "./src/app/model/story.ts":
 /*!********************************!*\
   !*** ./src/app/model/story.ts ***!
@@ -1484,7 +1571,7 @@ __webpack_require__.r(__webpack_exports__);
 let BasicAuthHtppInterceptorService = class BasicAuthHtppInterceptorService {
     constructor() { }
     intercept(req, next) {
-        if (sessionStorage.getItem('username') && sessionStorage.getItem('token')) {
+        if (sessionStorage.getItem('currentUser') && sessionStorage.getItem('token')) {
             req = req.clone({
                 setHeaders: {
                     Authorization: sessionStorage.getItem('token')
@@ -1738,12 +1825,16 @@ let UserRegistrationService = class UserRegistrationService {
     registerUser(user) {
         return this.http.post(`${window.location.origin + this.registrationUri}`, user);
     }
+    getLoggedInUser() {
+        return (JSON.parse(sessionStorage.getItem('currentUser')));
+    }
     isUserLoggedIn() {
-        const user = sessionStorage.getItem('username');
+        const user = sessionStorage.getItem('currentUser');
         return !(user === null);
     }
     logOut() {
-        sessionStorage.removeItem('username');
+        sessionStorage.removeItem('currentUser');
+        sessionStorage.removeItem('token');
     }
 };
 UserRegistrationService.ctorParameters = () => [
@@ -2024,7 +2115,7 @@ let UserLoginComponent = class UserLoginComponent {
     loginUser() {
         this.userRegistrationService.loginUser(this.user).subscribe((res) => {
             if (res) {
-                sessionStorage.setItem('username', this.user.username);
+                sessionStorage.setItem('currentUser', JSON.stringify(this.user));
                 const tokenStr = 'Bearer ' + res['token'];
                 sessionStorage.setItem('token', tokenStr);
                 const navigationExtras = {
@@ -2036,7 +2127,6 @@ let UserLoginComponent = class UserLoginComponent {
                 console.log('Invalid user credentials');
             }
         }, (error) => {
-            console.log('Unable to login, Please try again.');
             console.log('Login Error response', error);
         });
     }

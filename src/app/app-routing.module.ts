@@ -12,13 +12,15 @@ import { TaskComponent } from './task/task.component';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { InvitationComponent } from './invitation/invitation.component';
+import { AuthGuard } from './auth-guard';
+import { Role } from './model/role';
 
 
 const routes: Routes = [
 
   {
-    path: 'profile',
-    component: ProfileComponent
+    path: 'register',
+    component: UserRegisterComponent
   },
   {
     path: 'login',
@@ -30,39 +32,49 @@ const routes: Routes = [
   },
   {
     path: 'verify',
-    component: EmailVerificationComponent
+    component: EmailVerificationComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'invite',
-    component: InvitationComponent
+    component: InvitationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
-  },
-  {
-    path: 'register',
-    component: UserRegisterComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] }
   },
   {
     path: 'project/:id',
-    component: ProjectComponent
+    component: ProjectComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'feature/:id',
-    component: FeatureComponent
+    component: FeatureComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'story/:id',
-    component: StoryComponent
+    component: StoryComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'task/:id',
-    component: TaskComponent
+    component: TaskComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

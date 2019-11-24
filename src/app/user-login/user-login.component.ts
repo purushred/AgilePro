@@ -17,7 +17,7 @@ export class UserLoginComponent implements OnInit {
   public loginUser() {
     this.userRegistrationService.loginUser(this.user).subscribe((res) => {
       if (res) {
-        sessionStorage.setItem('username', this.user.username);
+        sessionStorage.setItem('currentUser', JSON.stringify(this.user));
         const tokenStr = 'Bearer ' + res['token'];
         sessionStorage.setItem('token', tokenStr);
         const navigationExtras: NavigationExtras = {
@@ -28,7 +28,6 @@ export class UserLoginComponent implements OnInit {
         console.log('Invalid user credentials');
       }
     }, (error) => {
-      console.log('Unable to login, Please try again.');
       console.log('Login Error response', error);
     });
   }

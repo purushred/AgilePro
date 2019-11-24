@@ -27,6 +27,7 @@ import { BasicAuthHtppInterceptorService } from './service/basic-auth-http-inter
 import { UserLogoutComponent } from './user-logout/user-logout.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { InvitationComponent } from './invitation/invitation.component';
+import { ErrorInterceptor } from './service/error-interceptor';
 
 @NgModule({
   declarations: [
