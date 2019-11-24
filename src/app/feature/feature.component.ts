@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Story } from '../story';
+import { Story } from '../model/story';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserRegistrationService } from '../user-registration.service';
-import { StoryService } from '../story.service';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { StoryService } from '../service/story.service';
 
 @Component({
   selector: 'app-feature',

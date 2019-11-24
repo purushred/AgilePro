@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserRegistrationService } from '../user-registration.service';
-import { Project } from '../project';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { Project } from '../model/project';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 

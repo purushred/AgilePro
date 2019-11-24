@@ -1,9 +1,9 @@
-<div class="main-container">
-    <header class="header header-6">
+<clr-main-container>
+    <clr-header>
         <div class="branding">
             Agile Pro
         </div>
-        <div class="header-nav">
+        <div class="header-nav" [clr-nav-level]="1">
             <a href="#" class="nav-link nav-text">Home</a>
             <a href="#" class="nav-link nav-text">Reports</a>
             <a href="#" class="nav-link nav-text">Track</a>
@@ -14,15 +14,41 @@
                 <clr-icon shape="user"></clr-icon>
                 <span class="nav-text">Login</span>
             </a>
-            <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" (click)="userLogout()" class="nav-link nav-icon-text">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" (click)="userLogout()"
+                class="nav-link nav-icon-text">
                 <clr-icon shape="user"></clr-icon>
                 <span class="nav-text">Logout</span>
             </a>
         </div>
-    </header>
+    </clr-header>
     <div class="content-container">
+        <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed"
+            [clr-nav-level]="1">
+            <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+                Projects
+            </a>
+            <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+                Sprint
+            </a>
+            <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
+                Stories
+            </a>
+
+            <a clrVerticalNavLink routerLink="./fighting" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
+                Reports
+            </a>
+            <div class="nav-divider"></div>
+            <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">
+                <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                Settings
+            </a>
+        </clr-vertical-nav>
         <div class="content-area">
             <router-outlet></router-outlet>
         </div>
     </div>
-</div>
+</clr-main-container>

@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Location, PlatformLocation } from '@angular/common';
 import { state } from '@angular/animations';
-import { Project } from './project';
-import { Feature } from './feature';
-import { Story } from './story';
-import { Task } from './task';
-import { User } from './user';
+import { Project } from '../model/project';
+import { Feature } from '../model/feature';
+import { Story } from '../model/story';
+import { Task } from '../model/task';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { PlatformLocation } from '@angular/common';
-import { Feature } from './feature';
+import { Feature } from '../model/feature';
 
 @Injectable({
   providedIn: 'root'

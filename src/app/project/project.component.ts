@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { UserRegistrationService } from '../user-registration.service';
-import { Feature } from '../feature';
-import { FeatureService } from '../feature.service';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { Feature } from '../model/feature';
+import { FeatureService } from '../service/feature.service';
 
 @Component({
   selector: 'app-project',

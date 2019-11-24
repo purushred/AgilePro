@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Story } from './story';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { PlatformLocation } from '@angular/common';
+import { Task } from '../model/task';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StoryService {
-  storyUri = '/story';
+export class TaskService {
+  taskUri = '/task';
 
   constructor(private http: HttpClient, private router: Router, private location: PlatformLocation) { }
 
-  createStory(story) {
-    return this.http.post<Story>(`${window.location.origin + this.storyUri}`, story);
+  createTask(task) {
+    return this.http.post<Task>(`${window.location.origin + this.taskUri}`, task);
   }
 }

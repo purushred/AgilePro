@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
-import { UserRegistrationService } from './user-registration.service';
+import { UserRegistrationService } from './service/user-registration.service';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -23,7 +23,7 @@ import { FeatureComponent } from './feature/feature.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { BasicAuthHtppInterceptorService } from './basic-auth-http-interceptor.service';
+import { BasicAuthHtppInterceptorService } from './service/basic-auth-http-interceptor.service';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
 
 @NgModule({

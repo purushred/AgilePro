@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserRegistrationService } from '../user-registration.service';
-import { Story } from '../story';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { Story } from '../model/story';
 
 @Component({
   selector: 'app-features',

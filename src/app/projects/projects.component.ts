@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../project';
-import { UserRegistrationService } from '../user-registration.service';
-import { ProjectService } from '../project.service';
+import { Project } from '../model/project';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { ProjectService } from '../service/project.service';
 
 @Component({
   selector: 'app-projects',

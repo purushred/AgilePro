@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../user-registration.service';
-import { User } from '../user';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { User } from '../model/user';
 import { Router, NavigationExtras } from '@angular/router';
 
 @Component({

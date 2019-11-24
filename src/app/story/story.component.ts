@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../task';
+import { Task } from '../model/task';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserRegistrationService } from '../user-registration.service';
-import { Story } from '../story';
-import { TaskService } from '../task.service';
+import { UserRegistrationService } from '../service/user-registration.service';
+import { Story } from '../model/story';
+import { TaskService } from '../service/task.service';
 
 @Component({
   selector: 'app-story',

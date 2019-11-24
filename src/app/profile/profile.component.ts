@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserRegistrationService } from '../user-registration.service';
+import { UserRegistrationService } from '../service/user-registration.service';
 
 @Component({
   selector: 'app-profile',
