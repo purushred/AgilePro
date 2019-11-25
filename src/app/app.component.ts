@@ -9,11 +9,40 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'AgilePro';
+  isHomeSelected = true;
+  isTrackSelected = false;
+  isProjectsSelected = false;
+  isSettingsSelected = false;
   constructor(private router: Router, private loginService: UserRegistrationService) {}
 
   userLogout() {
     this.loginService.logOut();
     this.router.navigate(['/login']);
+  }
+
+  handleHomeClick() {
+    this.isHomeSelected = true;
+    this.isTrackSelected = false;
+    this.isProjectsSelected = false;
+    this.isSettingsSelected = false;
+  }
+  handleTrackClick () {
+    this.isHomeSelected = false;
+    this.isTrackSelected = true;
+    this.isProjectsSelected = false;
+    this.isSettingsSelected = false;
+  }
+  handleProjectsClick () {
+    this.isHomeSelected = false;
+    this.isTrackSelected = false;
+    this.isProjectsSelected = true;
+    this.isSettingsSelected = false;
+  }
+  handleSettingsClick() {
+    this.isHomeSelected = false;
+    this.isTrackSelected = false;
+    this.isProjectsSelected = false;
+    this.isSettingsSelected = true;
   }
 }
 

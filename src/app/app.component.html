@@ -4,10 +4,10 @@
             Agile Pro
         </div>
         <div class="header-nav" [clr-nav-level]="1">
-            <a href="#" class="nav-link nav-text">Home</a>
-            <a href="#" class="nav-link nav-text">Reports</a>
-            <a href="#" class="nav-link nav-text">Track</a>
-            <a routerLink="/projects" class="nav-link nav-text">Projects</a>
+            <a routerLink="/home" (click)="handleHomeClick()" class="nav-link nav-text">Home</a>
+            <a routerLink="/track" (click)="handleTrackClick()" class="nav-link nav-text">Track</a>
+            <a routerLink="/projects" (click)="handleProjectsClick()" class="nav-link nav-text">Projects</a>
+            <a routerLink="/track" (click)="handleSettingsClick()" class="nav-link nav-text">Settings</a>
         </div>
         <div class="header-actions">
             <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link nav-icon-text">
@@ -23,33 +23,54 @@
     </clr-header>
     <div class="content-container">
         <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed"
-            [clr-nav-level]="1">
-            <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
-                Projects
-            </a>
-            <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
-                Sprint
-            </a>
-            <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
-                Stories
-            </a>
-
-            <a clrVerticalNavLink routerLink="./fighting" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
-                Reports
-            </a>
-            <div class="nav-divider"></div>
-            <a clrVerticalNavLink routerLink="./credit" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
-                Settings
-            </a>
-            <a clrVerticalNavLink routerLink="/invite" routerLinkActive="active">
-                <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
-                Invite User
-            </a>
+            [clr-nav-level]="2">
+            <div *ngIf="isHomeSelected">
+                <a clrVerticalNavLink routerLink="./dashboard" routerLinkActive="active" class="active">
+                    <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+                    Dashboard
+                </a>
+                <div class="nav-divider"></div>
+            </div>
+            <div *ngIf="isTrackSelected">
+                <a clrVerticalNavLink routerLink="./backlogs" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+                    Backlogs
+                </a>
+                <a clrVerticalNavLink routerLink="./sprint" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+                    Sprint
+                </a>
+                <a clrVerticalNavLink routerLink="./stories" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
+                    Stories
+                </a>
+                <div class="nav-divider"></div>
+            </div>
+            <div *ngIf="isProjectsSelected">
+                <a clrVerticalNavLink routerLink="./projects" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
+                    Projects
+                </a>
+                <a clrVerticalNavLink routerLink="./reports" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="shield"></clr-icon>
+                    Reports
+                </a>
+                <div class="nav-divider"></div>
+            </div>
+            <div *ngIf="isSettingsSelected">
+                <a clrVerticalNavLink routerLink="./profile" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                    Profile
+                </a>
+                <a clrVerticalNavLink routerLink="./settings" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                    Settings
+                </a>
+                <a clrVerticalNavLink routerLink="/invite" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                    Invite User
+                </a>
+            </div>
         </clr-vertical-nav>
         <div class="content-area">
             <router-outlet></router-outlet>
