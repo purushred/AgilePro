@@ -24,7 +24,6 @@ import { FeatureComponent } from './feature/feature.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { UserLogoutComponent } from './authentication/user-logout.component';
 import { EmailVerificationComponent } from './profile/email-verification.component';
 import { InvitationComponent } from './profile/invitation.component';
 
@@ -44,7 +43,6 @@ import { InvitationComponent } from './profile/invitation.component';
     TaskComponent,
     ReportsComponent,
     FeatureComponent,
-    UserLogoutComponent,
     EmailVerificationComponent,
     InvitationComponent
   ],

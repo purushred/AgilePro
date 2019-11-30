@@ -49,19 +49,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-logout.component.html":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-logout.component.html ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>user-logout works!</p>\n");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-register.component.html":
 /*!***************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-register.component.html ***!
@@ -488,18 +475,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth-guard */ "./src/app/auth-guard.ts");
 /* harmony import */ var _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./authentication/user-login.component */ "./src/app/authentication/user-login.component.ts");
-/* harmony import */ var _authentication_user_logout_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authentication/user-logout.component */ "./src/app/authentication/user-logout.component.ts");
-/* harmony import */ var _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./authentication/user-register.component */ "./src/app/authentication/user-register.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
-/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
-/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
-/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
-/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
-/* harmony import */ var _project_projects_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./project/projects.component */ "./src/app/project/projects.component.ts");
-/* harmony import */ var _stories_story_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./stories/story.component */ "./src/app/stories/story.component.ts");
-/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
-
+/* harmony import */ var _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authentication/user-register.component */ "./src/app/authentication/user-register.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
+/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
+/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
+/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
+/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
+/* harmony import */ var _project_projects_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./project/projects.component */ "./src/app/project/projects.component.ts");
+/* harmony import */ var _stories_story_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./stories/story.component */ "./src/app/stories/story.component.ts");
+/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
 
 
 
@@ -518,59 +503,55 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'register',
-        component: _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_6__["UserRegisterComponent"]
+        component: _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
     },
     {
         path: 'login',
         component: _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_4__["UserLoginComponent"]
     },
     {
-        path: 'logout',
-        component: _authentication_user_logout_component__WEBPACK_IMPORTED_MODULE_5__["UserLogoutComponent"]
-    },
-    {
         path: 'verify',
-        component: _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_9__["EmailVerificationComponent"],
+        component: _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_8__["EmailVerificationComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'invite',
-        component: _profile_invitation_component__WEBPACK_IMPORTED_MODULE_10__["InvitationComponent"],
+        component: _profile_invitation_component__WEBPACK_IMPORTED_MODULE_9__["InvitationComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'profile',
-        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
+        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'dashboard',
-        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'projects',
-        component: _project_projects_component__WEBPACK_IMPORTED_MODULE_13__["ProjectsComponent"],
+        component: _project_projects_component__WEBPACK_IMPORTED_MODULE_12__["ProjectsComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
     },
     {
         path: 'project/:id',
-        component: _project_project_component__WEBPACK_IMPORTED_MODULE_12__["ProjectComponent"],
+        component: _project_project_component__WEBPACK_IMPORTED_MODULE_11__["ProjectComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'feature/:id',
-        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_8__["FeatureComponent"],
+        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_7__["FeatureComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'story/:id',
-        component: _stories_story_component__WEBPACK_IMPORTED_MODULE_14__["StoryComponent"],
+        component: _stories_story_component__WEBPACK_IMPORTED_MODULE_13__["StoryComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     },
     {
         path: 'task/:id',
-        component: _task_task_component__WEBPACK_IMPORTED_MODULE_15__["TaskComponent"],
+        component: _task_task_component__WEBPACK_IMPORTED_MODULE_14__["TaskComponent"],
         canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
     }
 ];
@@ -697,10 +678,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/fesm2015/clr-angular.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _authentication_user_logout_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./authentication/user-logout.component */ "./src/app/authentication/user-logout.component.ts");
-/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
-/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
-
+/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
+/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
 
 
 
@@ -748,9 +727,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _task_task_component__WEBPACK_IMPORTED_MODULE_20__["TaskComponent"],
             _reports_reports_component__WEBPACK_IMPORTED_MODULE_21__["ReportsComponent"],
             _feature_feature_component__WEBPACK_IMPORTED_MODULE_22__["FeatureComponent"],
-            _authentication_user_logout_component__WEBPACK_IMPORTED_MODULE_26__["UserLogoutComponent"],
-            _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_27__["EmailVerificationComponent"],
-            _profile_invitation_component__WEBPACK_IMPORTED_MODULE_28__["InvitationComponent"]
+            _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_26__["EmailVerificationComponent"],
+            _profile_invitation_component__WEBPACK_IMPORTED_MODULE_27__["InvitationComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
@@ -884,36 +862,6 @@ UserLoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./user-login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-login.component.html")).default
     })
 ], UserLoginComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/authentication/user-logout.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/app/authentication/user-logout.component.ts ***!
-  \*********************************************************/
-/*! exports provided: UserLogoutComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserLogoutComponent", function() { return UserLogoutComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let UserLogoutComponent = class UserLogoutComponent {
-    constructor() { }
-    ngOnInit() {
-    }
-};
-UserLogoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-user-logout',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./user-logout.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/authentication/user-logout.component.html")).default
-    })
-], UserLogoutComponent);
 
 
 

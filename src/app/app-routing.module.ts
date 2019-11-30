@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth-guard';
 import { UserLoginComponent } from './authentication/user-login.component';
-import { UserLogoutComponent } from './authentication/user-logout.component';
 import { UserRegisterComponent } from './authentication/user-register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeatureComponent } from './feature/feature.component';
@@ -25,10 +24,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: UserLoginComponent
-  },
-  {
-    path: 'logout',
-    component: UserLogoutComponent
   },
   {
     path: 'verify',
