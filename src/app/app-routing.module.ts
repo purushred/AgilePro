@@ -1,3 +1,4 @@
+import { SprintsComponent } from './sprint/sprints.component';
 import { SettingsComponent } from './profile/settings.component';
 import { Role } from './model/role';
 import { NgModule } from '@angular/core';
@@ -51,6 +52,12 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'sprint',
+    component: SprintsComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] }
   },
   {
     path: 'projects',

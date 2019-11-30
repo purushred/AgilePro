@@ -31,6 +31,7 @@ export class AppComponent {
     this.isTrackSelected = true;
     this.isProjectsSelected = false;
     this.isSettingsSelected = false;
+    this.router.navigate(['/sprint']);
   }
   handleProjectsClick() {
     this.isHomeSelected = false;

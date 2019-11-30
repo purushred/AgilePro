@@ -5,13 +5,13 @@
         </div>
         <div class="header-nav" [clr-nav-level]="1">
             <a *ngIf="loginService.isUserLoggedIn()" routerLink="/dashboard" (click)="handleHomeClick()"
-                class="active nav-link nav-text">Home</a>
-            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/track" (click)="handleTrackClick()"
-                class="nav-link nav-text">Track</a>
+                [ngClass]="{'active': isHomeSelected, 'nav-link':true, 'nav-text':true}">Home</a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/sprint" (click)="handleTrackClick()"
+                [ngClass]="{'active': isTrackSelected, 'nav-link':true, 'nav-text':true}">Track</a>
             <a *ngIf="loginService.isUserLoggedIn()" routerLink="/projects" (click)="handleProjectsClick()"
-                class="nav-link nav-text">Projects</a>
+                [ngClass]="{'active': isProjectsSelected,  'nav-link':true, 'nav-text':true}">Projects</a>
             <a *ngIf="loginService.isUserLoggedIn()" routerLink="/settings" (click)="handleSettingsClick()"
-                class="nav-link nav-text">Settings</a>
+                [ngClass]="{'active': isSettingsSelected,  'nav-link':true, 'nav-text':true}">Settings</a>
         </div>
         <div class="header-actions">
             <clr-dropdown *ngIf="loginService.isUserLoggedIn()">
@@ -33,17 +33,14 @@
         <clr-vertical-nav *ngIf="loginService.isUserLoggedIn()" [clrVerticalNavCollapsible]="true"
             [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="2">
             <div *ngIf="isHomeSelected">
-                <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active" [ngClass]="{'active':isHomeSelected}">
+                <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active"
+                    [ngClass]="{'active':isHomeSelected}">
                     <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
                     Dashboard
                 </a>
                 <div class="nav-divider"></div>
             </div>
             <div *ngIf="isTrackSelected">
-                <a clrVerticalNavLink routerLink="backlogs" routerLinkActive="active">
-                    <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
-                    Backlogs
-                </a>
                 <a clrVerticalNavLink routerLink="sprint" routerLinkActive="active">
                     <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
                     Sprint
@@ -51,6 +48,10 @@
                 <a clrVerticalNavLink routerLink="stories" routerLinkActive="active">
                     <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
                     Stories
+                </a>
+                <a clrVerticalNavLink routerLink="backlogs" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
+                    Backlogs
                 </a>
                 <div class="nav-divider"></div>
             </div>
@@ -66,7 +67,8 @@
                 <div class="nav-divider"></div>
             </div>
             <div *ngIf="isSettingsSelected">
-                <a clrVerticalNavLink routerLink="profile" routerLinkActive="active" [ngClass]="{'active':isSettingsSelected}">
+                <a clrVerticalNavLink routerLink="profile" routerLinkActive="active"
+                    [ngClass]="{'active':isSettingsSelected}">
                     <clr-icon clrVerticalNavIcon shape="note"></clr-icon>
                     Profile
                 </a>

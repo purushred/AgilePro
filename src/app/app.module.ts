@@ -1,3 +1,4 @@
+import { SprintsComponent } from './sprint/sprints.component';
 import { SettingsComponent } from './profile/settings.component';
 import { HttpInterceptorService } from './service/http-interceptor.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,7 +29,6 @@ import { FormsModule } from '@angular/forms';
 import { EmailVerificationComponent } from './profile/email-verification.component';
 import { InvitationComponent } from './profile/invitation.component';
 import { SprintComponent } from './sprint/sprint.component';
-import { SprintsComponent } from './sprints/sprints.component';
 
 @NgModule({
   declarations: [
