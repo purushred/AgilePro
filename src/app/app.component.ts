@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'AgilePro';
@@ -13,7 +12,7 @@ export class AppComponent {
   isTrackSelected = false;
   isProjectsSelected = false;
   isSettingsSelected = false;
-  constructor(private router: Router, private loginService: UserRegistrationService) {}
+  constructor(private router: Router, public loginService: UserRegistrationService) {}
 
   userLogout() {
     this.loginService.logOut();
@@ -26,13 +25,13 @@ export class AppComponent {
     this.isProjectsSelected = false;
     this.isSettingsSelected = false;
   }
-  handleTrackClick () {
+  handleTrackClick() {
     this.isHomeSelected = false;
     this.isTrackSelected = true;
     this.isProjectsSelected = false;
     this.isSettingsSelected = false;
   }
-  handleProjectsClick () {
+  handleProjectsClick() {
     this.isHomeSelected = false;
     this.isTrackSelected = false;
     this.isProjectsSelected = true;

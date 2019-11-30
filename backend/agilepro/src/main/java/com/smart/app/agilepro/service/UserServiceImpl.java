@@ -37,11 +37,8 @@ public class UserServiceImpl {
 
     }
 
-    public User loginUser(final User user) {
-        return user;
-        // userDaoImpl.findAll().stream()
-        //         .filter(u -> u.getEmailId().equals(user.getEmailId()) 
-        // && u.getPassword().equals(user.getPassword())).findAny().orElse(null);
+    public User getUserByName(String userName){
+        return userDaoImpl.findByEmailId(userName);
     }
     public void saveUser(final User user) {
         userDaoImpl.save(user);

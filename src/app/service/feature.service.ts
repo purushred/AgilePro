@@ -16,6 +16,14 @@ export class FeatureService {
     return this.http.post<Feature>(`${window.location.origin + this.featureUri}`, feature);
   }
 
+  editFeature(feature) {
+    return this.http.put<Feature>(`${window.location.origin + this.featureUri}`, feature);
+  }
+
+  deleteFeature(feature) {
+    return this.http.delete<Feature>(`${window.location.origin + this.featureUri}`, feature);
+  }
+
   getFeatures(projectId) {
     return this.http.get <Array<Feature>> (`${window.location.origin + this.featuresUri + projectId}`);
   }

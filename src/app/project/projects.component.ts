@@ -1,20 +1,23 @@
+import { User } from '../model/user';
+import { UserRegistrationService } from '../service/user-registration.service';
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../model/project';
 import { ProjectService } from '../service/project.service';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  templateUrl: './projects.component.html'
 })
 export class ProjectsComponent implements OnInit {
   project: Project = new Project();
   projects: Array<Project> = [];
-  constructor(private projectService: ProjectService) {
+  user: User = new User();
+  constructor(private projectService: ProjectService, private userService: UserRegistrationService) {
   }
   isShowAddProjectModal = false;
   ngOnInit() {
-    this.projectService.getProjects(100).subscribe((res) => {
+    this.user = this.userService.getLoggedInUser();
+    this.projectService.getProjects(this.user.id).subscribe((res) => {
       if (res) {
         this.projects = res;
       } else {
@@ -30,7 +33,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   createProject() {
-    this.project.userId = 100;
+    this.project.userId = this.user.id;
     this.projectService.createProject(this.project).subscribe((res) => {
       if (res) {
         this.projects.push(res);

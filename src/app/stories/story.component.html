@@ -33,6 +33,7 @@
                         <tr>
                             <th>#</th>
                             <th>Task</th>
+                            <th>Status</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -40,6 +41,7 @@
                         <tr *ngFor="let task of tasks">
                             <td>{{task.taskId}}</td>
                             <td><a routerLink='/task/{{task.taskId}}'>{{task.name}}</a></td>
+                            <td>{{task.status}}</td>
                             <td>{{task.description}}</td>
                         </tr>
                     </tbody>
@@ -57,6 +59,12 @@
                     <label>Name</label>
                     <input clrInput type="text" [(ngModel)]="task.name" name="name" required />
                 </clr-input-container>
+                <clr-select-container>
+                    <label>Status</label>
+                    <select clrSelect [(ngModel)]="task.status" name="status">
+                        <option *ngFor="let item of statusValues | keyvalue" [value]="item.key">{{item.value}}</option>
+                    </select>
+                </clr-select-container>
                 <clr-textarea-container>
                     <label>Description</label>
                     <textarea clrTextarea [(ngModel)]="task.description" name="description" required></textarea>

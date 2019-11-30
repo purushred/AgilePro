@@ -5,8 +5,7 @@ import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
-  templateUrl: './user-login.component.html',
-  styleUrls: ['./user-login.component.css']
+  templateUrl: './user-login.component.html'
 })
 export class UserLoginComponent implements OnInit {
   user: User = new User();
@@ -17,8 +16,8 @@ export class UserLoginComponent implements OnInit {
   public loginUser() {
     this.userRegistrationService.loginUser(this.user).subscribe((res) => {
       if (res) {
-        sessionStorage.setItem('currentUser', JSON.stringify(this.user));
-        const tokenStr = 'Bearer ' + res['token'];
+        sessionStorage.setItem('currentUser', JSON.stringify(res));
+        const tokenStr = 'Bearer ' + res.token;
         sessionStorage.setItem('token', tokenStr);
         const navigationExtras: NavigationExtras = {
           queryParams: {userId: res.id}

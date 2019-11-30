@@ -8,6 +8,7 @@ import com.smart.app.agilepro.model.UserDTO;
 import com.smart.app.agilepro.security.JwtTokenUtil;
 import com.smart.app.agilepro.security.JwtUserDetailsService;
 import com.smart.app.agilepro.service.EmailServiceImpl;
+import com.smart.app.agilepro.service.UserServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,9 @@ public class UserController {
     @Autowired
     private EmailServiceImpl emailServiceImpl;
 
+    @Autowired
+    private UserServiceImpl userServiceImpl;
+
     @PostMapping(value = "/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         final String username = authenticationRequest.getUsername();
@@ -44,14 +48,15 @@ public class UserController {
         authenticate(username, password);
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         final String token = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new JwtResponse(token, userDetails.getUsername(), "Admin"));
+        User user = userServiceImpl.getUserByName(username);
+        return ResponseEntity.ok(new JwtResponse(user.getId(),token, userDetails.getUsername(), "Admin"));
     }
 
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
         User savedUser = userDetailsService.save(user);
         if (savedUser != null) {
-            emailServiceImpl.sendMail(user.getUsername(), "Please click <a href='http://localhost:8080'>" + "here" + "</a> to confirm your email.");
+            // emailServiceImpl.sendMail(user.getUsername(), "Please click <a href='http://localhost:8080'>" + "here" + "</a> to confirm your email.");
         }
         return ResponseEntity.ok(savedUser);
     }

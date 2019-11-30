@@ -1,3 +1,4 @@
+import { JwtResponse } from './../model/jwt-response';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../model/user';
@@ -14,7 +15,7 @@ export class UserRegistrationService {
   constructor(private http: HttpClient) { }
 
   loginUser(user) {
-    return this.http.post<User>(`${window.location.origin + this.loginUri}`, user);
+    return this.http.post<JwtResponse>(`${window.location.origin + this.loginUri}`, user);
   }
 
   registerUser(user) {

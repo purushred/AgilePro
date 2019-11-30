@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
-import {UserLoginComponent} from './user-login/user-login.component';
-import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserRegisterComponent } from './user-register/user-register.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ProjectComponent } from './project/project.component';
-import { FeatureComponent } from './feature/feature.component';
-import { StoryComponent } from './story/story.component';
-import { TaskComponent } from './task/task.component';
-import { UserLogoutComponent } from './user-logout/user-logout.component';
-import { EmailVerificationComponent } from './email-verification/email-verification.component';
-import { InvitationComponent } from './invitation/invitation.component';
+import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth-guard';
-import { Role } from './model/role';
+import { UserLoginComponent } from './authentication/user-login.component';
+import { UserLogoutComponent } from './authentication/user-logout.component';
+import { UserRegisterComponent } from './authentication/user-register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FeatureComponent } from './feature/feature.component';
+import { EmailVerificationComponent } from './profile/email-verification.component';
+import { InvitationComponent } from './profile/invitation.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectsComponent } from './project/projects.component';
+import { StoryComponent } from './stories/story.component';
+import { TaskComponent } from './task/task.component';
+
 
 
 const routes: Routes = [
@@ -54,7 +54,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
     canActivate: [AuthGuard],
-    data: { roles: [Role.Admin] }
+    // data: { roles: [Role.Admin] }
   },
   {
     path: 'project/:id',

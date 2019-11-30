@@ -15,6 +15,14 @@ export class StoryService {
     return this.http.post<Story>(`${window.location.origin + this.storyUri}`, story);
   }
 
+  editStory(story) {
+    return this.http.put<Story>(`${window.location.origin + this.storyUri}`, story);
+  }
+
+  deleteStory(story) {
+    return this.http.delete<Story>(`${window.location.origin + this.storyUri}`, story);
+  }
+
   getStories(featureId) {
     return this.http.get <Array<Story>> (`${window.location.origin + this.storiesUri + featureId}`);
   }

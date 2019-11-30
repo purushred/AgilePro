@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-email-verification',
-  templateUrl: './email-verification.component.html',
-  styleUrls: ['./email-verification.component.css']
+  templateUrl: './email-verification.component.html'
 })
 export class EmailVerificationComponent implements OnInit {
 

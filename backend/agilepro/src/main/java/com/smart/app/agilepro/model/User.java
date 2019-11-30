@@ -31,6 +31,9 @@ public class User {
     private String phone;
     private String country;
     
+    public Long getId() {
+        return id;
+    }
     public String getEmailId() {
         return emailId;
     }

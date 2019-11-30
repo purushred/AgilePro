@@ -15,6 +15,14 @@ export class ProjectService {
     return this.http.post<Project>(`${window.location.origin + this.projectUri}`, project);
   }
 
+  editProject(project) {
+    return this.http.put<Project>(`${window.location.origin + this.projectUri}`, project);
+  }
+
+  deleteProject(project) {
+    return this.http.delete<Project>(`${window.location.origin + this.projectUri}`, project);
+  }
+
   getProjects(userId) {
     return this.http.get<Array<Project>>(`${window.location.origin + this.projectsUri + userId}`);
   }

@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-register',
-  templateUrl: './user-register.component.html',
-  styleUrls: ['./user-register.component.css']
+  templateUrl: './user-register.component.html'
 })
 export class UserRegisterComponent implements OnInit {
   user: User = new User();

@@ -5,8 +5,7 @@ import { ProjectService } from '../service/project.service';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
 
@@ -17,9 +16,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.userId = this.route.snapshot
       .queryParamMap.get('userId');
-    console.log('Project Id', this.userId);
-
-    this.projectService.getProjects(100).subscribe((res) => {
+    this.projectService.getProjects(this.userId).subscribe((res) => {
       if (res) {
         this.projects = res;
       } else {

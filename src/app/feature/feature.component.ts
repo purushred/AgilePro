@@ -5,22 +5,22 @@ import { StoryService } from '../service/story.service';
 
 @Component({
   selector: 'app-feature',
-  templateUrl: './feature.component.html',
-  styleUrls: ['./feature.component.css']
+  templateUrl: './feature.component.html'
 })
 export class FeatureComponent implements OnInit {
 
   isShowAddStoryModal = false;
   story: Story = new Story();
   stories: Array<Story> = new Array();
+  featureId: string;
   constructor(private route: ActivatedRoute,
               private storyService: StoryService) { }
 
   ngOnInit() {
-    const featureId = this.route.snapshot.paramMap.get('id');
-    console.log('Feature Id', featureId);
+    this.featureId = this.route.snapshot.paramMap.get('id');
+    console.log('Feature Id', this.featureId);
 
-    this.storyService.getStories(featureId).subscribe((res) => {
+    this.storyService.getStories(this.featureId).subscribe((res) => {
       if (res) {
         this.stories = res;
       } else {
@@ -37,7 +37,7 @@ export class FeatureComponent implements OnInit {
   }
 
   createStory() {
-    this.story.featureId = 100;
+    this.story.featureId = this.featureId as unknown as number;
     this.storyService.createStory(this.story).subscribe((res) => {
       if (res) {
         this.stories.push(res);

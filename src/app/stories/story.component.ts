@@ -1,3 +1,4 @@
+import { Status } from '../model/status.enum';
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../model/task';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -5,23 +6,23 @@ import { TaskService } from '../service/task.service';
 
 @Component({
   selector: 'app-story',
-  templateUrl: './story.component.html',
-  styleUrls: ['./story.component.css']
+  templateUrl: './story.component.html'
 })
 export class StoryComponent implements OnInit {
 
   isShowAddTaskModal = false;
   task: Task = new Task();
-
+  storyId: string;
+  statusValues = [];
   tasks: Array<Task> = new Array();
   constructor(private route: ActivatedRoute,
-              private taskService: TaskService) { }
+              private taskService: TaskService) {
+                this.statusValues = Object.values(Status);
+               }
 
   ngOnInit() {
-    const storyId = this.route.snapshot.paramMap.get('id');
-    console.log('Feature Id', storyId);
-
-    this.taskService.getTasks(storyId).subscribe((res) => {
+    this.storyId = this.route.snapshot.paramMap.get('id');
+    this.taskService.getTasks(this.storyId).subscribe((res) => {
       if (res) {
         this.tasks = res;
       } else {
@@ -37,7 +38,7 @@ export class StoryComponent implements OnInit {
   }
 
   createTask() {
-    this.task.storyId = 100;
+    this.task.storyId = this.storyId as unknown as number;
     this.taskService.createTask(this.task).subscribe((res) => {
       if (res) {
         this.tasks.push(res);

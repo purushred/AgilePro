@@ -1,6 +1,8 @@
 package com.smart.app.agilepro.model;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
@@ -21,6 +23,8 @@ public class Story {
     private String name;
     private String description;
     private Long featureId;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     public Long getStoryId() {
         return storyId;
@@ -53,4 +57,13 @@ public class Story {
     public void setFeatureId(Long featureId) {
         this.featureId = featureId;
     }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+    
 }

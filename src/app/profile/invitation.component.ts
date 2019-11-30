@@ -4,8 +4,7 @@ import { InvitationService } from '../service/invitation.service';
 
 @Component({
   selector: 'app-invitation',
-  templateUrl: './invitation.component.html',
-  styleUrls: ['./invitation.component.css']
+  templateUrl: './invitation.component.html'
 })
 export class InvitationComponent implements OnInit {
 

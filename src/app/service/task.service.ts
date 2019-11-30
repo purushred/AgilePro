@@ -15,6 +15,14 @@ export class TaskService {
     return this.http.post<Task>(`${window.location.origin + this.taskUri}`, task);
   }
 
+  editTask(task) {
+    return this.http.put<Task>(`${window.location.origin + this.taskUri}`, task);
+  }
+
+  deleteTask(task) {
+    return this.http.delete<Task>(`${window.location.origin + this.taskUri}`, task);
+  }
+
   getTasks(storyId) {
     return this.http.get <Array<Task>> (`${window.location.origin + this.tasksUri + storyId}`);
   }

@@ -5,8 +5,7 @@ import { StoryService } from '../service/story.service';
 
 @Component({
   selector: 'app-features',
-  templateUrl: './features.component.html',
-  styleUrls: ['./features.component.css']
+  templateUrl: './features.component.html'
 })
 export class FeaturesComponent implements OnInit {
 
