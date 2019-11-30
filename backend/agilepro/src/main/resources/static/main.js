@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n    <clr-header>\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a routerLink=\"/home\" (click)=\"handleHomeClick()\" class=\"nav-link nav-text\">Home</a>\n            <a routerLink=\"/track\" (click)=\"handleTrackClick()\" class=\"nav-link nav-text\">Track</a>\n            <a routerLink=\"/projects\" (click)=\"handleProjectsClick()\" class=\"nav-link nav-text\">Projects</a>\n            <a routerLink=\"/track\" (click)=\"handleSettingsClick()\" class=\"nav-link nav-text\">Settings</a>\n        </div>\n        <div class=\"header-actions\">\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Login</span>\n            </a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"logout\" (click)=\"userLogout()\"\n                class=\"nav-link nav-icon-text\">\n                <clr-icon shape=\"user\"></clr-icon>\n                <span class=\"nav-text\">Logout</span>\n            </a>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <clr-vertical-nav [clrVerticalNavCollapsible]=\"true\" [(clrVerticalNavCollapsed)]=\"collapsed\"\n            [clr-nav-level]=\"2\">\n            <div *ngIf=\"isHomeSelected\">\n                <a clrVerticalNavLink routerLink=\"dashboard\" routerLinkActive=\"active\" class=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Dashboard\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isTrackSelected\">\n                <a clrVerticalNavLink routerLink=\"backlogs\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Backlogs\n                </a>\n                <a clrVerticalNavLink routerLink=\"sprint\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Sprint\n                </a>\n                <a clrVerticalNavLink routerLink=\"stories\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                    Stories\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isProjectsSelected\">\n                <a clrVerticalNavLink routerLink=\"projects\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Projects\n                </a>\n                <a clrVerticalNavLink routerLink=\"reports\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Reports\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isSettingsSelected\">\n                <a clrVerticalNavLink routerLink=\"profile\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Profile\n                </a>\n                <a clrVerticalNavLink routerLink=\"settings\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Settings\n                </a>\n                <a clrVerticalNavLink routerLink=\"invite\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Invite User\n                </a>\n            </div>\n        </clr-vertical-nav>\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n    <clr-header>\n        <div class=\"branding\">\n            Agile Pro\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/dashboard\" (click)=\"handleHomeClick()\"\n                class=\"active nav-link nav-text\">Home</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/track\" (click)=\"handleTrackClick()\"\n                class=\"nav-link nav-text\">Track</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/projects\" (click)=\"handleProjectsClick()\"\n                class=\"nav-link nav-text\">Projects</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/settings\" (click)=\"handleSettingsClick()\"\n                class=\"nav-link nav-text\">Settings</a>\n        </div>\n        <div class=\"header-actions\">\n            <clr-dropdown *ngIf=\"loginService.isUserLoggedIn()\">\n                <button class=\"nav-text\" clrDropdownTrigger aria-label=\"open user profile\">\n                    {{loginService.getLoggedInUser().userName}}\n                    <clr-icon shape=\"caret down\"></clr-icon>\n                </button>\n                <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n                    <a routerLink=\"settings\" clrDropdownItem (click)=\"userLogout()\">Settings</a>\n                    <a routerLink=\"logout\" clrDropdownItem (click)=\"userLogout()\">Log out</a>\n                </clr-dropdown-menu>\n            </clr-dropdown>\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <clr-vertical-nav *ngIf=\"loginService.isUserLoggedIn()\" [clrVerticalNavCollapsible]=\"true\"\n            [(clrVerticalNavCollapsed)]=\"collapsed\" [clr-nav-level]=\"2\">\n            <div *ngIf=\"isHomeSelected\">\n                <a clrVerticalNavLink routerLink=\"dashboard\" routerLinkActive=\"active\" class=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Dashboard\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isTrackSelected\">\n                <a clrVerticalNavLink routerLink=\"backlogs\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Backlogs\n                </a>\n                <a clrVerticalNavLink routerLink=\"sprint\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Sprint\n                </a>\n                <a clrVerticalNavLink routerLink=\"stories\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                    Stories\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isProjectsSelected\">\n                <a clrVerticalNavLink routerLink=\"projects\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Projects\n                </a>\n                <a clrVerticalNavLink routerLink=\"reports\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Reports\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isSettingsSelected\">\n                <a clrVerticalNavLink routerLink=\"profile\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Profile\n                </a>\n                <a clrVerticalNavLink routerLink=\"settings\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Settings\n                </a>\n                <a clrVerticalNavLink routerLink=\"invite\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"certificate\"></clr-icon>\n                    Invite User\n                </a>\n            </div>\n        </clr-vertical-nav>\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Projects</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-sm btn-icon btn-info\" (click)=\"showAddProjectModal()\" title=\"New Project\">\n                        <clr-icon shape=\"plus\"></clr-icon>\n                    </button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <div class=\"clr-col\">\n\n                    <clr-datagrid [(clrDgSelected)]=\"selected\">\n                        <clr-dg-column>No.</clr-dg-column>\n                        <clr-dg-column>Project</clr-dg-column>\n                        <clr-dg-column>Description</clr-dg-column>\n                        <clr-dg-column>Edit</clr-dg-column>\n                        <clr-dg-row *clrDgItems=\"let project of projects\" [clrDgItem]=\"project\">\n                            <clr-dg-cell>{{project.projectId}}</clr-dg-cell>\n                            <clr-dg-cell><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                            </clr-dg-cell>\n                            <clr-dg-cell>{{project.description}}</clr-dg-cell>\n                            <clr-dg-cell>\n                                <clr-icon shape=\"pencil\" (click)=\"showAddProjectModal()\" title=\"Edit Project\"></clr-icon>\n                            </clr-dg-cell>\n                        </clr-dg-row>\n                        <clr-dg-footer>\n                            <clr-dg-pagination #pagination [clrDgPageSize]=\"10\">\n                                <clr-dg-page-size [clrPageSizeOptions]=\"[10,20,50,100]\">Users per page\n                                </clr-dg-page-size>\n                                {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                                of {{pagination.totalItems}} users\n                            </clr-dg-pagination>\n                        </clr-dg-footer>\n                    </clr-datagrid>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddProjectModal\">\n    <h3 class=\"modal-title\">Add Project</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"project.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"project.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddProjectModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createProject()\">Add</button>\n    </div>\n</clr-modal>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Projects</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-sm btn-icon btn-info\" (click)=\"showAddProjectModal()\" title=\"New Project\">\n                        <clr-icon shape=\"plus\"></clr-icon>\n                    </button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <div class=\"clr-col\">\n\n                    <clr-datagrid [(clrDgSelected)]=\"selected\">\n                        <clr-dg-column>No.</clr-dg-column>\n                        <clr-dg-column>Project</clr-dg-column>\n                        <clr-dg-column>Description</clr-dg-column>\n                        <clr-dg-column>Edit</clr-dg-column>\n                        <clr-dg-column>Status</clr-dg-column>\n                        <clr-dg-row *clrDgItems=\"let project of projects\" [clrDgItem]=\"project\">\n                            <clr-dg-cell>{{project.projectId}}</clr-dg-cell>\n                            <clr-dg-cell><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                            </clr-dg-cell>\n                            <clr-dg-cell>{{project.description}}</clr-dg-cell>\n                            <clr-dg-cell>\n                                <clr-icon shape=\"pencil\" (click)=\"showAddProjectModal()\" title=\"Edit Project\">\n                                </clr-icon>\n                            </clr-dg-cell>\n                            <clr-dg-cell>\n                                <span [ngClass]=\"{'label':true, \n                                    'label-warning':project.status=='TODO' , \n                                    'label-info':project.status=='IN_PROGRESS' , \n                                    'label-success':project.status=='COMPLETED' , \n                                    'label-success':project.status=='ACCEPTED'}\">{{project.status}}</span>\n                            </clr-dg-cell>\n                        </clr-dg-row>\n                        <clr-dg-footer>\n                            <clr-dg-pagination #pagination [clrDgPageSize]=\"10\">\n                                <clr-dg-page-size [clrPageSizeOptions]=\"[10,20,50,100]\">Projects per page\n                                </clr-dg-page-size>\n                                {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                                of {{pagination.totalItems}} users\n                            </clr-dg-pagination>\n                        </clr-dg-footer>\n                    </clr-datagrid>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddProjectModal\">\n    <h3 class=\"modal-title\">Add Project</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"project.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-select-container>\n                    <label>Status</label>\n                    <select clrSelect [(ngModel)]=\"project.status\" name=\"status\">\n                        <option *ngFor=\"let item of statusValues | keyvalue\" [value]=\"item.key\">{{item.value}}</option>\n                    </select>\n                </clr-select-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"project.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddProjectModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createProject()\">Add</button>\n    </div>\n</clr-modal>");
 
 /***/ }),
 
@@ -471,20 +471,22 @@ function __importDefault(mod) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./auth-guard */ "./src/app/auth-guard.ts");
-/* harmony import */ var _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./authentication/user-login.component */ "./src/app/authentication/user-login.component.ts");
-/* harmony import */ var _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authentication/user-register.component */ "./src/app/authentication/user-register.component.ts");
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
-/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
-/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
-/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
-/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
-/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
-/* harmony import */ var _project_projects_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./project/projects.component */ "./src/app/project/projects.component.ts");
-/* harmony import */ var _stories_story_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./stories/story.component */ "./src/app/stories/story.component.ts");
-/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
+/* harmony import */ var _model_role__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/role */ "./src/app/model/role.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _auth_guard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./auth-guard */ "./src/app/auth-guard.ts");
+/* harmony import */ var _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authentication/user-login.component */ "./src/app/authentication/user-login.component.ts");
+/* harmony import */ var _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./authentication/user-register.component */ "./src/app/authentication/user-register.component.ts");
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/dashboard.component */ "./src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var _feature_feature_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./feature/feature.component */ "./src/app/feature/feature.component.ts");
+/* harmony import */ var _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./profile/email-verification.component */ "./src/app/profile/email-verification.component.ts");
+/* harmony import */ var _profile_invitation_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./profile/invitation.component */ "./src/app/profile/invitation.component.ts");
+/* harmony import */ var _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./profile/profile.component */ "./src/app/profile/profile.component.ts");
+/* harmony import */ var _project_project_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./project/project.component */ "./src/app/project/project.component.ts");
+/* harmony import */ var _project_projects_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./project/projects.component */ "./src/app/project/projects.component.ts");
+/* harmony import */ var _stories_story_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./stories/story.component */ "./src/app/stories/story.component.ts");
+/* harmony import */ var _task_task_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./task/task.component */ "./src/app/task/task.component.ts");
+
 
 
 
@@ -503,64 +505,65 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'register',
-        component: _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_5__["UserRegisterComponent"]
+        component: _authentication_user_register_component__WEBPACK_IMPORTED_MODULE_6__["UserRegisterComponent"]
     },
     {
         path: 'login',
-        component: _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_4__["UserLoginComponent"]
+        component: _authentication_user_login_component__WEBPACK_IMPORTED_MODULE_5__["UserLoginComponent"]
     },
     {
         path: 'verify',
-        component: _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_8__["EmailVerificationComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _profile_email_verification_component__WEBPACK_IMPORTED_MODULE_9__["EmailVerificationComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'invite',
-        component: _profile_invitation_component__WEBPACK_IMPORTED_MODULE_9__["InvitationComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _profile_invitation_component__WEBPACK_IMPORTED_MODULE_10__["InvitationComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'profile',
-        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'dashboard',
-        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'projects',
-        component: _project_projects_component__WEBPACK_IMPORTED_MODULE_12__["ProjectsComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+        component: _project_projects_component__WEBPACK_IMPORTED_MODULE_13__["ProjectsComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]],
+        data: { roles: [_model_role__WEBPACK_IMPORTED_MODULE_1__["Role"].Admin] }
     },
     {
         path: 'project/:id',
-        component: _project_project_component__WEBPACK_IMPORTED_MODULE_11__["ProjectComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _project_project_component__WEBPACK_IMPORTED_MODULE_12__["ProjectComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'feature/:id',
-        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_7__["FeatureComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _feature_feature_component__WEBPACK_IMPORTED_MODULE_8__["FeatureComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'story/:id',
-        component: _stories_story_component__WEBPACK_IMPORTED_MODULE_13__["StoryComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _stories_story_component__WEBPACK_IMPORTED_MODULE_14__["StoryComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     },
     {
         path: 'task/:id',
-        component: _task_task_component__WEBPACK_IMPORTED_MODULE_14__["TaskComponent"],
-        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]]
+        component: _task_task_component__WEBPACK_IMPORTED_MODULE_15__["TaskComponent"],
+        canActivate: [_auth_guard__WEBPACK_IMPORTED_MODULE_4__["AuthGuard"]]
     }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
     })
 ], AppRoutingModule);
 
@@ -595,6 +598,7 @@ let AppComponent = class AppComponent {
         this.isTrackSelected = false;
         this.isProjectsSelected = false;
         this.isSettingsSelected = false;
+        this.collapsed = true;
     }
     userLogout() {
         this.loginService.logOut();
@@ -930,22 +934,21 @@ UserRegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
 
 
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor(route, projectService) {
-        this.route = route;
+    constructor(projectService, userService) {
         this.projectService = projectService;
+        this.userService = userService;
         this.projects = new Array();
     }
     ngOnInit() {
-        this.userId = this.route.snapshot
-            .queryParamMap.get('userId');
+        this.userId = this.userService.getLoggedInUser().id;
         this.projectService.getProjects(this.userId).subscribe((res) => {
             if (res) {
                 this.projects = res;
@@ -959,11 +962,11 @@ let DashboardComponent = class DashboardComponent {
     }
 };
 DashboardComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] }
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] },
+    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_1__["UserRegistrationService"] }
 ];
 DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
         selector: 'app-dashboard',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./dashboard.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html")).default
     })
@@ -1159,6 +1162,27 @@ __webpack_require__.r(__webpack_exports__);
 
 class Project {
 }
+
+
+/***/ }),
+
+/***/ "./src/app/model/role.ts":
+/*!*******************************!*\
+  !*** ./src/app/model/role.ts ***!
+  \*******************************/
+/*! exports provided: Role */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Role", function() { return Role; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+
+var Role;
+(function (Role) {
+    Role["User"] = "User";
+    Role["Admin"] = "Admin";
+})(Role || (Role = {}));
 
 
 /***/ }),
@@ -1455,11 +1479,13 @@ ProjectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _model_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../model/user */ "./src/app/model/user.ts");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../model/project */ "./src/app/model/project.ts");
-/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
+/* harmony import */ var _model_status_enum__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../model/status.enum */ "./src/app/model/status.enum.ts");
+/* harmony import */ var _model_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/user */ "./src/app/model/user.ts");
+/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/project */ "./src/app/model/project.ts");
+/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
+
 
 
 
@@ -1470,10 +1496,12 @@ let ProjectsComponent = class ProjectsComponent {
     constructor(projectService, userService) {
         this.projectService = projectService;
         this.userService = userService;
-        this.project = new _model_project__WEBPACK_IMPORTED_MODULE_4__["Project"]();
+        this.project = new _model_project__WEBPACK_IMPORTED_MODULE_5__["Project"]();
         this.projects = [];
-        this.user = new _model_user__WEBPACK_IMPORTED_MODULE_1__["User"]();
+        this.user = new _model_user__WEBPACK_IMPORTED_MODULE_2__["User"]();
+        this.statusValues = [];
         this.isShowAddProjectModal = false;
+        this.statusValues = Object.values(_model_status_enum__WEBPACK_IMPORTED_MODULE_1__["Status"]);
     }
     ngOnInit() {
         this.user = this.userService.getLoggedInUser();
@@ -1507,11 +1535,11 @@ let ProjectsComponent = class ProjectsComponent {
     }
 };
 ProjectsComponent.ctorParameters = () => [
-    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_2__["UserRegistrationService"] }
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_6__["ProjectService"] },
+    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] }
 ];
 ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
         selector: 'app-projects',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/project/projects.component.html")).default
     })

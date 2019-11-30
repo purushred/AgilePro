@@ -1,3 +1,4 @@
+import { Status } from './../model/status.enum';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Feature } from '../model/feature';
@@ -14,7 +15,8 @@ export class ProjectComponent implements OnInit {
   features: Array<Feature> = new Array();
 
   constructor(private route: ActivatedRoute,
-              private featureService: FeatureService) { }
+              private featureService: FeatureService) {
+              }
 
   ngOnInit() {
     this.projectId = this.route.snapshot.paramMap.get('id');

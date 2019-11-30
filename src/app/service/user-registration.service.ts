@@ -2,7 +2,6 @@ import { JwtResponse } from './../model/jwt-response';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../model/user';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

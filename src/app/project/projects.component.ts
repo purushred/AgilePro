@@ -1,3 +1,4 @@
+import { Status } from './../model/status.enum';
 import { User } from '../model/user';
 import { UserRegistrationService } from '../service/user-registration.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,10 @@ export class ProjectsComponent implements OnInit {
   project: Project = new Project();
   projects: Array<Project> = [];
   user: User = new User();
+  statusValues = [];
+
   constructor(private projectService: ProjectService, private userService: UserRegistrationService) {
+    this.statusValues = Object.values(Status);
   }
   isShowAddProjectModal = false;
   ngOnInit() {

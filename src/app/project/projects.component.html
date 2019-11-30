@@ -17,18 +17,27 @@
                         <clr-dg-column>Project</clr-dg-column>
                         <clr-dg-column>Description</clr-dg-column>
                         <clr-dg-column>Edit</clr-dg-column>
+                        <clr-dg-column>Status</clr-dg-column>
                         <clr-dg-row *clrDgItems="let project of projects" [clrDgItem]="project">
                             <clr-dg-cell>{{project.projectId}}</clr-dg-cell>
                             <clr-dg-cell><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>
                             </clr-dg-cell>
                             <clr-dg-cell>{{project.description}}</clr-dg-cell>
                             <clr-dg-cell>
-                                <clr-icon shape="pencil" (click)="showAddProjectModal()" title="Edit Project"></clr-icon>
+                                <clr-icon shape="pencil" (click)="showAddProjectModal()" title="Edit Project">
+                                </clr-icon>
+                            </clr-dg-cell>
+                            <clr-dg-cell>
+                                <span [ngClass]="{'label':true, 
+                                    'label-warning':project.status=='TODO' , 
+                                    'label-info':project.status=='IN_PROGRESS' , 
+                                    'label-success':project.status=='COMPLETED' , 
+                                    'label-success':project.status=='ACCEPTED'}">{{project.status}}</span>
                             </clr-dg-cell>
                         </clr-dg-row>
                         <clr-dg-footer>
                             <clr-dg-pagination #pagination [clrDgPageSize]="10">
-                                <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Users per page
+                                <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Projects per page
                                 </clr-dg-page-size>
                                 {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
                                 of {{pagination.totalItems}} users
@@ -49,6 +58,12 @@
                     <label>Name</label>
                     <input clrInput type="text" [(ngModel)]="project.name" name="name" required />
                 </clr-input-container>
+                <clr-select-container>
+                    <label>Status</label>
+                    <select clrSelect [(ngModel)]="project.status" name="status">
+                        <option *ngFor="let item of statusValues | keyvalue" [value]="item.key">{{item.value}}</option>
+                    </select>
+                </clr-select-container>
                 <clr-textarea-container>
                     <label>Description</label>
                     <textarea clrTextarea [(ngModel)]="project.description" name="description" required></textarea>

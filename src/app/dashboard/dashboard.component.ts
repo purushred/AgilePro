@@ -1,5 +1,5 @@
+import { UserRegistrationService } from './../service/user-registration.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from '../model/project';
 import { ProjectService } from '../service/project.service';
 
@@ -9,13 +9,11 @@ import { ProjectService } from '../service/project.service';
 })
 export class DashboardComponent implements OnInit {
 
-  userId: string;
-  constructor(private route: ActivatedRoute,
-              private projectService: ProjectService) { }
+  userId: number;
+  constructor(private projectService: ProjectService, private userService: UserRegistrationService) { }
   projects: Array<Project> = new Array();
   ngOnInit() {
-    this.userId = this.route.snapshot
-      .queryParamMap.get('userId');
+    this.userId = this.userService.getLoggedInUser().id;
     this.projectService.getProjects(this.userId).subscribe((res) => {
       if (res) {
         this.projects = res;
@@ -25,7 +23,5 @@ export class DashboardComponent implements OnInit {
     }, (error) => {
       console.log('Get projects Error response', error);
     });
-
   }
-
 }

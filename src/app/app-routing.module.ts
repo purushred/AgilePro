@@ -1,3 +1,4 @@
+import { Role } from './model/role';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth-guard';
@@ -49,7 +50,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
     canActivate: [AuthGuard],
-    // data: { roles: [Role.Admin] }
+    data: { roles: [Role.Admin] }
   },
   {
     path: 'project/:id',

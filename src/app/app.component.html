@@ -4,26 +4,34 @@
             Agile Pro
         </div>
         <div class="header-nav" [clr-nav-level]="1">
-            <a routerLink="/home" (click)="handleHomeClick()" class="nav-link nav-text">Home</a>
-            <a routerLink="/track" (click)="handleTrackClick()" class="nav-link nav-text">Track</a>
-            <a routerLink="/projects" (click)="handleProjectsClick()" class="nav-link nav-text">Projects</a>
-            <a routerLink="/track" (click)="handleSettingsClick()" class="nav-link nav-text">Settings</a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/dashboard" (click)="handleHomeClick()"
+                class="active nav-link nav-text">Home</a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/track" (click)="handleTrackClick()"
+                class="nav-link nav-text">Track</a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/projects" (click)="handleProjectsClick()"
+                class="nav-link nav-text">Projects</a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/settings" (click)="handleSettingsClick()"
+                class="nav-link nav-text">Settings</a>
         </div>
         <div class="header-actions">
+            <clr-dropdown *ngIf="loginService.isUserLoggedIn()">
+                <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
+                    {{loginService.getLoggedInUser().userName}}
+                    <clr-icon shape="caret down"></clr-icon>
+                </button>
+                <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                    <a routerLink="settings" clrDropdownItem (click)="userLogout()">Settings</a>
+                    <a routerLink="logout" clrDropdownItem (click)="userLogout()">Log out</a>
+                </clr-dropdown-menu>
+            </clr-dropdown>
             <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link nav-icon-text">
-                <clr-icon shape="user"></clr-icon>
                 <span class="nav-text">Login</span>
-            </a>
-            <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" (click)="userLogout()"
-                class="nav-link nav-icon-text">
-                <clr-icon shape="user"></clr-icon>
-                <span class="nav-text">Logout</span>
             </a>
         </div>
     </clr-header>
     <div class="content-container">
-        <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed"
-            [clr-nav-level]="2">
+        <clr-vertical-nav *ngIf="loginService.isUserLoggedIn()" [clrVerticalNavCollapsible]="true"
+            [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="2">
             <div *ngIf="isHomeSelected">
                 <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active" class="active">
                     <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
