@@ -14,6 +14,7 @@ export class ProjectsComponent implements OnInit {
   projects: Array<Project> = [];
   user: User = new User();
   statusValues = [];
+  selected = true;
 
   constructor(private projectService: ProjectService, private userService: UserRegistrationService) {
     this.statusValues = Object.values(Status);

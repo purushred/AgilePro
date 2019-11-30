@@ -9,7 +9,7 @@ import { InvitationService } from '../service/invitation.service';
 export class InvitationComponent implements OnInit {
 
   invitation: Invitation = new Invitation();
-
+  options = '';
   constructor(private invitationService: InvitationService) { }
 
   ngOnInit() {

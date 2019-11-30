@@ -19,7 +19,7 @@
         <div class="header-actions">
             <clr-dropdown *ngIf="loginService.isUserLoggedIn()">
                 <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-                    {{loginService.getLoggedInUser().userName}}
+                    {{loginService.getLoggedInUser().username}}
                     <clr-icon shape="caret down"></clr-icon>
                 </button>
                 <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
