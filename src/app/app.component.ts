@@ -43,6 +43,7 @@ export class AppComponent {
     this.isTrackSelected = false;
     this.isProjectsSelected = false;
     this.isSettingsSelected = true;
+    this.router.navigate(['/profile']);
   }
 }
 

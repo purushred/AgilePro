@@ -1,3 +1,4 @@
+import { SettingsComponent } from './profile/settings.component';
 import { Role } from './model/role';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -39,6 +40,11 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent,
     canActivate: [AuthGuard]
   },
   {

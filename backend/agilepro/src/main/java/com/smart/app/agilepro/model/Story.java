@@ -25,7 +25,11 @@ public class Story {
     private Long featureId;
     @Enumerated(EnumType.STRING)
     private Status status;
-
+    private int estimation;
+    private String iteration;
+    private String owner;
+    private String team;
+    
     public Long getStoryId() {
         return storyId;
     }
@@ -65,5 +69,36 @@ public class Story {
     public void setStatus(Status status) {
         this.status = status;
     }
-    
+
+    public int getEstimation() {
+        return estimation;
+    }
+
+    public void setEstimation(int estimation) {
+        this.estimation = estimation;
+    }
+
+    public String getIteration() {
+        return iteration;
+    }
+
+    public void setIteration(String iteration) {
+        this.iteration = iteration;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
 }

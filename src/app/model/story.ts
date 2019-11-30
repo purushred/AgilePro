@@ -4,5 +4,9 @@ export class Story {
     public name: string;
     public description: string;
     public featureId: number;
+    public estimation: number;
+    public iteration: string;
+    public owner: string;
+    public team: string;
     public status: Status = Status.TODO;
 }

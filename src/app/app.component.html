@@ -33,7 +33,7 @@
         <clr-vertical-nav *ngIf="loginService.isUserLoggedIn()" [clrVerticalNavCollapsible]="true"
             [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="2">
             <div *ngIf="isHomeSelected">
-                <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active" class="active">
+                <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active" [ngClass]="{'active':isHomeSelected}">
                     <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
                     Dashboard
                 </a>
@@ -66,16 +66,16 @@
                 <div class="nav-divider"></div>
             </div>
             <div *ngIf="isSettingsSelected">
-                <a clrVerticalNavLink routerLink="profile" routerLinkActive="active">
-                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                <a clrVerticalNavLink routerLink="profile" routerLinkActive="active" [ngClass]="{'active':isSettingsSelected}">
+                    <clr-icon clrVerticalNavIcon shape="note"></clr-icon>
                     Profile
                 </a>
-                <a clrVerticalNavLink routerLink="settings" routerLinkActive="active">
-                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
-                    Settings
+                <a clrVerticalNavLink routerLink="teams" routerLinkActive="active">
+                    <clr-icon clrVerticalNavIcon shape="users"></clr-icon>
+                    Teams
                 </a>
                 <a clrVerticalNavLink routerLink="invite" routerLinkActive="active">
-                    <clr-icon clrVerticalNavIcon shape="certificate"></clr-icon>
+                    <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
                     Invite User
                 </a>
             </div>

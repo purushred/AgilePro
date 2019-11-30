@@ -1,3 +1,4 @@
+import { SettingsComponent } from './profile/settings.component';
 import { HttpInterceptorService } from './service/http-interceptor.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { EmailVerificationComponent } from './profile/email-verification.component';
 import { InvitationComponent } from './profile/invitation.component';
+import { SprintComponent } from './sprint/sprint.component';
+import { SprintsComponent } from './sprints/sprints.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { InvitationComponent } from './profile/invitation.component';
     ReportsComponent,
     FeatureComponent,
     EmailVerificationComponent,
-    InvitationComponent
+    InvitationComponent,
+    SettingsComponent,
+    SprintComponent,
+    SprintsComponent
   ],
   imports: [
     BrowserModule,
