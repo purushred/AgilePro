@@ -1,3 +1,4 @@
+import { Profile } from './../model/profile';
 import { JwtResponse } from './../model/jwt-response';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -10,6 +11,7 @@ export class UserRegistrationService {
 
   registrationUri = '/register';
   loginUri = '/authenticate';
+  profileUri = '/profile';
 
   constructor(private http: HttpClient) { }
 
@@ -32,5 +34,13 @@ export class UserRegistrationService {
   logOut() {
     sessionStorage.removeItem('currentUser');
     sessionStorage.removeItem('token');
+  }
+
+  getProfile(userId) {
+    return this.http.get<Profile>(`${window.location.origin + this.profileUri}` + '/' + userId);
+  }
+
+  postProfile(profile) {
+    return this.http.post<Profile>(`${window.location.origin + this.profileUri}`, profile);
   }
 }

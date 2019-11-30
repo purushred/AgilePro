@@ -1,8 +1,11 @@
 package com.smart.app.agilepro.controller;
 
+import java.util.Optional;
+
 import com.smart.app.agilepro.model.Invitation;
 import com.smart.app.agilepro.model.JwtRequest;
 import com.smart.app.agilepro.model.JwtResponse;
+import com.smart.app.agilepro.model.Profile;
 import com.smart.app.agilepro.model.User;
 import com.smart.app.agilepro.model.UserDTO;
 import com.smart.app.agilepro.security.JwtTokenUtil;
@@ -18,6 +21,8 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,10 +36,10 @@ public class UserController {
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
-    
+
     @Autowired
     private JwtUserDetailsService userDetailsService;
-    
+
     @Autowired
     private EmailServiceImpl emailServiceImpl;
 
@@ -49,16 +54,28 @@ public class UserController {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         final String token = jwtTokenUtil.generateToken(userDetails);
         User user = userServiceImpl.getUserByName(username);
-        return ResponseEntity.ok(new JwtResponse(user.getId(),token, userDetails.getUsername(), "Admin"));
+        return ResponseEntity.ok(new JwtResponse(user.getId(), token, userDetails.getUsername(), "Admin"));
     }
 
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
         User savedUser = userDetailsService.save(user);
         if (savedUser != null) {
-            // emailServiceImpl.sendMail(user.getUsername(), "Please click <a href='http://localhost:8080'>" + "here" + "</a> to confirm your email.");
+            // emailServiceImpl.sendMail(user.getUsername(), "Please click <a
+            // href='http://localhost:8080'>" + "here" + "</a> to confirm your email.");
         }
         return ResponseEntity.ok(savedUser);
+    }
+
+    @PostMapping(value = "/profile")
+    public Profile saveProfile(@RequestBody Profile profile) throws Exception {
+        return userDetailsService.saveProfile(profile);
+    }
+
+    @GetMapping(path = "/profile/{userId}")
+    public Profile getProfile(@PathVariable Long userId) throws Exception {
+        Optional<Profile> optionalProfile = userDetailsService.getProfile(userId);
+        return optionalProfile.isPresent() ? optionalProfile.get(): null;
     }
 
     @PostMapping(value="/invite")

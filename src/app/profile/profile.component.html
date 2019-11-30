@@ -5,25 +5,35 @@
             <div class="card-text">
                 <form clrForm>
                     <clr-input-container>
+                        <label>First Name</label>
+                        <input clrInput type="text" [(ngModel)]="profile.firstName" name="firstName" required />
+                        <clr-control-error>First Name is required!</clr-control-error>
+                    </clr-input-container>
+                    <clr-input-container>
+                            <label>Last Name</label>
+                            <input clrInput type="text" [(ngModel)]="profile.lastName" name="lastName" required />
+                            <clr-control-error>Last Name is required!</clr-control-error>
+                        </clr-input-container>
+                    <clr-input-container>
                         <label>Company</label>
-                        <input clrInput type="text" [(ngModel)]="company" name="company" required />
+                        <input clrInput type="text" [(ngModel)]="profile.company" name="company" required />
                         <clr-control-error>Company is required!</clr-control-error>
                     </clr-input-container>
                     <clr-input-container>
                         <label>Phone</label>
-                        <input clrInput type="text" [(ngModel)]="phone" name="phone" required />
+                        <input clrInput type="text" [(ngModel)]="profile.phone" name="phone" required />
                         <clr-control-error>Phone is required!</clr-control-error>
                     </clr-input-container>
                     <clr-input-container>
                         <label>Country</label>
-                        <input clrInput type="text" [(ngModel)]="country" name="country" required />
+                        <input clrInput type="text" [(ngModel)]="profile.country" name="country" required />
                         <clr-control-error>Country is required!</clr-control-error>
                     </clr-input-container>
                 </form>
             </div>
         </div>
         <div class="card-footer">
-            <button class="btn" routerLink="/projects" type="button" (click)="getProjects()">Save</button>
+            <button class="btn" type="button" (click)="saveProfile()">Save</button>
         </div>
     </div>
 </div>

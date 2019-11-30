@@ -29,6 +29,8 @@ import { FormsModule } from '@angular/forms';
 import { EmailVerificationComponent } from './profile/email-verification.component';
 import { InvitationComponent } from './profile/invitation.component';
 import { SprintComponent } from './sprint/sprint.component';
+import { TeamsComponent } from './teams/teams.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { SprintComponent } from './sprint/sprint.component';
     InvitationComponent,
     SettingsComponent,
     SprintComponent,
-    SprintsComponent
+    SprintsComponent,
+    TeamsComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

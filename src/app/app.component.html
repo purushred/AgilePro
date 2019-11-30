@@ -1,7 +1,10 @@
 <clr-main-container>
     <clr-header>
         <div class="branding">
-            Agile Pro
+            <a href="#" class="nav-link">
+                <clr-icon shape="users"></clr-icon>
+                <span class="title">Agile Pro</span>
+            </a>
         </div>
         <div class="header-nav" [clr-nav-level]="1">
             <a *ngIf="loginService.isUserLoggedIn()" routerLink="/dashboard" (click)="handleHomeClick()"
@@ -49,9 +52,9 @@
                     <clr-icon clrVerticalNavIcon shape="sad-face"></clr-icon>
                     Stories
                 </a>
-                <a clrVerticalNavLink routerLink="backlogs" routerLinkActive="active">
+                <a clrVerticalNavLink routerLink="schedule" routerLinkActive="active">
                     <clr-icon clrVerticalNavIcon shape="bolt"></clr-icon>
-                    Backlogs
+                    Schedule
                 </a>
                 <div class="nav-divider"></div>
             </div>

@@ -12,7 +12,7 @@ export class AppComponent {
   isTrackSelected = false;
   isProjectsSelected = false;
   isSettingsSelected = false;
-  collapsed = true;
+  collapsed = false;
   constructor(private router: Router, public loginService: UserRegistrationService) {}
 
   userLogout() {

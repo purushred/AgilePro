@@ -1,3 +1,6 @@
+import { ScheduleComponent } from './schedule/schedule.component';
+import { StoriesComponent } from './stories/stories.component';
+import { TeamsComponent } from './teams/teams.component';
 import { SprintsComponent } from './sprint/sprints.component';
 import { SettingsComponent } from './profile/settings.component';
 import { Role } from './model/role';
@@ -60,6 +63,12 @@ const routes: Routes = [
     data: { roles: [Role.Admin] }
   },
   {
+    path: 'teams',
+    component: TeamsComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.Admin] }
+  },
+  {
     path: 'projects',
     component: ProjectsComponent,
     canActivate: [AuthGuard],
@@ -81,10 +90,20 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'stories',
+    component: StoriesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'task/:id',
     component: TaskComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+    canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({
