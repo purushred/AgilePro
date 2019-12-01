@@ -19,11 +19,11 @@
         <div class="header-actions">
             <clr-dropdown *ngIf="loginService.isUserLoggedIn()">
                 <button class="nav-text" clrDropdownTrigger aria-label="open user profile">
-                    {{loginService.getLoggedInUser().username}}
+                    {{loginService.getLoggedInUser().userName}}
                     <clr-icon shape="caret down"></clr-icon>
                 </button>
                 <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-                    <a routerLink="settings" clrDropdownItem (click)="userLogout()">Settings</a>
+                    <a routerLink="profile" clrDropdownItem (click)="handleSettingsClick()">Profile</a>
                     <a routerLink="logout" clrDropdownItem (click)="userLogout()">Log out</a>
                 </clr-dropdown-menu>
             </clr-dropdown>

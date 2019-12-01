@@ -24,7 +24,7 @@ export class UserRegistrationService {
   }
 
   getLoggedInUser() {
-    return  (JSON.parse(sessionStorage.getItem('currentUser'))) as User;
+    return  (JSON.parse(sessionStorage.getItem('currentUser'))) as JwtResponse;
   }
 
   isUserLoggedIn() {

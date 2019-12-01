@@ -1,3 +1,4 @@
+import { JwtResponse } from './../model/jwt-response';
 import { Status } from './../model/status.enum';
 import { User } from '../model/user';
 import { UserRegistrationService } from '../service/user-registration.service';
@@ -12,7 +13,7 @@ import { ProjectService } from '../service/project.service';
 export class ProjectsComponent implements OnInit {
   project: Project = new Project();
   projects: Array<Project> = [];
-  user: User = new User();
+  loggedInUser: JwtResponse = new JwtResponse();
   statusValues = [];
   selected = false;
 
@@ -21,11 +22,10 @@ export class ProjectsComponent implements OnInit {
   }
   isShowAddProjectModal = false;
   ngOnInit() {
-    this.user = this.userService.getLoggedInUser();
-    this.projectService.getProjects(this.user.id).subscribe((res) => {
+    this.loggedInUser = this.userService.getLoggedInUser();
+    this.projectService.getProjects(this.loggedInUser.id).subscribe((res) => {
       if (res) {
         this.projects = res;
-        console.log("Projects:", this.projects);
       } else {
         console.log('Could not get projects');
       }
@@ -39,7 +39,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   createProject() {
-    this.project.userId = this.user.id;
+    this.project.userId = this.loggedInUser.id;
     this.projectService.createProject(this.project).subscribe((res) => {
       if (res) {
         this.projects.push(res);
