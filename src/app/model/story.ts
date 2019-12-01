@@ -1,6 +1,6 @@
 import { Status } from './status.enum';
 export class Story {
-    public storyId: BigInteger;
+    public storyId: number;
     public name: string;
     public description: string;
     public featureId: number;

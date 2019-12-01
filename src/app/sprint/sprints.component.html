@@ -1,1 +1,36 @@
-<p>sprints works!</p>
+<div class="clr-row">
+    <div>
+        Spring 114
+    </div>
+    <div class="clr-row">
+        <clr-datagrid [(clrDgSelected)]="selected">
+            <clr-dg-column>No.</clr-dg-column>
+            <clr-dg-column>Name</clr-dg-column>
+            <clr-dg-column>Owner</clr-dg-column>
+            <clr-dg-column>Status</clr-dg-column>
+            <clr-dg-column>Estimation</clr-dg-column>
+            <clr-dg-column>Feature</clr-dg-column>
+            <clr-dg-row *clrDgItems="let story of stories" [clrDgItem]="story">
+                <clr-dg-cell>{{story.projectId}}</clr-dg-cell>
+                <clr-dg-cell><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>
+                </clr-dg-cell>
+                <clr-dg-cell>{{project.description}}</clr-dg-cell>
+                <clr-dg-cell>
+                    <span [ngClass]="{'label':true, 
+                                'label-warning':project.status=='TODO' , 
+                                'label-info':project.status=='IN_PROGRESS' , 
+                                'label-success':project.status=='COMPLETED' , 
+                                'label-error':project.status=='ACCEPTED'}">{{project.status}}</span>
+                </clr-dg-cell>
+            </clr-dg-row>
+            <clr-dg-footer>
+                <clr-dg-pagination #pagination [clrDgPageSize]="10">
+                    <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Stories per page
+                    </clr-dg-page-size>
+                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+                    of {{pagination.totalItems}} stories
+                </clr-dg-pagination>
+            </clr-dg-footer>
+        </clr-datagrid>
+    </div>
+</div>

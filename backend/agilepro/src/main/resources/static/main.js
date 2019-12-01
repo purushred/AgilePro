@@ -227,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>sprints works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-row\">\n    <div>\n        Spring 114\n    </div>\n    <div class=\"clr-row\">\n        <clr-datagrid [(clrDgSelected)]=\"selected\">\n            <clr-dg-column>No.</clr-dg-column>\n            <clr-dg-column>Name</clr-dg-column>\n            <clr-dg-column>Owner</clr-dg-column>\n            <clr-dg-column>Status</clr-dg-column>\n            <clr-dg-column>Estimation</clr-dg-column>\n            <clr-dg-column>Feature</clr-dg-column>\n            <clr-dg-row *clrDgItems=\"let story of stories\" [clrDgItem]=\"story\">\n                <clr-dg-cell>{{story.projectId}}</clr-dg-cell>\n                <clr-dg-cell><a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                </clr-dg-cell>\n                <clr-dg-cell>{{project.description}}</clr-dg-cell>\n                <clr-dg-cell>\n                    <span [ngClass]=\"{'label':true, \n                                'label-warning':project.status=='TODO' , \n                                'label-info':project.status=='IN_PROGRESS' , \n                                'label-success':project.status=='COMPLETED' , \n                                'label-error':project.status=='ACCEPTED'}\">{{project.status}}</span>\n                </clr-dg-cell>\n            </clr-dg-row>\n            <clr-dg-footer>\n                <clr-dg-pagination #pagination [clrDgPageSize]=\"10\">\n                    <clr-dg-page-size [clrPageSizeOptions]=\"[10,20,50,100]\">Stories per page\n                    </clr-dg-page-size>\n                    {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}\n                    of {{pagination.totalItems}} stories\n                </clr-dg-pagination>\n            </clr-dg-footer>\n        </clr-datagrid>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -2194,11 +2194,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SprintsComponent", function() { return SprintsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../model/project */ "./src/app/model/project.ts");
+
 
 
 let SprintsComponent = class SprintsComponent {
-    constructor() { }
+    constructor() {
+        this.sprints = [];
+    }
     ngOnInit() {
+        this.sprints.push(new _model_project__WEBPACK_IMPORTED_MODULE_2__["Project"]());
+        this.sprints.push(new _model_project__WEBPACK_IMPORTED_MODULE_2__["Project"]());
+        this.sprints.push(new _model_project__WEBPACK_IMPORTED_MODULE_2__["Project"]());
     }
 };
 SprintsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
