@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   projects: Array<Project> = [];
   user: User = new User();
   statusValues = [];
-  selected = true;
+  selected = false;
 
   constructor(private projectService: ProjectService, private userService: UserRegistrationService) {
     this.statusValues = Object.values(Status);
@@ -25,6 +25,7 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects(this.user.id).subscribe((res) => {
       if (res) {
         this.projects = res;
+        console.log("Projects:", this.projects);
       } else {
         console.log('Could not get projects');
       }
