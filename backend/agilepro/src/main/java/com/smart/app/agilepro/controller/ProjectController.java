@@ -2,7 +2,7 @@ package com.smart.app.agilepro.controller;
 
 import java.util.List;
 
-import com.smart.app.agilepro.model.Project;
+import com.smart.app.agilepro.entity.Project;
 import com.smart.app.agilepro.service.ProjectServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +39,9 @@ public class ProjectController {
         projectServiceImpl.deleteProject(id);
     }
 
-    @GetMapping(path="/project/{id}")
-    public Project getProject(@PathVariable Long id){
-        return projectServiceImpl.getProject(id);
+    @GetMapping(path="/project/{userId}/{projectId}")
+    public Project getProject(@PathVariable Long userId, @PathVariable Long projectId){
+        return projectServiceImpl.getProjectByUserIdAndProjectId(userId, projectId);
     }
 
     @GetMapping(path="/projects/{id}")

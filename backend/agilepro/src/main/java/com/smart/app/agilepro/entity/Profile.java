@@ -1,4 +1,4 @@
-package com.smart.app.agilepro.model;
+package com.smart.app.agilepro.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

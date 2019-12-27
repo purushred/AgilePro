@@ -31,6 +31,7 @@ import { InvitationComponent } from './profile/invitation.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { EpicComponent } from './epic/epic.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     SprintComponent,
     SprintsComponent,
     TeamsComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    EpicComponent
   ],
   imports: [
     BrowserModule,

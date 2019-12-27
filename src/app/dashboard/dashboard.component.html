@@ -1,13 +1,21 @@
 <clr-tabs>
     <clr-tab>
-        <button clrTabLink id="link1">Dashboard</button>
+        <button clrTabLink id="link1">Projects</button>
         <clr-tab-content id="content1" *clrIfActive="true">
+            <div class="clr-row clr-justify-content-end">
+                <div class="clr-col-2">
+                    <button class="btn btn-primary" (click)="showAddProjectModal()" title="New project">
+                        <clr-icon shape="plus"></clr-icon>New project
+                    </button>
+                </div>
+            </div>
             <div class="clr-row">
                 <div class="clr-col-lg-4 clr-col-12" *ngFor="let project of projects">
-                    <div class="card">
+                    <div class="card clickable" (click)="navigateToProject(project.projectId)">
                         <div class="card-block">
                             <h3 class="card-title">
-                                <a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>
+                                <clr-icon shape="objects" class="is-info" size="36"></clr-icon>
+                                {{project.name}}
                             </h3>
                             <p class="card-text">
                                 {{project.description}}
@@ -19,9 +27,30 @@
         </clr-tab-content>
     </clr-tab>
     <clr-tab>
-        <button clrTabLink>Progress</button>
+        <button clrTabLink>My Work Items</button>
         <clr-tab-content>
             Show current progress here.
         </clr-tab-content>
     </clr-tab>
 </clr-tabs>
+<clr-modal [(clrModalOpen)]="isShowAddProjectModal">
+    <h3 class="modal-title">Create new project</h3>
+    <div class="modal-body">
+        <div>
+            <form clrForm clrLayout="vertical">
+                <clr-input-container>
+                    <label>Project name</label>
+                    <input size="43" clrInput type="text" [(ngModel)]="project.name" name="name" required />
+                </clr-input-container>
+                <clr-textarea-container>
+                    <label>Description</label>
+                    <textarea rows="5" cols="40" clrTextarea [(ngModel)]="project.description" name="description" required></textarea>
+                </clr-textarea-container>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="isShowAddProjectModal = false">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="createProject()">Create</button>
+    </div>
+</clr-modal>

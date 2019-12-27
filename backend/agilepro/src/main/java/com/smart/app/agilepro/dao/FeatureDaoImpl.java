@@ -4,7 +4,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import com.smart.app.agilepro.model.Feature;
+import com.smart.app.agilepro.entity.Feature;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

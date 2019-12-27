@@ -1,8 +1,10 @@
 <clr-main-container>
-    <clr-header>
+
+    <!--Header Area-->
+    <header class="header header-4">
         <div class="branding">
             <a href="#" class="nav-link">
-                <clr-icon shape="users"></clr-icon>
+                <clr-icon shape="users" class="is-inverse"></clr-icon>
                 <span class="title">Agile Pro</span>
             </a>
         </div>
@@ -31,11 +33,19 @@
                 <span class="nav-text">Login</span>
             </a>
         </div>
-    </clr-header>
+    </header>
+
+    <!--Content Area with Side Pane and Work Area-->
     <div class="content-container">
+        <!-- Veritical Navigation Side Panel-->
         <clr-vertical-nav *ngIf="loginService.isUserLoggedIn()" [clrVerticalNavCollapsible]="true"
             [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="2">
             <div *ngIf="isHomeSelected">
+                <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active"
+                    [ngClass]="{'active':isHomeSelected}">
+                    <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+                    Summary
+                </a>
                 <a clrVerticalNavLink routerLink="dashboard" routerLinkActive="active"
                     [ngClass]="{'active':isHomeSelected}">
                     <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
@@ -85,6 +95,8 @@
                 </a>
             </div>
         </clr-vertical-nav>
+        
+        <!--Content Area-->
         <div class="content-area">
             <router-outlet></router-outlet>
         </div>

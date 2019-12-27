@@ -1,3 +1,8 @@
+import { Invitation } from './../model/invitation';
+import { InvitationService } from './../service/invitation.service';
+import { Project } from './../model/project';
+import { UserRegistrationService } from './../service/user-registration.service';
+import { ProjectService } from './../service/project.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Feature } from '../model/feature';
@@ -8,25 +13,33 @@ import { FeatureService } from '../service/feature.service';
   templateUrl: './project.component.html'
 })
 export class ProjectComponent implements OnInit {
-  isShowAddFeatureModal = false;
-  feature: Feature = new Feature();
-  projectId: string;
-  features: Array<Feature> = new Array();
+  private userEmail = '';
+  private message = '';
+  private isShowAddFeatureModal = false;
+  private isShowInviteModal = false;
+  private projectMembers: Array<string> = [];
+  private project: Project = new Project();
+  private feature: Feature = new Feature();
+  private projectId: string;
+  private features: Array<Feature> = new Array();
 
   constructor(private route: ActivatedRoute,
-              private featureService: FeatureService) {
+              private featureService: FeatureService,
+              private projectService: ProjectService,
+              private userService: UserRegistrationService,
+              private inviteService: InvitationService) {
   }
 
   ngOnInit() {
     this.projectId = this.route.snapshot.paramMap.get('id');
-    this.featureService.getFeatures(this.projectId).subscribe((res) => {
-      if (res) {
-        this.features = res;
+    this.projectService.getProject(this.userService.getLoggedInUser().id, this.projectId).subscribe( (response) => {
+      if (response) {
+        this.project = response;
       } else {
-        console.log('Could not get features');
+        console.log('No project for selected user.');
       }
     }, (error) => {
-      console.log('Get features Error response', error);
+      console.error('Failed to retrieve project for user.', error);
     });
   }
 
@@ -48,6 +61,27 @@ export class ProjectComponent implements OnInit {
       }
     }, (error) => {
       console.log('Unable to create feature, Please try again.', error);
+    });
+  }
+
+  showInviteModal() {
+    this.isShowInviteModal = true;
+  }
+
+  handleInviteUser() {
+    const emailsArray = this.userEmail.split(',');
+    const invitList = new Array<Invitation> ();
+    emailsArray.forEach ((email) => {
+      const inv = new Invitation();
+      inv.emailId = email;
+      inv.invitationMessage = this.message;
+      invitList.push(inv);
+    });
+    this.projectMembers = this.projectMembers.concat(emailsArray);
+    this.isShowInviteModal = false;
+    this.inviteService.inviteUsers(invitList).subscribe((res) => {
+    }, (error) => {
+      console.log('Invitation failed.', error);
     });
   }
 }

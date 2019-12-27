@@ -7,10 +7,13 @@ import { Invitation } from '../model/invitation';
 })
 export class InvitationService {
 
-  invitationUri = '/invite';
+  invitationUri = '/invites';
   constructor(private http: HttpClient) { }
 
-  inviteUser(invitation) {
+  inviteUser(invitation: Invitation) {
     return this.http.post<Invitation>(`${window.location.origin + this.invitationUri}`, invitation);
+  }
+  inviteUsers(invitations: Invitation[]) {
+    return this.http.post<Array<Invitation>>(`${window.location.origin + this.invitationUri}`, invitations);
   }
 }

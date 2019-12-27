@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.smart.app.agilepro.dao.ProfileDaoImpl;
 import com.smart.app.agilepro.dao.UserDaoImpl;
-import com.smart.app.agilepro.model.Profile;
+import com.smart.app.agilepro.entity.Profile;
 import com.smart.app.agilepro.model.UserDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;

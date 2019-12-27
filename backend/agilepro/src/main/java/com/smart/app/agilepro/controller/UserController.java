@@ -1,11 +1,12 @@
 package com.smart.app.agilepro.controller;
 
+import java.util.List;
 import java.util.Optional;
 
+import com.smart.app.agilepro.entity.Profile;
 import com.smart.app.agilepro.model.Invitation;
 import com.smart.app.agilepro.model.JwtRequest;
 import com.smart.app.agilepro.model.JwtResponse;
-import com.smart.app.agilepro.model.Profile;
 import com.smart.app.agilepro.model.User;
 import com.smart.app.agilepro.model.UserDTO;
 import com.smart.app.agilepro.security.JwtTokenUtil;
@@ -81,6 +82,13 @@ public class UserController {
     @PostMapping(value="/invite")
     public void inviteUser(@RequestBody Invitation invitation) {
         emailServiceImpl.sendMail(invitation.getEmailId(), invitation.getInvitationMessage());
+    }
+
+    @PostMapping(value="/invites")
+    public void inviteUsers(@RequestBody List<Invitation> invitations) {
+        invitations.forEach( invitation -> {
+            emailServiceImpl.sendMail(invitation.getEmailId(), invitation.getInvitationMessage());
+        });
     }
 
     private void authenticate(String username, String password) throws Exception {

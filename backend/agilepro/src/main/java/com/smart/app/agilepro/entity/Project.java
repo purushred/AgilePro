@@ -1,4 +1,4 @@
-package com.smart.app.agilepro.model;
+package com.smart.app.agilepro.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -8,32 +8,26 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.smart.app.agilepro.model.Status;
+
 @Entity
-@Table(name = "feature")
-public class Feature {
+@Table(name = "project")
+public class Project {
 
     @Id
-    @GeneratedValue(generator = "feature_id_generator")
+    @GeneratedValue(generator = "project_id_generator")
     @SequenceGenerator(
-            name = "feature_id_generator",
-            sequenceName = "feature_id_sequence",
+            name = "project_id_generator",
+            sequenceName = "project_id_sequence",
             initialValue = 1
     )
-    private Long featureId;
+    private Long projectId;
     private String name;
     private String description;
-    private Long projectId;
+    private Long userId;
     @Enumerated(EnumType.STRING)
     private Status status;
     
-    public Long getFeatureId() {
-        return featureId;
-    }
-
-    public void setFeatureId(Long featureId) {
-        this.featureId = featureId;
-    }
-
     public String getName() {
         return name;
     }
@@ -58,6 +52,14 @@ public class Feature {
         this.projectId = projectId;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
     public Status getStatus() {
         return status;
     }
@@ -65,5 +67,5 @@ public class Feature {
     public void setStatus(Status status) {
         this.status = status;
     }
-    
+
 }

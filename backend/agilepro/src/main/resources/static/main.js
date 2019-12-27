@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n    <clr-header>\n        <div class=\"branding\">\n            <a href=\"#\" class=\"nav-link\">\n                <clr-icon shape=\"users\"></clr-icon>\n                <span class=\"title\">Agile Pro</span>\n            </a>\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/dashboard\" (click)=\"handleHomeClick()\"\n                [ngClass]=\"{'active': isHomeSelected, 'nav-link':true, 'nav-text':true}\">Home</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/sprint\" (click)=\"handleTrackClick()\"\n                [ngClass]=\"{'active': isTrackSelected, 'nav-link':true, 'nav-text':true}\">Track</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/projects\" (click)=\"handleProjectsClick()\"\n                [ngClass]=\"{'active': isProjectsSelected,  'nav-link':true, 'nav-text':true}\">Projects</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/settings\" (click)=\"handleSettingsClick()\"\n                [ngClass]=\"{'active': isSettingsSelected,  'nav-link':true, 'nav-text':true}\">Settings</a>\n        </div>\n        <div class=\"header-actions\">\n            <clr-dropdown *ngIf=\"loginService.isUserLoggedIn()\">\n                <button class=\"nav-text\" clrDropdownTrigger aria-label=\"open user profile\">\n                    {{loginService.getLoggedInUser().userName}}\n                    <clr-icon shape=\"caret down\"></clr-icon>\n                </button>\n                <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n                    <a routerLink=\"profile\" clrDropdownItem (click)=\"handleSettingsClick()\">Profile</a>\n                    <a routerLink=\"logout\" clrDropdownItem (click)=\"userLogout()\">Log out</a>\n                </clr-dropdown-menu>\n            </clr-dropdown>\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </clr-header>\n    <div class=\"content-container\">\n        <clr-vertical-nav *ngIf=\"loginService.isUserLoggedIn()\" [clrVerticalNavCollapsible]=\"true\"\n            [(clrVerticalNavCollapsed)]=\"collapsed\" [clr-nav-level]=\"2\">\n            <div *ngIf=\"isHomeSelected\">\n                <a clrVerticalNavLink routerLink=\"dashboard\" routerLinkActive=\"active\"\n                    [ngClass]=\"{'active':isHomeSelected}\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Dashboard\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isTrackSelected\">\n                <a clrVerticalNavLink routerLink=\"sprint\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Sprint\n                </a>\n                <a clrVerticalNavLink routerLink=\"stories\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                    Stories\n                </a>\n                <a clrVerticalNavLink routerLink=\"schedule\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Schedule\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isProjectsSelected\">\n                <a clrVerticalNavLink routerLink=\"projects\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Projects\n                </a>\n                <a clrVerticalNavLink routerLink=\"reports\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Reports\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isSettingsSelected\">\n                <a clrVerticalNavLink routerLink=\"profile\" routerLinkActive=\"active\"\n                    [ngClass]=\"{'active':isSettingsSelected}\">\n                    <clr-icon clrVerticalNavIcon shape=\"note\"></clr-icon>\n                    Profile\n                </a>\n                <a clrVerticalNavLink routerLink=\"teams\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"users\"></clr-icon>\n                    Teams\n                </a>\n                <a clrVerticalNavLink routerLink=\"invite\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Invite User\n                </a>\n            </div>\n        </clr-vertical-nav>\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-main-container>\n\n    <!--Header Area-->\n    <header class=\"header header-4\">\n        <div class=\"branding\">\n            <a href=\"#\" class=\"nav-link\">\n                <clr-icon shape=\"users\" class=\"is-inverse\"></clr-icon>\n                <span class=\"title\">Agile Pro</span>\n            </a>\n        </div>\n        <div class=\"header-nav\" [clr-nav-level]=\"1\">\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/dashboard\" (click)=\"handleHomeClick()\"\n                [ngClass]=\"{'active': isHomeSelected, 'nav-link':true, 'nav-text':true}\">Home</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/sprint\" (click)=\"handleTrackClick()\"\n                [ngClass]=\"{'active': isTrackSelected, 'nav-link':true, 'nav-text':true}\">Track</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/projects\" (click)=\"handleProjectsClick()\"\n                [ngClass]=\"{'active': isProjectsSelected,  'nav-link':true, 'nav-text':true}\">Projects</a>\n            <a *ngIf=\"loginService.isUserLoggedIn()\" routerLink=\"/settings\" (click)=\"handleSettingsClick()\"\n                [ngClass]=\"{'active': isSettingsSelected,  'nav-link':true, 'nav-text':true}\">Settings</a>\n        </div>\n        <div class=\"header-actions\">\n            <clr-dropdown *ngIf=\"loginService.isUserLoggedIn()\">\n                <button class=\"nav-text\" clrDropdownTrigger aria-label=\"open user profile\">\n                    {{loginService.getLoggedInUser().userName}}\n                    <clr-icon shape=\"caret down\"></clr-icon>\n                </button>\n                <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n                    <a routerLink=\"profile\" clrDropdownItem (click)=\"handleSettingsClick()\">Profile</a>\n                    <a routerLink=\"logout\" clrDropdownItem (click)=\"userLogout()\">Log out</a>\n                </clr-dropdown-menu>\n            </clr-dropdown>\n            <a *ngIf=\"!loginService.isUserLoggedIn()\" routerLink=\"login\" class=\"nav-link nav-icon-text\">\n                <span class=\"nav-text\">Login</span>\n            </a>\n        </div>\n    </header>\n\n    <!--Content Area with Side Pane and Work Area-->\n    <div class=\"content-container\">\n        <!-- Veritical Navigation Side Panel-->\n        <clr-vertical-nav *ngIf=\"loginService.isUserLoggedIn()\" [clrVerticalNavCollapsible]=\"true\"\n            [(clrVerticalNavCollapsed)]=\"collapsed\" [clr-nav-level]=\"2\">\n            <div *ngIf=\"isHomeSelected\">\n                <a clrVerticalNavLink routerLink=\"dashboard\" routerLinkActive=\"active\"\n                    [ngClass]=\"{'active':isHomeSelected}\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Summary\n                </a>\n                <a clrVerticalNavLink routerLink=\"dashboard\" routerLinkActive=\"active\"\n                    [ngClass]=\"{'active':isHomeSelected}\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Dashboard\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isTrackSelected\">\n                <a clrVerticalNavLink routerLink=\"sprint\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Sprint\n                </a>\n                <a clrVerticalNavLink routerLink=\"stories\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"sad-face\"></clr-icon>\n                    Stories\n                </a>\n                <a clrVerticalNavLink routerLink=\"schedule\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"bolt\"></clr-icon>\n                    Schedule\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isProjectsSelected\">\n                <a clrVerticalNavLink routerLink=\"projects\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Projects\n                </a>\n                <a clrVerticalNavLink routerLink=\"reports\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"shield\"></clr-icon>\n                    Reports\n                </a>\n                <div class=\"nav-divider\"></div>\n            </div>\n            <div *ngIf=\"isSettingsSelected\">\n                <a clrVerticalNavLink routerLink=\"profile\" routerLinkActive=\"active\"\n                    [ngClass]=\"{'active':isSettingsSelected}\">\n                    <clr-icon clrVerticalNavIcon shape=\"note\"></clr-icon>\n                    Profile\n                </a>\n                <a clrVerticalNavLink routerLink=\"teams\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"users\"></clr-icon>\n                    Teams\n                </a>\n                <a clrVerticalNavLink routerLink=\"invite\" routerLinkActive=\"active\">\n                    <clr-icon clrVerticalNavIcon shape=\"user\"></clr-icon>\n                    Invite User\n                </a>\n            </div>\n        </clr-vertical-nav>\n        \n        <!--Content Area-->\n        <div class=\"content-area\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n</clr-main-container>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-6\">\n    <form clrForm>\n        <clr-input-container>\n            <label>Email</label>\n            <input clrInput type=\"email\" [(ngModel)]=\"user.username\" name=\"username\" required/>\n            <clr-control-error>Email is required!</clr-control-error>\n        </clr-input-container>\n        <clr-input-container>\n            <label>Password</label>\n            <input clrInput type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" required/>\n            <clr-control-error>Password is required!</clr-control-error>\n        </clr-input-container>\n        <button class=\"btn\" type=\"button\" (click)=\"registerUser()\">Register</button>\n    </form>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"clr-offset-4 clr-col-5\">\n    <div class=\"card\">\n        <div class=\"card-header\">\n            User registration\n        </div>\n        <div class=\"card-block\">\n            <form clrForm clrLayout=\"vertical\">\n                <clr-input-container>\n                    <label>Email</label>\n                    <input size=\"40\" clrInput type=\"email\" [(ngModel)]=\"user.username\" name=\"username\" required/>\n                    <clr-control-error>Email is required!</clr-control-error>\n                </clr-input-container>\n                <clr-input-container>\n                    <label>Password</label>\n                    <input size=\"40\" clrInput type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" required/>\n                    <clr-control-error>Password is required!</clr-control-error>\n                </clr-input-container>\n            </form>\n        </div>\n        <div class=\"card-footer\">\n            <button class=\"btn\" type=\"button\" (click)=\"registerUser()\">Register</button>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -71,7 +71,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Dashboard</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\" *ngFor=\"let project of projects\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">\n                                <a routerLink='/project/{{project.projectId}}'>{{project.name}}</a>\n                            </h3>\n                            <p class=\"card-text\">\n                                {{project.description}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Progress</button>\n        <clr-tab-content>\n            Show current progress here.\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">Projects</button>\n        <clr-tab-content id=\"content1\" *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-primary\" (click)=\"showAddProjectModal()\" title=\"New project\">\n                        <clr-icon shape=\"plus\"></clr-icon>New project\n                    </button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\" *ngFor=\"let project of projects\">\n                    <div class=\"card clickable\" (click)=\"navigateToProject(project.projectId)\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">\n                                <clr-icon shape=\"objects\" class=\"is-info\" size=\"36\"></clr-icon>\n                                {{project.name}}\n                            </h3>\n                            <p class=\"card-text\">\n                                {{project.description}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>My Work Items</button>\n        <clr-tab-content>\n            Show current progress here.\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddProjectModal\">\n    <h3 class=\"modal-title\">Create new project</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm clrLayout=\"vertical\">\n                <clr-input-container>\n                    <label>Project name</label>\n                    <input size=\"43\" clrInput type=\"text\" [(ngModel)]=\"project.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea rows=\"5\" cols=\"40\" clrTextarea [(ngModel)]=\"project.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddProjectModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createProject()\">Create</button>\n    </div>\n</clr-modal>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/epic/epic.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/epic/epic.component.html ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>epic works!</p>\n");
 
 /***/ }),
 
@@ -162,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Project</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div class=\"clr-col-lg-4 clr-col-12\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Description</h3>\n                            <p class=\"card-text\">\n                                OneView is a HPE project for its Synergy Hardware.\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Features</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddFeatureModal()\">Add Feature</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Feature</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let feature of features\">\n                            <td>{{feature.featureId}}</td>\n                            <td><a routerLink='/feature/{{feature.featureId}}'>{{feature.name}}</a></td>\n                            <td>{{feature.description}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddFeatureModal\">\n    <h3 class=\"modal-title\">Add Feature</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"feature.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"feature.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddFeatureModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createFeature()\">Add</button>\n    </div>\n</clr-modal>");
+/* harmony default export */ __webpack_exports__["default"] = ("<clr-tabs>\n    <clr-tab>\n        <button clrTabLink id=\"link1\">About Project</button>\n        <clr-tab-content id=\"content1\" *clrIfActive>\n            <div class=\"clr-row\">\n                <div style=\"width: 100%;\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">{{project.name}}</h3>\n                            <p class=\"card-text\">\n                                {{project.description}}\n                            </p>\n                        </div>\n                        <div class=\"card-footer\">\n                            <a href=\"...\" class=\"btn btn-sm btn-link\">Save</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <div style=\"width: 100%;\">\n                    <div class=\"card\">\n                        <div class=\"card-block\">\n                            <h3 class=\"card-title\">Members</h3>\n                            <p class=\"card-text\" *ngIf=\"!projectMembers.length\">\n                                No members available.\n                            </p>\n                            <a *ngFor=\"let member of projectMembers\" class=\"label label-light-blue clickable\">\n                                {{member}}<clr-icon shape=\"close\"></clr-icon>\n                            </a>\n                        </div>\n                        <div class=\"card-footer\">\n                            <button (click)=\"showInviteModal()\" class=\"btn btn-sm btn-link\">Invite</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n    <clr-tab>\n        <button clrTabLink>Features</button>\n        <clr-tab-content *clrIfActive=\"true\">\n            <div class=\"clr-row clr-justify-content-end\">\n                <div class=\"clr-col-2\">\n                    <button class=\"btn btn-info-outline\" (click)=\"showAddFeatureModal()\">Add Feature</button>\n                </div>\n            </div>\n            <div class=\"clr-row\">\n                <table class=\"table table-light\">\n                    <thead class=\"thead-dark\">\n                        <tr>\n                            <th>#</th>\n                            <th>Feature</th>\n                            <th>Description</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor=\"let feature of features\">\n                            <td>{{feature.featureId}}</td>\n                            <td><a routerLink='/feature/{{feature.featureId}}'>{{feature.name}}</a></td>\n                            <td>{{feature.description}}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </clr-tab-content>\n    </clr-tab>\n</clr-tabs>\n<clr-modal [(clrModalOpen)]=\"isShowAddFeatureModal\">\n    <h3 class=\"modal-title\">Add Feature</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm>\n                <clr-input-container>\n                    <label>Name</label>\n                    <input clrInput type=\"text\" [(ngModel)]=\"feature.name\" name=\"name\" required />\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Description</label>\n                    <textarea clrTextarea [(ngModel)]=\"feature.description\" name=\"description\" required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowAddFeatureModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"createFeature()\">Add</button>\n    </div>\n</clr-modal>\n<clr-modal [(clrModalOpen)]=\"isShowInviteModal\">\n    <h3 class=\"modal-title\">Invite User</h3>\n    <div class=\"modal-body\">\n        <div>\n            <form clrForm clrLayout=\"vertical\">\n                <clr-input-container>\n                    <label>Email</label>\n                    <input size=\"40\" clrInput type=\"text\"\n                        [(ngModel)]=\"userEmail\" name=\"userEmail\" required />\n                        <clr-control-helper>Enter email separated by comma.</clr-control-helper>\n                </clr-input-container>\n                <clr-textarea-container>\n                    <label>Message</label>\n                    <textarea cols=\"38\" rows=\"5\" clrTextarea [(ngModel)]=\"message\" name=\"message\"\n                        required></textarea>\n                </clr-textarea-container>\n            </form>\n        </div>\n    </div>\n    <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-outline\" (click)=\"isShowInviteModal = false\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"handleInviteUser()\">Invite</button>\n    </div>\n</clr-modal>");
 
 /***/ }),
 
@@ -793,6 +806,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sprint_sprint_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sprint/sprint.component */ "./src/app/sprint/sprint.component.ts");
 /* harmony import */ var _teams_teams_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./teams/teams.component */ "./src/app/teams/teams.component.ts");
 /* harmony import */ var _schedule_schedule_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./schedule/schedule.component */ "./src/app/schedule/schedule.component.ts");
+/* harmony import */ var _epic_epic_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./epic/epic.component */ "./src/app/epic/epic.component.ts");
+
 
 
 
@@ -851,7 +866,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _sprint_sprint_component__WEBPACK_IMPORTED_MODULE_30__["SprintComponent"],
             _sprint_sprints_component__WEBPACK_IMPORTED_MODULE_1__["SprintsComponent"],
             _teams_teams_component__WEBPACK_IMPORTED_MODULE_31__["TeamsComponent"],
-            _schedule_schedule_component__WEBPACK_IMPORTED_MODULE_32__["ScheduleComponent"]
+            _schedule_schedule_component__WEBPACK_IMPORTED_MODULE_32__["ScheduleComponent"],
+            _epic_epic_component__WEBPACK_IMPORTED_MODULE_33__["EpicComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
@@ -1053,22 +1069,32 @@ UserRegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _model_jwt_response__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../model/jwt-response */ "./src/app/model/jwt-response.ts");
+/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../model/project */ "./src/app/model/project.ts");
+/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../service/project.service */ "./src/app/service/project.service.ts");
+
+
+
 
 
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor(projectService, userService) {
+    constructor(projectService, userService, router) {
         this.projectService = projectService;
         this.userService = userService;
+        this.router = router;
         this.projects = new Array();
+        this.isShowAddProjectModal = false;
+        this.project = new _model_project__WEBPACK_IMPORTED_MODULE_5__["Project"]();
+        this.loggedInUser = new _model_jwt_response__WEBPACK_IMPORTED_MODULE_2__["JwtResponse"]();
     }
     ngOnInit() {
-        this.userId = this.userService.getLoggedInUser().id;
-        this.projectService.getProjects(this.userId).subscribe((res) => {
+        this.loggedInUser = this.userService.getLoggedInUser();
+        this.projectService.getProjects(this.loggedInUser.id).subscribe((res) => {
             if (res) {
                 this.projects = res;
             }
@@ -1079,17 +1105,83 @@ let DashboardComponent = class DashboardComponent {
             console.log('Get projects Error response', error);
         });
     }
+    showAddProjectModal() {
+        this.isShowAddProjectModal = true;
+    }
+    navigateToProject(projectId) {
+        this.router.navigate(['/project/' + projectId]);
+        console.log('Navigating to the project.', projectId);
+    }
+    createProject() {
+        this.project.userId = this.loggedInUser.id;
+        this.projectService.createProject(this.project).subscribe((res) => {
+            if (res) {
+                this.projects.push(res);
+                this.isShowAddProjectModal = false;
+            }
+            else {
+                console.log('Could not create project');
+            }
+        }, (error) => {
+            console.log('Unable to create project, Please try again.', error);
+        });
+    }
 };
 DashboardComponent.ctorParameters = () => [
-    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_3__["ProjectService"] },
-    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_1__["UserRegistrationService"] }
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_6__["ProjectService"] },
+    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_3__["UserRegistrationService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
 ];
 DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_4__["Component"])({
         selector: 'app-dashboard',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./dashboard.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dashboard/dashboard.component.html")).default
     })
 ], DashboardComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/epic/epic.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/epic/epic.component.css ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VwaWMvZXBpYy5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/epic/epic.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/epic/epic.component.ts ***!
+  \****************************************/
+/*! exports provided: EpicComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EpicComponent", function() { return EpicComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let EpicComponent = class EpicComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+};
+EpicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-epic',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./epic.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/epic/epic.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./epic.component.css */ "./src/app/epic/epic.component.css")).default]
+    })
+], EpicComponent);
 
 
 
@@ -1617,34 +1709,52 @@ SettingsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectComponent", function() { return ProjectComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _model_feature__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../model/feature */ "./src/app/model/feature.ts");
-/* harmony import */ var _service_feature_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service/feature.service */ "./src/app/service/feature.service.ts");
+/* harmony import */ var _model_invitation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../model/invitation */ "./src/app/model/invitation.ts");
+/* harmony import */ var _service_invitation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../service/invitation.service */ "./src/app/service/invitation.service.ts");
+/* harmony import */ var _model_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../model/project */ "./src/app/model/project.ts");
+/* harmony import */ var _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../service/user-registration.service */ "./src/app/service/user-registration.service.ts");
+/* harmony import */ var _service_project_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../service/project.service */ "./src/app/service/project.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _model_feature__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../model/feature */ "./src/app/model/feature.ts");
+/* harmony import */ var _service_feature_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../service/feature.service */ "./src/app/service/feature.service.ts");
+
+
+
+
+
 
 
 
 
 
 let ProjectComponent = class ProjectComponent {
-    constructor(route, featureService) {
+    constructor(route, featureService, projectService, userService, inviteService) {
         this.route = route;
         this.featureService = featureService;
+        this.projectService = projectService;
+        this.userService = userService;
+        this.inviteService = inviteService;
+        this.userEmail = '';
+        this.message = '';
         this.isShowAddFeatureModal = false;
-        this.feature = new _model_feature__WEBPACK_IMPORTED_MODULE_3__["Feature"]();
+        this.isShowInviteModal = false;
+        this.projectMembers = [];
+        this.project = new _model_project__WEBPACK_IMPORTED_MODULE_3__["Project"]();
+        this.feature = new _model_feature__WEBPACK_IMPORTED_MODULE_8__["Feature"]();
         this.features = new Array();
     }
     ngOnInit() {
         this.projectId = this.route.snapshot.paramMap.get('id');
-        this.featureService.getFeatures(this.projectId).subscribe((res) => {
-            if (res) {
-                this.features = res;
+        this.projectService.getProject(this.userService.getLoggedInUser().id, this.projectId).subscribe((response) => {
+            if (response) {
+                this.project = response;
             }
             else {
-                console.log('Could not get features');
+                console.log('No project for selected user.');
             }
         }, (error) => {
-            console.log('Get features Error response', error);
+            console.error('Failed to retrieve project for user.', error);
         });
     }
     showAddFeatureModal() {
@@ -1667,13 +1777,35 @@ let ProjectComponent = class ProjectComponent {
             console.log('Unable to create feature, Please try again.', error);
         });
     }
+    showInviteModal() {
+        this.isShowInviteModal = true;
+    }
+    handleInviteUser() {
+        const emailsArray = this.userEmail.split(',');
+        const invitList = new Array();
+        emailsArray.forEach((email) => {
+            const inv = new _model_invitation__WEBPACK_IMPORTED_MODULE_1__["Invitation"]();
+            inv.emailId = email;
+            inv.invitationMessage = this.message;
+            invitList.push(inv);
+        });
+        this.projectMembers = this.projectMembers.concat(emailsArray);
+        this.isShowInviteModal = false;
+        this.inviteService.inviteUsers(invitList).subscribe((res) => {
+        }, (error) => {
+            console.log('Invitation failed.', error);
+        });
+    }
 };
 ProjectComponent.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: _service_feature_service__WEBPACK_IMPORTED_MODULE_4__["FeatureService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_7__["ActivatedRoute"] },
+    { type: _service_feature_service__WEBPACK_IMPORTED_MODULE_9__["FeatureService"] },
+    { type: _service_project_service__WEBPACK_IMPORTED_MODULE_5__["ProjectService"] },
+    { type: _service_user_registration_service__WEBPACK_IMPORTED_MODULE_4__["UserRegistrationService"] },
+    { type: _service_invitation_service__WEBPACK_IMPORTED_MODULE_2__["InvitationService"] }
 ];
 ProjectComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_6__["Component"])({
         selector: 'app-project',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./project.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/project/project.component.html")).default
     })
@@ -1929,10 +2061,13 @@ __webpack_require__.r(__webpack_exports__);
 let InvitationService = class InvitationService {
     constructor(http) {
         this.http = http;
-        this.invitationUri = '/invite';
+        this.invitationUri = '/invites';
     }
     inviteUser(invitation) {
         return this.http.post(`${window.location.origin + this.invitationUri}`, invitation);
+    }
+    inviteUsers(invitations) {
+        return this.http.post(`${window.location.origin + this.invitationUri}`, invitations);
     }
 };
 InvitationService.ctorParameters = () => [
@@ -1967,7 +2102,7 @@ __webpack_require__.r(__webpack_exports__);
 let ProjectService = class ProjectService {
     constructor(http) {
         this.http = http;
-        this.projectUri = '/project';
+        this.projectUri = '/project/';
         this.projectsUri = '/projects/';
     }
     createProject(project) {
@@ -1978,6 +2113,9 @@ let ProjectService = class ProjectService {
     }
     deleteProject(project) {
         return this.http.delete(`${window.location.origin + this.projectUri}`, project);
+    }
+    getProject(userId, projectId) {
+        return this.http.get(`${window.location.origin + this.projectUri + userId + '/' + projectId}`);
     }
     getProjects(userId) {
         return this.http.get(`${window.location.origin + this.projectsUri + userId}`);

@@ -3,16 +3,34 @@
         <button clrTabLink id="link1">About Project</button>
         <clr-tab-content id="content1" *clrIfActive>
             <div class="clr-row">
-                <div class="clr-col-lg-4 clr-col-12">
+                <div style="width: 100%;">
                     <div class="card">
                         <div class="card-block">
-                            <h3 class="card-title">Description</h3>
+                            <h3 class="card-title">{{project.name}}</h3>
                             <p class="card-text">
-                                OneView is a HPE project for its Synergy Hardware.
+                                {{project.description}}
                             </p>
                         </div>
                         <div class="card-footer">
                             <a href="..." class="btn btn-sm btn-link">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clr-row">
+                <div style="width: 100%;">
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">Members</h3>
+                            <p class="card-text" *ngIf="!projectMembers.length">
+                                No members available.
+                            </p>
+                            <a *ngFor="let member of projectMembers" class="label label-light-blue clickable">
+                                {{member}}<clr-icon shape="close"></clr-icon>
+                            </a>
+                        </div>
+                        <div class="card-footer">
+                            <button (click)="showInviteModal()" class="btn btn-sm btn-link">Invite</button>
                         </div>
                     </div>
                 </div>
@@ -67,5 +85,29 @@
     <div class="modal-footer">
         <button type="button" class="btn btn-outline" (click)="isShowAddFeatureModal = false">Cancel</button>
         <button type="button" class="btn btn-primary" (click)="createFeature()">Add</button>
+    </div>
+</clr-modal>
+<clr-modal [(clrModalOpen)]="isShowInviteModal">
+    <h3 class="modal-title">Invite User</h3>
+    <div class="modal-body">
+        <div>
+            <form clrForm clrLayout="vertical">
+                <clr-input-container>
+                    <label>Email</label>
+                    <input size="40" clrInput type="text"
+                        [(ngModel)]="userEmail" name="userEmail" required />
+                        <clr-control-helper>Enter email separated by comma.</clr-control-helper>
+                </clr-input-container>
+                <clr-textarea-container>
+                    <label>Message</label>
+                    <textarea cols="38" rows="5" clrTextarea [(ngModel)]="message" name="message"
+                        required></textarea>
+                </clr-textarea-container>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="isShowInviteModal = false">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="handleInviteUser()">Invite</button>
     </div>
 </clr-modal>

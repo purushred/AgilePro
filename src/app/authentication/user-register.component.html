@@ -1,15 +1,24 @@
-<div class="clr-offset-4 clr-col-6">
-    <form clrForm>
-        <clr-input-container>
-            <label>Email</label>
-            <input clrInput type="email" [(ngModel)]="user.username" name="username" required/>
-            <clr-control-error>Email is required!</clr-control-error>
-        </clr-input-container>
-        <clr-input-container>
-            <label>Password</label>
-            <input clrInput type="password" [(ngModel)]="user.password" name="password" required/>
-            <clr-control-error>Password is required!</clr-control-error>
-        </clr-input-container>
-        <button class="btn" type="button" (click)="registerUser()">Register</button>
-    </form>
+<div class="clr-offset-4 clr-col-5">
+    <div class="card">
+        <div class="card-header">
+            User registration
+        </div>
+        <div class="card-block">
+            <form clrForm clrLayout="vertical">
+                <clr-input-container>
+                    <label>Email</label>
+                    <input size="40" clrInput type="email" [(ngModel)]="user.username" name="username" required/>
+                    <clr-control-error>Email is required!</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Password</label>
+                    <input size="40" clrInput type="password" [(ngModel)]="user.password" name="password" required/>
+                    <clr-control-error>Password is required!</clr-control-error>
+                </clr-input-container>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn" type="button" (click)="registerUser()">Register</button>
+        </div>
+    </div>
 </div>

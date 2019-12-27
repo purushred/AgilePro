@@ -7,15 +7,16 @@ import { Project } from '../model/project';
 })
 export class ProjectService {
 
-  projectUri = '/project';
-  projectsUri = '/projects/';
+  private projectUri = '/project/';
+  private projectsUri = '/projects/';
+
   constructor(private http: HttpClient) { }
 
-  createProject(project) {
+  createProject(project: Project) {
     return this.http.post<Project>(`${window.location.origin + this.projectUri}`, project);
   }
 
-  editProject(project) {
+  editProject(project: Project) {
     return this.http.put<Project>(`${window.location.origin + this.projectUri}`, project);
   }
 
@@ -23,7 +24,11 @@ export class ProjectService {
     return this.http.delete<Project>(`${window.location.origin + this.projectUri}`, project);
   }
 
-  getProjects(userId) {
+  getProject(userId, projectId) {
+    return this.http.get<Project>(`${window.location.origin + this.projectUri + userId + '/' + projectId}`);
+  }
+
+  getProjects(userId: number) {
     return this.http.get<Array<Project>>(`${window.location.origin + this.projectsUri + userId}`);
   }
 }

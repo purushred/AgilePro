@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import com.smart.app.agilepro.dao.FeatureDaoImpl;
-import com.smart.app.agilepro.model.Feature;
+import com.smart.app.agilepro.entity.Feature;
 
 import org.springframework.stereotype.Service;
 

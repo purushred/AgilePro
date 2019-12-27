@@ -2,7 +2,7 @@ package com.smart.app.agilepro.controller;
 
 import java.util.List;
 
-import com.smart.app.agilepro.model.Feature;
+import com.smart.app.agilepro.entity.Feature;
 import com.smart.app.agilepro.service.FeatureServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
